@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shawan</title>
+    </head>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+          background: linear-gradient(115deg,#2e7697,#121112);
+             
+        }
+       
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .background-image{
+            width: 100%;
+            height: 500px;
+        }
+        .btn{
+             position: absolute;
+            bottom: 20px;
+            left: 50%;
+           background-color: transparent;
+            padding: 10px 20px;
+            border:2px solid #48d5df;
+            color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .btn:hover{
+            background-color: #48d5df;
+        }
+        .overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+        .overlay-content{
+            background-color: rgba(226, 215, 215, 0.2);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            width: 90%;
+        }
+       
+
+         .container_2 {
+            width: 90%;
+            margin: 40px;
+            padding: 20px;
+            border: 2px solid #48d5df;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px 0 #48d5df;
+        }
+        
+        .section {
+            color: white;
+            margin-bottom: 40px;
+        }
+        .hit-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .hit-list li {
+            display: flex;
+            color: white;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .hit-list button {
+            padding: 5px 10px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid #48d5df;
+            
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .hit-list button:hover {
+            background-color: #48d5df;
+        }
+      
+        .details,.career,.awards{
+            font-family: 'Monaco',serif;
+            margin: 20px;
+            height: 300px;
+            width: 500px;
+            padding: 20px;
+            font-size: 17px;
+            
+        }
+        .overlay-content h1{
+            color: yellow;
+        }
+        .text-overlay {
+            position: absolute;
+            top: 60%; 
+            left: 30px;
+            color: white; 
+            font-size: 24px; 
+            font-family: Georgia, serif; 
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+        }
+
+ .container_3 {
+     display: flex;
+     flex-direction: column;
+      align-items: center;
+    padding: 10px;
+}
+
+
+.image-gallary {
+    display: none;
+    margin-top: 20px;
+      gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #48d5df;
+    border-radius: 8px;
+}
+.image-item:hover {
+     box-shadow: 0 8px 32px 0 #48d5df;
+}
+.image-item img {
+     width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; 
+    
+}
+.image-item img:hover {
+    transform: scale(1.1); /* Optional zoom effect on hover */
+}
+
+
+.overlay_img {
+    position: absolute; 
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: white; 
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-item:hover .overlay_img {
+    opacity: 1; /* Show overlay text on hover */
+}
+.bn{
+    height: 50px;
+    width: 150px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 2px solid #48d5df;
+    background-color: transparent;
+    border-radius: 50px;
+    color: white;
+    box-shadow: 0 8px 32px 0 #48d5df;
+}
+.bn:focus{
+    background-color: #48d5df;
+}
+       strong{
+        color: #48d5df;
+       }
+
+
+    </style>
+    <body>
+        <div class="container">
+            <img src="\musics_pics\english_pic\sha.jpeg"class="background-image">
+            <button id="detailsButton" class="btn">show</button>
+             <div class="text-overlay">
+                <h1>Shawn Peter Raul Mendes</h1>
+                <h5>Singer, Songwriter</h5>
+                </div>
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <div class="details">
+                    <h1>About</h1>
+                    <h3>Birthdate: August 8, 1998</h3>
+                    <h3>Hometown: Pickering, Ontario, Canada</h3>
+                    <p>Shawn Mendes is a Canadian singer-songwriter known for his soulful voice and acoustic guitar-driven pop songs. Rising to fame with his viral Vine videos, he quickly became a global pop sensation with his heartfelt music and relatable lyrics.</p>
+                    </div>
+                    <div class="career">
+                        <h1>Career Highlights</h1>
+                     <p>  <strong>Breakthrough:</strong>
+Gained popularity with his Vine covers in 2013, leading to his debut single Life of the Party (2014).<br><br>
+<strong>Chart-Topping Albums:</strong>
+Handwritten (2015): Included the hit single Stitches.Illuminate (2016) and Shawn Mendes (2018) produced hits like Treat You Better and There's Nothing Holdin' Me Back.</p>
+                    </div>
+                    <div class="awards">
+                    <h1>Achievements</h1> 
+                        <h4>Over 70 million records sold worldwide..</h4>
+                        <h4>Multiple award wins, including American Music Awards and MTV Europe Music Awards.
+</h4>
+                    </div>
+                </div>
+         <button id="closebutton" class="btn" >close</button>
+                </div>
+            </div>
+        </div>
+      
+        <div class="container_2">
+    <div class="section hit-list">
+    <h2>Hit Songs</h2>
+    <ul>
+        <li>
+            <span>Shawn Mendes, Zedd - Lost In Japan</span>
+            <button onclick="togglePlay('/musicss/english_musics/shawan/Lost In Japan .mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Treat You Better</span>
+            <button onclick="togglePlay('/musicss/english_musics/shawan/Treat You Better.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Shawn Mendes, Camila Cabello - Señorita</span>
+            <button onclick="togglePlay('/musicss/english_musics/shawan/Señorita.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Shawn Mendes, Tainy - Summer Of Love</span>
+            <button onclick="togglePlay('/musicss/english_musics/shawan/Summer Of Love .mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>There_s Nothing Holdin_ Me Back</span>
+            <button onclick="togglePlay('/musicss/english_musics/shawan/There_s Nothing Holdin_ Me Back .mp3', this)">Play</button>
+        </li>
+       
+    </ul>
+</div>
+</div>
+      <div class="container_3">
+                   <button onclick="showMovies()" class="bn">Notable Albums</button>
+                 <div class="container_3">
+        <div class="image-gallary" id="movies">
+        <div class="image-item">
+            <a href="https://youtu.be/oKIT0DkO-ac?si=eTmLSpr1DNwvk7gN">
+            <img src="\musics_pics\english_pic\s.jpg" alt="Roja"></a>
+            <div class="overlay_img">
+            <h3>Shawn Mendes</h3>
+            <h4>Released on25 May 2018 and Labeled by Island</h4>
+        </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/AuvJ7t5ILk8?si=Gd3D1pt-eDu0YpB8">
+            <img src="\musics_pics\english_pic\sa.jpg" alt="Jeans"></a>
+            <div class="overlay_img">
+                <h3>Wonder</h3>
+                <h4>Released in 4 December 2020 and Labeled by Island Records
+                </h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/QiEz1GleIbs?si=CkLJw7AO3N4SR4T4">
+            <img src="\musics_pics\english_pic\han.jpg" alt="Bombay"></a>
+            <div class="overlay_img">
+                <h3>Handwritten</h3>
+                <h4>Released on 14 April 2015 and Labeled by Island</h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/EVJoD4MPh4M?si=OdnRhiMR_ude-NWF">
+            <img src="\musics_pics\english_pic\ilu.jpg" alt="guru"></a>
+            <div class="overlay_img">
+                <h3>Illuminate</h3>
+            <h4>Released on 23 September 2016  <br>and Labeled by Island Records</h4></div>
+        </div>
+       
+
+    </div>
+</div>
+        <script>
+            document.getElementById('detailsButton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='flex';
+            });
+             document.getElementById('closebutton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='none';
+            });
+
+            let currentAudio = null; 
+    let currentButton = null; 
+
+    function togglePlay(file, button) {
+        
+        if (currentAudio) {
+            // Check if the current audio is the same as the new one
+            if (currentAudio.src === new URL(file, window.location.href).href) {
+                if (currentAudio.paused) {
+                    currentAudio.play(); 
+                    button.textContent = 'Pause'; 
+                } else {
+                    currentAudio.pause(); 
+                    button.textContent = 'Play'; 
+                }
+                return; 
+            } else {
+                // Stop the current audio if it's different
+                currentAudio.pause();
+                currentButton.textContent = 'Play'; // Reset the previous button text
+                currentAudio = null;
+                currentButton = null;
+            }
+        }
+
+        // Set up and play the new audio
+        currentAudio = new Audio(file); 
+        currentAudio.play();
+        button.textContent = 'Pause';
+        currentButton = button; 
+
+        // Handle when the audio finishes
+        currentAudio.onended = () => {
+            button.textContent = 'Play'; 
+            currentAudio = null; 
+            currentButton = null; 
+        };
+    }
+         function showMovies() {
+            const movieGallery = document.getElementById("movies");
+            if (movieGallery.style.display === "none" || movieGallery.style.display === "") {
+                movieGallery.style.display = "flex";
+            } else {
+                movieGallery.style.display = "none";
+            }
+        }
+
+        
+        </script>
+    </body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bhasil</title>
+    </head>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+          background: linear-gradient(115deg,#c79a6a,#546461);
+             
+        }
+       
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .background-image{
+            width: 100%;
+            height: 500px;
+        }
+        .btn{
+             position: absolute;
+            bottom: 20px;
+            left: 50%;
+           background-color: transparent;
+            padding: 10px 20px;
+            border:2px solid #f5c46f;
+            color: black;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .btn:hover{
+            background-color: #f5c46f;
+        }
+        .overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+        .overlay-content{
+            background-color: rgba(226, 215, 215, 0.2);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            width: 90%;
+        }
+       
+
+         .container_2 {
+            width: 90%;
+            margin: 40px;
+            padding: 20px;
+            border: 2px solid #f5c46f;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px 0 #f5c46f;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        .hit-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .hit-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .hit-list button {
+            padding: 5px 10px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid #f5c46f;
+            
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .hit-list button:hover {
+            background-color: #f5c46f;
+        }
+      
+        .details,.career,.awards{
+            font-family: 'Monaco',serif;
+            margin: 20px;
+            height: 300px;
+            width: 500px;
+            padding: 20px;
+            font-size: 17px;
+            
+        }
+        .overlay-content h1{
+            color: yellow;
+        }
+        .text-overlay {
+            position: absolute;
+            top: 60%; 
+            left: 30px;
+            color: white; 
+            font-size: 24px; 
+            font-family: Georgia, serif; 
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+        }
+
+ .container_3 {
+     display: flex;
+     flex-direction: column;
+      align-items: center;
+    padding: 10px;
+}
+
+
+.image-gallary {
+    display: none;
+    margin-top: 20px;
+      gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #f5c46f;
+    border-radius: 8px;
+}
+.image-item:hover{
+    box-shadow: 0px 8px 32px 0 #f5c46f;
+}
+
+.image-item img {
+     width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; 
+    
+}
+.image-item img:hover {
+    transform: scale(1.1); /* Optional zoom effect on hover */
+}
+
+
+.overlay_img {
+    position: absolute; 
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: white; 
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-item:hover .overlay_img {
+    opacity: 1; /* Show overlay text on hover */
+}
+.bn{
+    height: 50px;
+    width: 150px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 2px solid #f5c46f;
+    background-color: transparent;
+    border-radius: 50px;
+    color: white;
+    box-shadow: 0 8px 32px 0 #f5c46f;
+}
+.bn:focus{
+    background-color: #f5c46f;
+}
+       strong{
+        color: #f5c46f;
+       }
+
+
+    </style>
+    <body>
+        <div class="container">
+            <img src="\musics_pics\mala_pics\sree.jpeg"class="background-image">
+            <button id="detailsButton" class="btn">show</button>
+             <div class="text-overlay">
+                <h1>  Sreenath Bhasi</h1>
+                <h5>Actor, Singer</h5>
+                </div>
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <div class="details">
+                    <h1>About</h1>
+                    <h3>Birthdate:May 29, 1988</h3>
+                    <h3>Hometown: Kochi, Kerala, India</h3>
+                    <p>Sreenath Bhasi is a versatile Indian actor and singer primarily associated with the Malayalam film industry. Known for his natural acting style and soulful singing, he has gained a reputation as a talented artist capable of portraying diverse roles and delivering memorable performances.</p>
+                    </div>
+                    <div class="career">
+                        <h1>Career Highlights</h1>
+                     <p><strong>Acting Career:</strong> Made his acting debut with Pranayam (2011) and gained fame with roles in films like Da Thadiya, Ustad Hotel, and Jacobinte Swargarajyam.<br><br>
+                 <strong>Playback Singing:</strong> Contributed his vocal talent to songs in films like North 24 Kaatham and Honey Bee.<br><br>
+               <strong>Versatility:</strong> Known for balancing roles across mainstream films and experimental cinema.</p>
+                    </div>
+                    <div class="awards">
+                    <h1>Awards</h1> 
+                        <h4>Best Actor (Special Mention) for his role in Kumbalangi Nights (2019).Kerala State Film Award</h4>
+                        <h4>SIIMA Awards
+Nominated for Best Actor for his performances in various films, including Home (2021).</h4>
+         <h4>Film Critics' Awards
+
+Recognized for his contributions to Malayalam cinema with multiple nominations in the Best Actor category for his diverse roles.</h4>            
+</div>
+                </div>
+         <button id="closebutton" class="btn" >close</button>
+                </div>
+            </div>
+        </div>
+      
+        <div class="container_2">
+    <div class="section hit-list">
+    <h2>Hit Songs</h2>
+    <ul>
+        <li>
+            <span>Full Naked</span>
+            <button onclick="togglePlay('/musicss/malayalam_musics/bhasil/Full Naked.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Jaada _ Aavesham _Jithu Madhavan _Fahadh Faasil _Sushin Shyam_Sreenath Bhasi _Nazriya _Anwar Rasheed</span>
+            <button onclick="togglePlay('/musicss/malayalam_musics/bhasil/Jaada .mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>KozhiPunk Sreenath Bhasi _ Sekhar Menon _ K Satchidanandan</span>
+            <button onclick="togglePlay('/musicss/malayalam_musics/bhasil/KozhiPunk .mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Parudeesa  Bheeshma Parvam _ Mammootty _ Amal Neerad _ Sushin Shyam _ Sreenath Bhasi</span>
+            <button onclick="togglePlay('/musicss/malayalam_musics/bhasil/Parudeesa.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>POGALLEY - SREENATH BHASI</span>
+            <button onclick="togglePlay('/musicss/malayalam_musics/bhasil/POGALLEY.mp3', this)">Play</button>
+        </li>
+       
+    </ul>
+</div>
+</div>
+      <div class="container_3">
+                   <button onclick="showMovies()" class="bn">Notable Albums</button>
+                 <div class="container_3">
+        <div class="image-gallary" id="movies">
+        <div class="image-item">
+            <a href="https://youtu.be/kx8cmiF7Smw?si=h8nL1UhYXcvLo8cv">
+            <img src="\musics_pics\mala_pics\iru.jpg" alt="Roja"></a>
+            <div class="overlay_img">
+            <h3>Iruthala Pakshi</h3>
+            <h4>Released on 23 jun 2023 and Produced by V3K</h4>
+        </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/vUrDqdEYIEg?si=yCMa4IXTJz6ZRfq_">
+            <img src="\musics_pics\mala_pics\sam.jpg" alt="Jeans"></a>
+            <div class="overlay_img">
+                <h3>Kozhi punuku</h3>
+                <h4>Released on 27Sep 2020 and produced by Reethu Zachariah
+                </h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/9ohXRCDqbqo?si=DPmgMMIzokWdesAB">
+            <img src="\musics_pics\mala_pics\pon.jpg" alt="Bombay"></a>
+            <div class="overlay_img">
+                <h3></h3>
+                <h4>Released on 20 jun 2024 and produced by V3k</h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/_AyC1fW8grg?si=MWj3pCfS9xk16cQg">
+            <img src="\musics_pics\mala_pics\mura.jpg" alt="guru"></a>
+            <div class="overlay_img">
+                <h3>Noolilla Karakkam</h3>
+            <h4>Released on 15 oct 2024  and produced by Vinayak Sasikumar.</h4></div>
+        </div>
+       
+
+    </div>
+</div>
+        <script>
+            document.getElementById('detailsButton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='flex';
+            });
+             document.getElementById('closebutton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='none';
+            });
+ let currentAudio = null; 
+    let currentButton = null; 
+
+    function togglePlay(file, button) {
+        
+        if (currentAudio) {
+            // Check if the current audio is the same as the new one
+            if (currentAudio.src === new URL(file, window.location.href).href) {
+                if (currentAudio.paused) {
+                    currentAudio.play(); 
+                    button.textContent = 'Pause'; 
+                } else {
+                    currentAudio.pause(); 
+                    button.textContent = 'Play'; 
+                }
+                return; 
+            } else {
+                // Stop the current audio if it's different
+                currentAudio.pause();
+                currentButton.textContent = 'Play'; // Reset the previous button text
+                currentAudio = null;
+                currentButton = null;
+            }
+        }
+
+        // Set up and play the new audio
+        currentAudio = new Audio(file); 
+        currentAudio.play();
+        button.textContent = 'Pause';
+        currentButton = button; 
+
+        // Handle when the audio finishes
+        currentAudio.onended = () => {
+            button.textContent = 'Play'; 
+            currentAudio = null; 
+            currentButton = null; 
+        };
+    }
+         function showMovies() {
+            const movieGallery = document.getElementById("movies");
+            if (movieGallery.style.display === "none" || movieGallery.style.display === "") {
+                movieGallery.style.display = "flex";
+            } else {
+                movieGallery.style.display = "none";
+            }
+        }
+
+        
+        </script>
+    </body>
+</html>

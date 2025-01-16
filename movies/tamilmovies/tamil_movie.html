@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamil movies</title>
+</head>
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color:#2C2C2C; /* Dark Gray Background */
+    color: #D3D3D3; 
+    }
+.container1{
+   display: grid;
+   grid-template-areas:
+    'one two three four'
+    'five six seven eight';
+    padding: 20px;
+}
+.card {
+    background-color:#b4182d;
+    width: 250px; 
+    box-shadow: 0 4px 8px rgba(224, 221, 43, 0.1);
+    border-radius: 8px;
+    font-size: 12px; 
+    color: #fff;
+    margin: 15px;
+}
+
+.image img {
+    width: 100%;
+    height: 300px;
+}
+
+.details {
+    padding: 10px; /* Reduced padding */
+}
+
+.title {
+    font-size: 16px; /* Reduced title size */
+    margin: 0;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.title span {
+    font-size: 12px; /* Reduced year font size */
+    font-weight: normal;
+    color: #fff;
+}
+
+.genre, .starring, p {
+    margin: 5px 0; /* Reduced margin between lines */
+    line-height: 1.4; /* Adjusted line height for smaller text */
+}
+
+
+.slideshow{
+    position: relative;
+    width: 99%;
+    height: 500px;
+    overflow: hidden;
+    border: 5px solid #FFD700;   
+    border-radius: 8px;
+}
+
+
+.slides{
+  display:flex ;
+  width: 100%;
+  height: 100%;
+   position: absolute;
+    border-radius: 8px;
+  animation: slideshow 15s infinite;
+}
+.slide{
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+.slide img{
+  width: 100%;
+  height: 100%;
+  
+  
+}
+.slideshow:hover{
+    transform: scale(0.99); 
+   box-shadow: 0 6px 12px rgba(218, 198, 22, 0.8);
+}
+
+/* Keyframes for fade-in and fade-out effect */
+@keyframes slideshow {
+    0%, 20% {
+        transform: translateX(0%);
+    }
+    25%, 45% {
+        transform: translateX(-100%);
+    }
+    50%, 70% {
+        transform: translateX(-200%);
+    }
+    75%, 100% {
+        transform: translateX(0%);
+    }
+}
+.card:hover{
+    transform: scale(1.1); /* Enlarge Image on Hover */
+   box-shadow: 0 6px 12px rgba(218, 198, 22, 0.856);
+}
+</style>
+<body>
+  <section class="slideshow">
+<div class="slides">
+  <div class="slide">
+    <a href=" \movies\tamilmovies\remo.html">
+  <img src="\movie_pics\tamimovies_pic\remo.jpg" alt="image1" ></a>
+  </div>
+  <div class="slide">
+  <a href=" \movies\tamilmovies\master.html">
+  <img src="\movie_pics\tamimovies_pic\master.jpg" alt="image1"></a>
+  </div>
+  <div class="slide">
+  <a href=" \movies\tamilmovies\jailer.html">
+  <img src="\movie_pics\tamimovies_pic\jaii.jpg" alt="image1"></a>
+</div>
+
+</div>
+</section>
+  <br>
+  <div class="container1">
+  <div class="card" style="grid-area: one;">
+        <div class="image">
+          <a href=" \movies\tamilmovies\bigil.html">
+            <img src="\movie_pics\tamimovies_pic\bigil.jpg" alt="Movie Image"  ></a>
+        </div>
+        <div class="details">
+            <h1 class="title"> Bigil <span>2019</span></h1>
+            <p class="genre"><strong>Genre:</strong> Action, Drama, Sports</p>
+            <p><strong>Directed by:</strong> Atlee</p>
+            <p><strong>Written by:</strong> Atlee</p>
+            <p><strong>Produced by:</strong> Listen Stephen,Kalpathi Aghoram</p>
+            <p class="starring"><strong>Starring:</strong>Vijay,Nayanthara,Jackie,Kathir</p>  
+        </div>
+        </div>
+        <div class="card" style="grid-area: two;">
+        <div class="image">
+             <a href=" \movies\tamilmovies\okk.html">
+            <img src="\movie_pics\tamimovies_pic\ok kanmani.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">O Kadhal Kanmani <span>2015</span></h1>
+            <p class="genre"><strong>Genre:</strong> Romance,Drama</p>
+            <p><strong>Directed by:</strong> Mani Ratnam</p>
+            <p><strong>Written by:</strong> Mani Ratnam</p>
+            <p><strong>Produced by:</strong>Mani Ratnam</p>
+            <p class="starring"><strong>Starring:</strong> Dulquer Salmaan,Nithya Menen,PrakashRaj,Leela Samson</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: three;">
+        <div class="image">
+           <a href=" \movies\tamilmovies\vikram.html">
+            <img src="\movie_pics\tamimovies_pic\vikram.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Vikram <span>2022</span></h1>
+            <p class="genre"><strong>Genre:</strong> Action,thriller</p>
+            <p><strong>Directed by:</strong>Lokesh Kanagaraj</p>
+            <p><strong>Written by:</strong> Lokesh Kanagaraj</p>
+            <p><strong>Produced by:</strong> Kamal Films International</p>
+            <p class="starring"><strong>Starring:</strong>Kamal Hassan,Vijay Sethupathi,Fahad Faasil</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: four;">
+        <div class="image">
+            <a href=" \movies\tamilmovies\jackson.html">
+            <img src="\movie_pics\tamimovies_pic\jaksan durai.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Jackson Durai <span>2016</span></h1>
+            <p class="genre"><strong>Genre:</strong> Horror,Comedy</p>
+            <p><strong>Directed by:</strong> Dharani Dharan</p>
+            <p><strong>Written by:</strong> Dharani Dharan</p>
+            <p><strong>Produced by:</strong>Sri Green Production</p>
+            <p class="starring"><strong>Starring:</strong> Sathyaraj,Sibirai,Bindhu Madhavi,Yogi Babu</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: five;">
+        <div class="image">
+            <a href=" \movies\tamilmovies\nanban.html">
+            <img src="\movie_pics\tamimovies_pic\nanban.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Nanban <span>2012</span></h1>
+            <p class="genre"><strong>Genre:</strong> Commedy, Drama</p>
+            <p><strong>Directed by:</strong> Shankar</p>
+            <p><strong>Written by:</strong> Amal Neerad</p>
+            <p><strong>Produced by:</strong> Gemini Film Circuit</p>
+            <p class="starring"><strong>Starring:</strong>Vijay,Illeana,Srikanth,Jiva</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: six;">
+        <div class="image">
+            <a href=" \movies\tamilmovies\imn.html">
+            <img src="\movie_pics\tamimovies_pic\imaika nodigal.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Imaikkaa Nodigal <span>2018</span></h1>
+            <p class="genre"><strong>Genre:</strong> Crime, Thriller</p>
+            <p><strong>Directed by:</strong> R.Ajay Gnanamuthu</p>
+            <p><strong>Written by:</strong> R.Ajay Gnanamuthu</p>
+            <p><strong>Produced by:</strong> C.J jayaKumar</p>
+            <p class="starring"><strong>Starring:</strong> Vijay Sethupathi,Nayanthara,Atharvaa,Raashii Khanna</p>
+        </div>
+    </div>
+     <div class="card" style="grid-area: seven;">
+        <div class="image">
+            <a href=" \movies\tamilmovies\96.html">
+            <img src="\movie_pics\tamimovies_pic\96.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">96 <span>2018</span></h1>
+            <p class="genre"><strong>Genre:</strong> Romance, Drama</p>
+            <p><strong>Directed by:</strong> C.PremKumar</p>
+            <p><strong>Written by:</strong> C.PremKumar</p>
+            <p><strong>Produced by:</strong>Madras Enterprises</p>
+            <p class="starring"><strong>Starring:</strong>Vijay Sethupathi,Trisha Krishnan</p>
+        </div>
+    </div>
+     <div class="card" style="grid-area: eight;">
+        <div class="image">
+            <a href=" \movies\tamilmovies\fir.html">
+            <img src="\movie_pics\tamimovies_pic\fir.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">FIR(Faizal Ibrahim Raiz)<span>2022</span></h1>
+            <p class="genre"><strong>Genre:</strong> Action,Thriller</p>
+            <p><strong>Directed by:</strong>Manu Anand</p>
+            <p><strong>Written by:</strong> Manu Anand</p>
+            <p><strong>Produced by:</strong> Vishnu Vishal</p>
+            <p class="starring"><strong>Starring:</strong>Vishnu Vishal,Gautham Vasudev Menon,Manjima,Raiza</p>
+        </div>
+    </div>
+    </div>
+    <script>
+     function goToMoviePage(url) {
+    window.location.href = url; // Navigates to the specific movie page
+}
+
+</script>
+</body>
+
+</html>

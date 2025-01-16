@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP page</title>
+</head>
+<style>
+    *{
+        background-color: wheat;
+    }
+    .container{
+    border: 2px solid black ;
+    height: 100px;
+    width: 200px;
+    padding: 25px;
+    border-radius: 40px;
+    border-color: rgb(129, 8, 24);
+    margin: 100px;
+  }
+  .container:hover{
+    border-color: rgb(170, 34, 46);
+    }
+.input{
+    height: 20px;
+    width: 150px;
+    margin: 12px;
+    border-radius: 15px;
+  }
+  #btn{
+      margin: 12px;
+      border-radius: 10px;
+  }
+  #btn:hover{
+      border-color: rgb(73, 3, 12);
+  }
+</style>
+<body>
+    <center>
+    <h1>OTP VERFICATION</h1>
+    <div class="container">
+    <input type="text" class="input" id="otp">
+    <br>
+    <button id="btn" onclick="OTPverification()">verify</button>
+    <button id="btn" onclick="resendOTP()">Resend OTP</button>
+    <br>
+    <p id="error" style="color: red;"></p>
+    </div>
+    </center>
+    <script>
+        var GeneratedOTP=Math.floor(Math.random()*999999)
+        alert(GeneratedOTP)
+        function OTPverification(){
+            var EnteredOTP=document.getElementById("otp").value
+            if(GeneratedOTP==EnteredOTP){
+                window.location.href="home.html"
+            }
+            else{
+                document.getElementById("error").innerHTML="*INCORRECT OTP*"
+            }
+        }
+         function resendOTP(){
+                 window.location.href="otp.html"
+         }
+    </script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ani</title>
+    </head>
+    <style>
+       body{
+            margin: 0;
+            padding: 0;
+          background: linear-gradient(135deg, #a86400, #e68d18);
+             animation: gradientBG 10s ease infinite; 
+        }
+       
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .background-image{
+            width: 100%;
+            height: 500px;
+        }
+        .btn{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+           background-color: transparent;
+            padding: 10px 20px;
+            border:2px solid #a86400;
+            color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .btn:hover{
+            background-color: #a86400;
+        }
+        .overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+        .overlay-content{
+            background-color: rgba(226, 215, 215, 0.2);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            width: 90%;
+        }
+        
+
+         .container_2 {
+            width: 90%;
+            margin: 40px;
+            padding: 20px;
+            border: 2px solid #6f6260;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px 0 #999898 ;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        .hit-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .hit-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .hit-list button {
+            padding: 5px 10px;
+            background-color: transparent;
+            color: white;
+            border:2px solid #6f6260;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .hit-list button:hover {
+            background-color: #6f6260;
+        }
+      
+        .details,.career,.awards{
+            font-family: 'Monaco',serif;
+            margin: 20px;
+            height: 300px;
+            width: 500px;
+            padding: 20px;
+            font-size: 17px;
+            
+        }
+        .overlay-content h1{
+            color: yellow;
+        }
+        .text-overlay {
+            position: absolute;
+            top: 60%; 
+            left: 30px;
+            color: white; 
+            font-size: 24px; 
+            font-family: Georgia, serif; 
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+        }
+
+ .container_3 {
+     display: flex;
+     flex-direction: column;
+      align-items: center;
+    padding: 10px;
+}
+
+
+.image-gallary {
+    display: none;
+    margin-top: 20px;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #305268;
+    border-radius: 8px;
+}
+.image-item:hover{
+ box-shadow: 0 8px 32px 0 #305268;
+}
+
+.image-item img {
+     width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; 
+    
+}
+.image-item img:hover {
+    transform: scale(1.1); /* Optional zoom effect on hover */
+}
+
+
+.overlay_img {
+    position: absolute; 
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: white; 
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-item:hover .overlay_img {
+    opacity: 1; /* Show overlay text on hover */
+}
+.bn{
+    height: 50px;
+    width: 150px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 2px solid #305268;
+    background-color: transparent;
+    border-radius: 50px;
+    color: white;
+    box-shadow: 0 8px 32px 0 #305268;
+}
+.bn:focus{
+    background-color:#6f6260 ;
+}
+       strong{
+        color:#e68d18;
+       }
+
+
+    </style>
+    <body>
+        <div class="container">
+            <img src="\musics_pics\tamil_pics\ani.jpeg"class="background-image">
+            <div class="text-overlay">
+                <h1>Anirudh Ravichander</h1>
+                <h5>Indian Music Composer, Singer, and Producer</h5>
+            </div>
+            <button id="detailsButton" class="btn">show</button>
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <div class="details">
+                    <h1>About</h1>
+                    <h3>Birthdate: October 16, 1990 </h3>
+                    <h3>Hometown: Chennai, Tamil Nadu, India</h3>
+                    <p> He is an Indian film composer and singer. He made his debut in the Tamil film Name 3,His subsequent albums have all become commercial successes and he has won acclaim from critics for his soundtrack music and background recordings.</p>
+                    </div>
+                    <div class="career">
+                        <h1>Carrer Highlights</h1>
+                        <p><strong>Breakthrough:</strong> Gained international fame with the viral hit "Why This Kolaveri Di" from 3 (2012).<br><br>
+                   <strong>Film Music:</strong> Composed chart-topping tracks for Tamil blockbusters such as Vedalam, Kaththi, Master, and Jailer.<br><br>
+              <strong>Singing:</strong> Known for his versatile singing in hit tracks like "Selfie Pulla," "Chellamma," and "Arabic Kuthu."</p>
+                    </div>
+                    <div class="awards">
+                    <h1>Awards</h1> 
+                        <h4>Numerous Filmfare Awards for Best Music Director.</h4>
+                        <h4>Multiple SIIMA Awards and Vijay Awards for his outstanding compositions.</h4>
+                        <h4>Recognized as one of the youngest composers to achieve pan-Indian fame</h4>
+                    </div>
+                </div>
+         <button id="closebutton" class="btn" >close</button>
+                </div>
+            </div>
+        </div>
+      
+        <div class="container_2">
+    <div class="section hit-list">
+    <h2>Hit Songs</h2>
+    <ul>
+        <li>
+            <span>Chellamma</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/Ani/Chellamma.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Dippam</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/Ani/Dippam.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Ethir_Neechal</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/Ani/Ethir_Neechal.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Naan_Pizai</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/Ani/Naan_Pizai.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>So_Baby</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/Ani/So_Baby.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Un_Vizhigalil</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/Ani/Un_Vizhigalil.mp3', this)">Play</button>
+        </li>
+    </ul>
+</div>
+</div>
+       <div class="container_3">
+                   <button onclick="showMovies()" class="bn">Notable Albums</button>       
+        <div class="image-gallary" id="movies">
+        <div class="image-item">
+            <a href="https://youtu.be/FQJVmwaeOBk?si=OYeqZ4MgWRELRepc">
+            <img src="\musics_pics\tamil_pics\3.jpg" alt="3"></a>
+            <div class="overlay_img">
+            <h3>3</h3>
+            <h4>Released on 23 Dec 2011 and <br>directed by Aishwaryaa R.</h4>
+        </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/dPOCK6idSaQ?si=rNvd2AuxDhBKZkxo">
+            <img src="\musics_pics\tamil_pics\ja.jpg" alt="jawan"></a>
+            <div class="overlay_img">
+                <h3>Jawan</h3>
+                <h4>Released in 5 Sep 2023 and directed by Atlee
+                </h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/6sDSZwH2EpM?si=j4OF5PXWC6vC2vwZ">
+            <img src="\musics_pics\tamil_pics\gang.jpg" alt="gang"></a>
+            <div class="overlay_img">
+                <h3>Gang Leader</h3>
+                <h4>Released on 13 Sep 2019 and<br> directed by Vikram Kumar.</h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/3opHKmcdImQ?si=0LIFKAxdw8nIFe2N">
+            <img src="\musics_pics\tamil_pics\ethir.jpg" alt="Ethir"></a>
+            <div class="overlay_img">
+                <h3>Ethir Neechal </h3>
+            <h4>Released on 1 May 2013  and <br>directed by <br>R.S.Durai Senthilkumar.</h4></div>
+        </div>
+    </div>
+
+
+        <script>
+            document.getElementById('detailsButton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='flex';
+            });
+             document.getElementById('closebutton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='none';
+            });
+
+            let currentAudio = null;  // Current playing audio
+    let currentButton = null; // Button associated with the current audio
+
+    function togglePlay(file, button) {
+        // If the same song is clicked again, stop it
+        if (currentAudio && currentAudio.src.includes(file)) {
+            if (!currentAudio.paused) {
+                currentAudio.pause();
+                button.textContent = 'Play'; // Change button text to "Play"
+            } else {
+                currentAudio.play();
+                button.textContent = 'Pause'; // Change button text to "Pause"
+            }
+        } else {
+            // Stop the previous song if playing
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+                currentButton.textContent = 'Play'; // Reset previous button text
+            }
+
+            // Play the new song
+            currentAudio = new Audio(file);
+            currentAudio.play();
+            button.textContent = 'Pause'; 
+            currentButton = button; 
+        }
+    }
+         function showMovies() {
+            const movieGallery = document.getElementById("movies");
+            if (movieGallery.style.display === "none" || movieGallery.style.display === "") {
+                movieGallery.style.display = "flex";
+            } else {
+                movieGallery.style.display = "none";
+                console.log("images not visible")
+            }
+        }
+
+        
+        </script>
+    </body>
+</html>

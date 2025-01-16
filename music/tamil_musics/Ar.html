@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ARR</title>
+    </head>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+          background: linear-gradient(105deg, #999898, #121212);
+             
+        }
+       
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .background-image{
+            width: 100%;
+            height: 500px;
+        }
+        .btn{
+            position: absolute;
+           bottom: 15px;
+            left: 50%;
+            padding: 10px 20px;
+            color: #fff;
+            background-color:transparent;
+            border:2px solid #fff;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .btn:hover{
+            background-color: #999898;
+        }
+        .overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+        .overlay-content{
+            background-color: rgba(226, 215, 215, 0.2);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            width: 90%;
+        }
+       
+
+         .container_2 {
+            width: 90%;
+            margin: 40px;
+            padding: 20px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px 0 #999898;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        .hit-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .hit-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .hit-list button {
+            padding: 5px 10px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid #999898;
+            
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .hit-list button:hover {
+            background-color: #999898;
+        }
+      
+        .details,.career,.awards{
+            font-family: 'Monaco',serif;
+            margin: 20px;
+            height: 300px;
+            width: 500px;
+            padding: 20px;
+            font-size: 17px;
+            
+        }
+        .overlay-content h1{
+            color: yellow;
+        }
+        .text-overlay {
+            position: absolute;
+            top: 60%; 
+            left: 30px;
+            color: white; 
+            font-size: 24px; 
+            font-family: Georgia, serif; 
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+        }
+
+ .container_3 {
+     display: flex;
+     flex-direction: column;
+      align-items: center;
+    padding: 10px;
+}
+
+
+.image-gallary {
+    display: none;
+    margin-top: 20px;
+      gap:50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    border-radius: 8px;
+    
+}
+.image-item:hover {
+     box-shadow: 0 8px 32px 0 white;
+}
+
+.image-item img {
+     width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-item img:hover {
+    transform: scale(1.1); 
+}
+
+.overlay_img {
+    position: absolute; 
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    color: white; 
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-item:hover .overlay_img {
+    opacity: 1; 
+}
+.bn{
+    height: 50px;
+    width: 150px;
+    font-family: inherit;
+    background-color: transparent;
+    font-size: 18px;
+    border: 3px solid #999898;
+    border-radius: 50px;
+     box-shadow: 0 8px 32px 0 #999898;
+}
+.bn:focus{
+    background-color: #999898;
+}
+       strong{
+        color:red;
+       }
+
+    </style>
+    <body>
+        <div class="container">
+            <img src="\musics_pics\tamil_pics\arr.jpg"class="background-image">
+            <div class="text-overlay">
+                <h1>AR RAHMAN - Indian Music Composer</h1>
+                <h5>Indian Music Composer, Singer, and Producer</h5>
+                
+                </div>
+            <button id="detailsButton" class="btn">show</button>
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <div class="details">
+                    <h1> A.R. Rahman</h1>
+                    <h3>Birthdate: January 6, 1967</h3>
+                    <h3>Hometown: Chennai, Tamil Nadu, India</h3>
+                    <p>A.R. Rahman, famously known as the "Mozart of Madras",is an internationally acclaimed Indian composer, music director, and record producer. Renowned for his unique blend of traditional Indian music and modern orchestral arrangements, Rahman has revolutionized the Indian music industry.</p>
+                    </div>
+                    <div class="career">
+                        <h1>Career Highlights</h1>
+                     <p><strong>Indian Cinema:</strong> Achieved fame with Roja (1992) and delivered iconic soundtracks for films like Bombay, Dil Se, and Lagaan.<br><br>
+                   <strong> Global Reach:</strong> Won two Academy Awards for Slumdog Millionaire and worked on international projects like 127 Hours and Bombay Dreams.<br><br>
+                    <strong> Collaborations:</strong> Partnered with global artists such as Mick Jagger and Michael Jackson, elevating Indian music globally.</p>
+                    </div>
+                    <div class="awards">
+                    <h1>Awards</h1> 
+                        <h4>6 National Film Awards</h4>
+                        <h4>2 Academy Awards</h4>
+                        <h4>2 Grammy Awards</h4>
+                        <h4>1 BAFTA Award</h4>
+                        <h4>1 Golden Globe Award</h4>
+                    </div>
+                </div>
+         <button id="closebutton" class="btn" >close</button>
+                </div>
+            </div>
+        </div>
+      
+        <div class="container_2">
+    <div class="section hit-list">
+    <h2>Hit Songs</h2>
+    <ul>
+        <li>
+            <span>Song 1</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/arr/Alaipayuthey.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Song 2</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/arr/Anbe_Anbe_kollathey__[SamaDada.Com].mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Song 3</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/arr/Ennodu_Nee_Irundhal_Reprise_[SamaDada.Com].mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Song 4</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/arr/Kadhal_Rojave_Bit.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Song 5</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/arr/Mustafa_Mustafa.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Song 6</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/arr/Romeo_Aatam_Potal.mp3', this)">Play</button>
+        </li>
+    </ul>
+</div>
+</div>
+      <div class="container_3">
+                   <button onclick="showMovies()" class="bn">Notable Albums</button>
+                 <div class="container_3">
+        <div class="image-gallary" id="movies">
+        <div class="image-item">
+            <a href="https://youtu.be/fCYUWWE8wrs?si=5Hzoxioo1mQTzlPI">
+            <img src="\musics_pics\tamil_pics\roja.jpg" alt="Roja"></a>
+            <div class="overlay_img">
+            <h3>Roja</h3>
+            <h4>Released on 15 August 1992 and directed by Mani Ratnam.</h4>
+        </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/S6ttB_L7T3w?si=3ptFJBYAI_-Qycc2">
+            <img src="\musics_pics\tamil_pics\slum.jpg" alt="Jeans"></a>
+            <div class="overlay_img">
+                <h3>Slumdog Millionaire</h3>
+                <h4>Release in United Kingdom on 9 January 2009, in India on 23 January 2009 and
+                    directed by  Danny Boyle
+                </h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/k2-a08fL000?si=PbAWVyECT7jxgQ1C">
+            <img src="\musics_pics\tamil_pics\bombay.jpg" alt="Bombay"></a>
+            <div class="overlay_img">
+                <h3>Bombay</h3>
+                <h4>Released on 11 March 1995 and directed by Mani Ratnam.</h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/TlWLo29LBdo?si=ZXfMjHtVuksjP1OR">
+            <img src="\musics_pics\tamil_pics\gu.jpg" alt="guru"></a>
+            <div class="overlay_img">
+                <h3>Guru</h3>
+            <h4>Released on 12 January 2007  and directed by Mani Ratnam.</h4></div>
+        </div>
+    </div>
+</div>
+
+
+        <script>
+            document.getElementById('detailsButton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='flex';
+            });
+             document.getElementById('closebutton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='none';
+            });
+
+            let currentAudio = null;  // Current playing audio
+    let currentButton = null; // Button associated with the current audio
+
+    function togglePlay(file, button) {
+        // If the same song is clicked again, stop it
+        if (currentAudio && currentAudio.src.includes(file)) {
+            if (!currentAudio.paused) {
+                currentAudio.pause();
+                button.textContent = 'Play'; // Change button text to "Play"
+            } else {
+                currentAudio.play();
+                button.textContent = 'Pause'; // Change button text to "Pause"
+            }
+        } else {
+            // Stop the previous song if playing
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+                currentButton.textContent = 'Play'; // Reset previous button text
+            }
+
+            // Play the new song
+            currentAudio = new Audio(file);
+            currentAudio.play();
+            button.textContent = 'Pause'; 
+            currentButton = button; 
+        }
+    }
+         function showMovies() {
+            const movieGallery = document.getElementById("movies");
+            if (movieGallery.style.display === "none" || movieGallery.style.display === "") {
+                movieGallery.style.display = "flex";
+            } else {
+                movieGallery.style.display = "none";
+                console.log("images not visible")
+            }
+        }
+
+        
+        </script>
+    </body>
+</html>

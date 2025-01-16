@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hiridayam</title>
+</head>
+<style>
+     body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #252c37; 
+    
+}
+.container1{
+   display: grid;
+   grid-template-areas:
+    'one three two eight'
+    'four five six seven'
+    ;
+    padding: 20px;
+}
+.card {
+    background-color:#732449;
+    width: 250px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 12px; 
+    color: #fff;
+    margin: 15px;
+}
+
+.image img {
+    width: 100%;
+    height: 300px;
+}
+
+.details {
+    padding: 10px; /* Reduced padding */
+}
+
+.title {
+    font-size: 16px; /* Reduced title size */
+    margin: 0;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.title span {
+    font-size: 12px; /* Reduced year font size */
+    font-weight: bold;
+    color: #fff;
+}
+
+.genre, .starring, p {
+    margin: 5px 0; /* Reduced margin between lines */
+    line-height: 1.4; /* Adjusted line height for smaller text */
+}
+.movie-image img{
+    height: 400px;
+    width: 700px;
+}
+
+/* Movie Section */
+header {
+    background-color: #732449;
+    color: #FFFFFF; 
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    border-bottom: 3px solid #ffd700;
+}
+
+.movie-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.movie-image {
+    width: 40%;
+    height: 350px;
+    border: 5px solid #ffd700;
+    border-radius: 10px;
+    
+   transition: transform 0.3s ease
+}
+.movie-image:hover{
+   transform: scale(1.1); /* Enlarge Image on Hover */
+box-shadow: 0 8px 16px #ffd700; /* Glow Effect */
+}
+
+.movie-details {
+    width: 50%;
+    background-color: #732449; 
+    padding: 20px;
+    border-radius: 10px;
+    color: #FFF;
+    font-family: inherit;
+}
+.movie-details h1{
+    color: #ffd700;
+}
+
+/* Buttons */
+button {
+    background-color: #ffd700;
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button a{
+    text-decoration: none;
+}
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px #ffd700;/* Glow Effect */
+   
+}
+.card:hover{
+   transform: scale(1.05);
+    box-shadow: 0 8px 16px #ffd700;
+}
+</style>
+<body>
+<header>Retro Cinema</header>
+    <div class="movie-container">
+        <img src="\movie_pics\malayalam_pic\hir.jpg" alt="Movie Poster" class="movie-image">
+        <div class="movie-details">
+            <h1>Hridayam</h1>
+            <h4>Release Date: 21 January 2022</h4>
+            <h4>Director: Vineeth Sreenivasan</h4>
+            <p>The film was lauded for its relatable narrative, heartwarming performances, and vibrant music by Hesham Abdul Wahab, with songs like "Darshana" becoming especially popular. Hridayam resonated with audiences for its nostalgic portrayal of college days, friendships, and the bittersweet nature of love. It was both a commercial and critical success, celebrated for its emotional depth and realistic depiction of life's ups and downs.
+            </p>
+            <button>
+                <a href="https://youtu.be/48tqyDA5Sb0?si=ucFldB4276YtW5QA">Watch Now</a>
+            </button>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+   <div class="container1">
+  <div class="card" style="grid-area: one;">
+        <div class="image">
+          <a href=" \movies\malayalam_movies\trance.html">
+            <img src="\movie_pics\malayalam_pic\trance.jpg" alt="Movie Image"  ></a>
+        </div>
+        <div class="details">
+            <h1 class="title"> Trance <span>2020</span></h1>
+            <p class="genre"><strong>Genre:</strong> Psychological,Thriller</p>
+            <p><strong>Directed by:</strong> Anwar Rasheed</p>
+            <p><strong>Written by:</strong> Vincent Vadakkan</p>
+            <p><strong>Produced by:</strong> Anwar Rasheed Entertainments</p>
+            <p class="starring"><strong>Starring:</strong>Fahaddh Faasil,Gautham Vasudev Menon,Nazriya Nazim</p>  
+        </div>
+        </div>
+        <div class="card" style="grid-area: two;">
+        <div class="image">
+             <a href=" \movies\malayalam_movies\charlie.html">
+            <img src="\movie_pics\malayalam_pic\pic1.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Charlie<span>2015</span></h1>
+            <p class="genre"><strong>Genre:</strong> Adventures, Drama</p>
+            <p><strong>Directed by:</strong> Martin Prakkat</p>
+            <p><strong>Written by:</strong> Unni R</p>
+            <p><strong>Produced by:</strong> Finding Cinema</p>
+            <p class="starring"><strong>Starring:</strong> Dulqur Salmaan,Parvathy, Aparna Gopinath,Nedumudi Venu</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: three;">
+        <div class="image">
+             <a href=" \movies\malayalam_movies\bheesha.html">
+            <img src="\movie_pics\malayalam_pic\bheesh.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Bheeshma Parvam <span>2022</span></h1>
+            <p class="genre"><strong>Genre:</strong> Crime, Drama, Mystery</p>
+            <p><strong>Directed by:</strong> Amal Neerad</p>
+            <p><strong>Written by:</strong> Amal Neerad</p>
+            <p><strong>Produced by:</strong> Amal Neerad Productions</p>
+            <p class="starring"><strong>Starring:</strong> Mammootty, Soubin Shahir, Shine Tom Chacko, Dileesh Pothan</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: four;">
+        <div class="image">
+             <a href=" \movies\malayalam_movies\2018.html">
+            <img src="\movie_pics\malayalam_pic\2018.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">2018 <span>2023</span></h1>
+            <p class="genre"><strong>Genre:</strong> Surival, Thriller</p>
+            <p><strong>Directed by:</strong> Jude Anthany Joseph</p>
+            <p><strong>Written by:</strong> Akhil p. Dharmajan</p>
+            <p><strong>Produced by:</strong> Kvya Film Company</p>
+            <p class="starring"><strong>Starring:</strong>Tovino Thomas,Asif Ali,Kunchacko Bohan,Narain</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: five;">
+        <div class="image">
+             <a href=" \movies\malayalam_movies\ishq.html">
+            <img src="\movie_pics\malayalam_pic\2.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Ishq<span>2019</span></h1>
+            <p class="genre"><strong>Genre:</strong> Romance</p>
+            <p><strong>Directed by:</strong> Anuraj Manohar</p>
+            <p><strong>Written by:</strong> Ratheesh Ravi</p>
+            <p><strong>Produced by:</strong> AVA Productions</p>
+            <p class="starring"><strong>Starring:</strong>Shane Nigam, Ann Sheetal, Shine Tom Chacko</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: six;">
+        <div class="image">
+             <a href=" \movies\malayalam_movies\super.html">
+            <img src="\movie_pics\malayalam_pic\3.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Super Sharanya <span>2023</span></h1>
+            <p class="genre"><strong>Genre:</strong> Comedy</p>
+            <p><strong>Directed by:</strong> Girish A.D</p>
+            <p><strong>Written by:</strong> Girish A.D</p>
+            <p><strong>Produced by:</strong> Shebin Backer Productions</p>
+            <p class="starring"><strong>Starring:</strong>Anaswara Rajan,Arjun Ashokan,Mamitha Baiju</p>
+        </div>
+    </div>
+     <div class="card" style="grid-area: seven;">
+        <div class="image">
+             <a href=" \movies\malayalam_movies\premalu.html">
+            <img src="\movie_pics\malayalam_pic\4.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Premalu <span>2024</span></h1>
+            <p class="genre"><strong>Genre:</strong> Comedy, Romantic</p>
+            <p><strong>Directed by:</strong> Girish A.D</p>
+            <p><strong>Written by:</strong> Kiran Josey</p>
+            <p><strong>Produced by:</strong> Bhavana Studios</p>
+            <p class="starring"><strong>Starring:</strong> Naslen K.Gafoor,Mamitha Baiju</p>
+        </div>
+    </div>
+     <div class="card" style="grid-area: eight;">
+        <div class="image">
+             <a href=" \movies\malayalam_movies\athiran.html">
+            <img src="\movie_pics\malayalam_pic\athiran.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Athiran <span>2019</span></h1>
+            <p class="genre"><strong>Genre:</strong> Psychological,Thriller</p>
+            <p><strong>Directed by:</strong>Vivek</p>
+            <p><strong>Written by:</strong>Vivek</p>
+            <p><strong>Produced by:</strong> Amal Neerad Productions</p>
+            <p class="starring"><strong>Starring:</strong> Sai Pallavi,Fahadh Faasil,Atul kulkarni,Renji Panicker</p>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

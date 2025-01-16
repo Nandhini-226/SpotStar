@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dua</title>
+    </head>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+          background: linear-gradient(115deg,  #024560, #241e1e);
+             
+        }
+       
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .background-image{
+            width: 100%;
+            height: 500px;
+        }
+        .btn{
+             position: absolute;
+            bottom: 20px;
+            left: 50%;
+           background-color: transparent;
+            padding: 10px 20px;
+            border:2px solid #305268;
+            color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .btn:hover{
+            background-color: #305268;
+        }
+        .overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+        .overlay-content{
+            background-color: rgba(226, 215, 215, 0.2);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            width: 90%;
+        }
+        .overlay .button{
+            background-color: #305268;
+        }
+
+         .container_2 {
+            width: 90%;
+            margin: 40px;
+            padding: 20px;
+            border: 2px solid #305268;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px 0 #305268;
+        }
+        
+        .section {
+            color: white;
+            margin-bottom: 40px;
+        }
+        .hit-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .hit-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            color: white;
+            margin: 10px 0;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .hit-list button {
+            padding: 5px 10px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid #305268;
+            
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .hit-list button:hover {
+            background-color: #305268;
+        }
+      
+        .details,.career,.awards{
+            font-family: 'Monaco',serif;
+            margin: 20px;
+            height: 300px;
+            width: 500px;
+            padding: 20px;
+            font-size: 17px;
+            
+        }
+        .overlay-content h1{
+            color: yellow;
+        }
+        .text-overlay {
+            position: absolute;
+            top: 60%; 
+            left: 30px;
+            color: white; 
+            font-size: 24px; 
+            font-family: Georgia, serif; 
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+        }
+
+ .container_3 {
+     display: flex;
+     flex-direction: column;
+      align-items: center;
+    padding: 10px;
+}
+
+
+.image-gallary {
+    display: none;
+    margin-top: 20px;
+      gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #679db3;
+    border-radius: 8px;
+}
+.image-item:hover {
+     box-shadow: 0 8px 32px 0 #679db3;
+}
+
+.image-item img {
+     width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; 
+    
+}
+.image-item img:hover {
+    transform: scale(1.1); /* Optional zoom effect on hover */
+}
+
+
+.overlay_img {
+    position: absolute; 
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: white; 
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-item:hover .overlay_img {
+    opacity: 1; /* Show overlay text on hover */
+}
+.bn{
+    height: 50px;
+    width: 150px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 2px solid #305268;
+    background-color: transparent;
+    border-radius: 50px;
+    color: white;
+    box-shadow: 0 8px 32px 0 #305268;
+}
+.bn:focus{
+    background-color: #305268;
+}
+       strong{
+        color:#679db3;
+       }
+
+
+    </style>
+    <body>
+        <div class="container">
+            <img src="\musics_pics\english_pic\lipa.jpg"class="background-image">
+            <button id="detailsButton" class="btn">show</button>
+             <div class="text-overlay">
+                <h1>Dua Lipa</h1>
+                <h5> Singer, Songwriter, Model</h5>
+                </div>
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <div class="details">
+                    <h1>About</h1>
+                    <h3>Birthdate: August 22, 19957</h3>
+                    <h3>Hometown: London, England</h3>
+                    <p>Dua Lipa is a British singer and songwriter who became one of the biggest pop stars of her generation with her powerful voice, catchy hits, and bold fashion sense. Known for her deep, sultry vocals and innovative music, she quickly rose to fame and established herself as a pop music icon.</p>
+                    </div>
+                    <div class="career">
+                        <h1>Career Highlights</h1>
+                     <p><strong>Breakthrough:</strong>
+                        Debut self-titled album Dua Lipa (2017) featured global hits like New Rules, earning her critical acclaim and commercial success.<br><br>
+                        <strong> Chart-Topping Success:</strong>
+Future Nostalgia (2020): A game-changing album that included massive hits like Don't Start Now and Physical, solidifying her pop dominance.</p>
+                    </div>
+                    <div class="awards">
+                    <h1>Achievements</h1> 
+                        <h4>Won Grammy Awards for Best New Artist (2019) and Best Pop Vocal Album (2021).</h4>
+                        <h4>Known for her stylish music videos and boundary-pushing collaborations.</h4>
+                    </div>
+                </div>
+         <button id="closebutton" class="btn" >close</button>
+                </div>
+            </div>
+        </div>
+      
+        <div class="container_2">
+    <div class="section hit-list">
+    <h2>Hit Songs</h2>
+    <ul>
+        <li>
+            <span>Dua Lipa - Break My Heart</span>
+            <button onclick="togglePlay('/musicss/english_musics/dua/Dua Lipa  .mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Dua Lipa - Levitating Featuring DaBaby</span>
+            <button onclick="togglePlay('/musicss/english_musics/dua/Dua Lipa .mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Dua Lipa, Angèle - Fever</span>
+            <button onclick="togglePlay('/musicss/english_musics/dua/Fever .mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>One Kiss - Calvin Harris, Dua Lipa (Lyrics) _ Sean Paul, Sia, Justin Bieber,...</span>
+            <button onclick="togglePlay('/musicss/english_musics/dua/One Kiss  .mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Sean Paul - No Lie ft. Dua Lipa</span>
+            <button onclick="togglePlay('/musicss/english_musics/dua/No Lie .mp3', this)">Play</button>
+        </li>
+       
+    </ul>
+</div>
+</div>
+      <div class="container_3">
+                   <button onclick="showMovies()" class="bn">Notable Albums</button>
+                 <div class="container_3">
+        <div class="image-gallary" id="movies">
+        <div class="image-item">
+            <a href="https://youtu.be/8EJ-vZyBzOQ?si=XPDA-9VPkzdVQYCn">
+            <img src="\musics_pics\english_pic\d.jpg" alt="Roja"></a>
+            <div class="overlay_img">
+            <h3>Future Nostalgia</h3>
+            <h4>Released on 27 March 2020 and Labeled Warner Records</h4>
+        </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/k2qgadSvNyU?si=BsMnNwzl0d34ckG2">
+            <img src="\musics_pics\english_pic\du.jpg" alt="dua"></a>
+            <div class="overlay_img">
+                <h3>Dua Lipa</h3>
+                <h4>Released 2 June 2017 and <br>Labeled by Warner Bros.
+                </h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/Mgfe5tIwOj0?si=PksiZw8R_9gA5foJ">
+            <img src="\musics_pics\english_pic\ig.jpg" alt="idgaf"></a>
+            <div class="overlay_img">
+                <h3>IDGAF (Remixes)</h3>
+                <h4>Released on 23 February 2018 and Labled by Warner </h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/1xatjVWZc1k?si=9OB1VxIc2clascCW">
+            <img src="\musics_pics\english_pic\ra.jpg" alt="radical"></a>
+            <div class="overlay_img">
+                <h3>Radical Optimism</h3>
+            <h4>Released on  3 May 2024 and <br>Labeled by Warner</h4></div>
+        </div>
+       
+
+    </div>
+</div>
+        <script>
+            document.getElementById('detailsButton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='flex';
+            });
+             document.getElementById('closebutton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='none';
+            });
+
+          let currentAudio = null; 
+    let currentButton = null; 
+
+    function togglePlay(file, button) {
+        
+        if (currentAudio) {
+            // Check if the current audio is the same as the new one
+            if (currentAudio.src === new URL(file, window.location.href).href) {
+                if (currentAudio.paused) {
+                    currentAudio.play(); 
+                    button.textContent = 'Pause'; 
+                } else {
+                    currentAudio.pause(); 
+                    button.textContent = 'Play'; 
+                }
+                return; 
+            } else {
+                // Stop the current audio if it's different
+                currentAudio.pause();
+                currentButton.textContent = 'Play'; // Reset the previous button text
+                currentAudio = null;
+                currentButton = null;
+            }
+        }
+
+        // Set up and play the new audio
+        currentAudio = new Audio(file); 
+        currentAudio.play();
+        button.textContent = 'Pause';
+        currentButton = button; 
+
+        // Handle when the audio finishes
+        currentAudio.onended = () => {
+            button.textContent = 'Play'; 
+            currentAudio = null; 
+            currentButton = null; 
+        };
+    }
+         function showMovies() {
+            const movieGallery = document.getElementById("movies");
+            if (movieGallery.style.display === "none" || movieGallery.style.display === "") {
+                movieGallery.style.display = "flex";
+            } else {
+                movieGallery.style.display = "none";
+            }
+        }
+
+        
+        </script>
+    </body>
+</html>

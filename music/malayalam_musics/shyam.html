@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>shyam</title>
+    </head>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+          background: linear-gradient(115deg,#1e5bd8,#121212);
+             
+        }
+       
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .background-image{
+            width: 100%;
+            height: 500px;
+        }
+        .btn{
+             position: absolute;
+            bottom: 20px;
+            left: 50%;
+           background-color: transparent;
+            padding: 10px 20px;
+            border:2px solid #91c0d9;
+            color: black;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .btn:hover{
+            background-color: #91c0d9;
+        }
+        .overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+        .overlay-content{
+            background-color: rgba(226, 215, 215, 0.2);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            width: 90%;
+        }
+       
+
+         .container_2 {
+            width: 90%;
+            margin: 40px;
+            padding: 20px;
+            border: 2px solid #91c0d9;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px 0 #91c0d9;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        .hit-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .hit-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .hit-list button {
+            padding: 5px 10px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid #91c0d9;
+            
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .hit-list button:hover {
+            background-color: #91c0d9;
+        }
+      
+        .details,.career,.awards{
+            font-family: 'Monaco',serif;
+            margin: 20px;
+            height: 300px;
+            width: 500px;
+            padding: 20px;
+            font-size: 17px;
+            
+        }
+        .overlay-content h1{
+            color: yellow;
+        }
+        .text-overlay {
+            position: absolute;
+            top: 60%; 
+            left: 30px;
+            color: white; 
+            font-size: 24px; 
+            font-family: Georgia, serif; 
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+        }
+
+ .container_3 {
+     display: flex;
+     flex-direction: column;
+      align-items: center;
+    padding: 10px;
+}
+
+
+.image-gallary {
+    display: none;
+    margin-top: 20px;
+      gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #91c0d9;
+    border-radius: 8px;
+}
+.image-item:hover{
+    box-shadow: 0px 8px 32px 0 #91c0d9;
+}
+.image-item img {
+     width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; 
+    
+}
+.image-item img:hover {
+    transform: scale(1.1); /* Optional zoom effect on hover */
+}
+
+
+.overlay_img {
+    position: absolute; 
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: white; 
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-item:hover .overlay_img {
+    opacity: 1; /* Show overlay text on hover */
+}
+.bn{
+    height: 50px;
+    width: 150px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 2px solid #91c0d9;
+    background-color: transparent;
+    border-radius: 50px;
+    color: white;
+    box-shadow: 0 8px 32px 0 #91c0d9;
+}
+.bn:focus{
+    background-color: #91c0d9;
+}
+       strong{
+        color: #91c0d9;
+       }
+
+
+    </style>
+    <body>
+        <div class="container">
+            <img src="\musics_pics\mala_pics\sha.jpeg"class="background-image">
+            <button id="detailsButton" class="btn">show</button>
+             <div class="text-overlay">
+                <h1>Sushin Shyam</h1>
+                <h5>Music Composer, Singer</h5>
+                </div>
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <div class="details">
+                    <h1>About</h1>
+                    <h3>Birthdate: February 13, 1992</h3>
+                    <h3>Hometown: Thrissur, Kerala, India</h3>
+                    <p>Sushin Shyam is an accomplished Indian music composer and singer known for his groundbreaking work in Malayalam cinema. With his expertise in blending traditional and contemporary sounds, Sushin has carved a niche as one of the most innovative composers in the industry.</p>
+                    </div>
+                    <div class="career">
+                        <h1>Career Highlights</h1>
+                     <p><strong>Breakthrough:</strong> Rose to prominence with his background scores for critically acclaimed films like Kumbalangi Nights (2019) and Eeda (2018).<br><br>
+     <strong>Iconic Soundtracks:</strong> Composed memorable songs for films such as Varathan (2018), Virus (2019), and Malik (2021).<br><br>
+   <strong> Collaborations:</strong> Frequently works with leading directors in Malayalam cinema, showcasing his ability to adapt to diverse storytelling styles.</p>
+                    </div>
+                    <div class="awards">
+                    <h1>Awards</h1> 
+                        <h4>Kerala State Film Award: Best Background Score for Kumbalangi Nights.</h4>
+                        <h4>Filmfare Awards South: Best Music Director nomination for his innovative scores.</h4>
+                    <h4>South Indian International Movie Awards (SIIMA): Honored for his contributions to Malayalam cinema.</h4>
+                    </div>
+                </div>
+         <button id="closebutton" class="btn" >close</button>
+                </div>
+            </div>
+        </div>
+      
+        <div class="container_2">
+    <div class="section hit-list">
+    <h2>Hit Songs</h2>
+    <ul>
+        <li>
+            <span>Armadham _ Aavesham _ Jithu Madhavan _Fahadh Faasil _ Sushin Shyam _ Vinayak_ Nazriya_ Anwar Rasheed</span>
+            <button onclick="togglePlay('/musicss/malayalam_musics/shyam/Armadham.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Kuthanthram - Manjummel Boys _ Chidambaram _ Sushin Shyam _ Vedan _ Parava Films</span>
+            <button onclick="togglePlay('/musicss/malayalam_musics/shyam/Kuthanthram.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Pakaliravukal - Kurup _ Dulquer Salmaan _ Sobhita Dhulipala _ Sushin Shyam _ Anwar Ali</span>
+            <button onclick="togglePlay('/musicss/malayalam_musics\/shyam/Pakaliravukal.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Rathipushpam - Bheeshma Parvam _ Mammootty _ Amal Neerad _ Sushin Shyam _ Unni Menon</span>
+            <button onclick="togglePlay('/musicss/malayalam_musics/shyam/Rathipushpam.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Theerame - Malik _ Mahesh Narayanan _ Sushin Shyam _ Anwar Ali _ K S Chithra _ Sooraj</span>
+            <button onclick="togglePlay('/musicss/malayalam_musics/shyam/Theerame.mp3', this)">Play</button>
+        </li>
+       
+    </ul>
+</div>
+</div>
+      <div class="container_3">
+                   <button onclick="showMovies()" class="bn">Notable Albums</button>
+                 <div class="container_3">
+        <div class="image-gallary" id="movies">
+        <div class="image-item">
+            <a href="https://youtu.be/QLNhsatfwMI?si=fYMLDYgwbNSS1YMA">
+            <img src="\movie_pics\malayalam_pic\aavesham.jpg" alt="Roja"></a>
+            <div class="overlay_img">
+            <h3>Aavesham</h3>
+            <h4>Released on 11 Apr 2024 and directed by Jithu Madhavan.</h4>
+        </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/Ktm7uBsHCps?si=MSjlWow0djqpxRG2">
+            <img src="\movie_pics\malayalam_pic\manjumel boys.jpg" alt="Jeans"></a>
+            <div class="overlay_img">
+                <h3>Manjummel Boys</h3>
+                <h4>Released in 22 Feb 2024 and <br>directed by  Shyju Khalid 
+                </h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/dEhu4nAjb6k?si=7GS3CD1Lx5dzgj6B">
+            <img src="\musics_pics\mala_pics\sushin.jpg" alt="Bombay"></a>
+            <div class="overlay_img">
+                <h3>Hit List</h3>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/exkJKrAVzAc?si=5KzJivxEXuhG0M3_">
+            <img src="\musics_pics\mala_pics\stuthi.jpg" alt="guru"></a>
+            <div class="overlay_img">
+                <h3>Stuthi</h3>
+            <h4>Released on  26 Sep  2024  and <br>directed by  Amal Neerad</h4></div>
+        </div>
+       
+
+    </div>
+</div>
+        <script>
+            document.getElementById('detailsButton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='flex';
+            });
+             document.getElementById('closebutton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='none';
+            });
+ let currentAudio = null; 
+    let currentButton = null; 
+
+    function togglePlay(file, button) {
+        
+        if (currentAudio) {
+            // Check if the current audio is the same as the new one
+            if (currentAudio.src === new URL(file, window.location.href).href) {
+                if (currentAudio.paused) {
+                    currentAudio.play(); 
+                    button.textContent = 'Pause'; 
+                } else {
+                    currentAudio.pause(); 
+                    button.textContent = 'Play'; 
+                }
+                return; 
+            } else {
+                // Stop the current audio if it's different
+                currentAudio.pause();
+                currentButton.textContent = 'Play'; // Reset the previous button text
+                currentAudio = null;
+                currentButton = null;
+            }
+        }
+
+        // Set up and play the new audio
+        currentAudio = new Audio(file); 
+        currentAudio.play();
+        button.textContent = 'Pause';
+        currentButton = button; 
+
+        // Handle when the audio finishes
+        currentAudio.onended = () => {
+            button.textContent = 'Play'; 
+            currentAudio = null; 
+            currentButton = null; 
+        };
+    }
+         function showMovies() {
+            const movieGallery = document.getElementById("movies");
+            if (movieGallery.style.display === "none" || movieGallery.style.display === "") {
+                movieGallery.style.display = "flex";
+            } else {
+                movieGallery.style.display = "none";
+            }
+        }
+
+        
+        </script>
+    </body>
+</html>

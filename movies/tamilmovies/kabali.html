@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kabali</title>
+</head>
+<style>
+     body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2C2C2C; /* Dark Gray Background */
+    color: #D3D3D3; /* Light Gray Text */
+}
+.container1{
+   display: grid;
+   grid-template-areas:
+    'two three four eight'
+    'one five six seven'
+    ;
+    padding: 20px;
+}
+.card {
+    background-color:#D7263D;
+    width: 250px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 12px; 
+    color: #fff;
+    margin: 15px;
+}
+
+.image img {
+    width: 100%;
+    height: 300px;
+}
+
+.details {
+    padding: 10px; /* Reduced padding */
+}
+
+.title {
+    font-size: 16px; /* Reduced title size */
+    margin: 0;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.title span {
+    font-size: 12px; /* Reduced year font size */
+    font-weight: bold;
+    color: #080808;
+}
+
+.genre, .starring, p {
+    margin: 5px 0; /* Reduced margin between lines */
+    line-height: 1.4; /* Adjusted line height for smaller text */
+}
+
+
+/* Movie Section */
+header {
+    background-color: #D7263D; /* Deep Red Header */
+    color: #FFFFFF; /* White Text */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 3px solid #FFD700;
+}
+
+.movie-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.movie-image {
+    width: 43%;
+    height: 400px;
+    border: 5px solid #FFD700; /* Gold Border */
+    border-radius: 10px;
+}
+.movie-image:hover{
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(241, 196, 15, 0.8); /* Glow Effect */
+}
+
+.movie-details {
+    width: 50%;
+    background-color: #D7263D; /* Deep Red Section */
+    padding: 20px;
+    border-radius: 10px;
+    color: #FFFFFF; /* White Text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.movie-details h1{
+    color: #FFD700;
+}
+
+/* Buttons */
+button {
+    background-color: #FFD700; /* Gold Button */
+    color: #2C2C2C; /* Dark Gray Text */
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button a{
+    text-decoration: none;
+}
+button:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(241, 196, 15, 0.8); /* Glow Effect */
+   
+}
+.card:hover{
+   box-shadow: 0 6px 12px rgba(218, 198, 22, 0.8);
+}
+</style>
+<body>
+    <header>Movie Showcase</header>
+    <div class="movie-container">
+        <img src="\movie_pics\tamimovies_pic\kab.jpeg" alt="Movie Poster" class="movie-image">
+        <div class="movie-details">
+            <h1>Kabali</h1>
+            <h4>Release Date: 22 July 2016</h4>
+            <h4>Director:  Pa. Ranjith</h4>
+            <p>The film follows Kabali (Rajinikanth), an aged gangster who is released from prison after 25 years and returns to take revenge on those who wronged him, as well as to reunite with his family. Set against the backdrop of the Malaysian Tamil underworld, Kabali explores themes of identity, justice, and redemption.
+Kabali was praised for Rajinikanth’s charismatic performance, Pa. Ranjith’s direction, and its unique take on a gangster's life with emotional depth. The music by Santhosh Narayanan, especially songs like "Neruppu Da," became widely popular. Kabali was a box-office success and resonated with fans for its style, socially relevant themes, and Rajinikanth’s impactful portrayal of the lead character. </p>
+ <button>
+    <a href="https://youtu.be/5vTIvrlIV9M?si=CSUZJteHG17Z5Sy_">Watch Now</a>
+    </button>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container1">
+  <div class="card" style="grid-area: one;">
+        <div class="image">
+          <a href=" \movies\tamilmovies\margatha.html">
+           <img src="\movie_pics\tamimovies_pic\mara.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+             <h1 class="title">Maragatha Naanayam <span>2017</span></h1>
+            <p class="genre"><strong>Genre:</strong> Comedy,Drama</p>
+            <p><strong>Directed by:</strong> Ark Saravan</p>
+            <p><strong>Written by:</strong>Ark Saravan</p>
+            <p><strong>Produced by:</strong>Axes Film Factory</p>
+            <p class="starring"><strong>Starring:</strong> Aadhi,Nikki Galrani,Anandraj,Munishkanth</p>
+        </div>
+        </div>
+        <div class="card" style="grid-area: two;">
+        <div class="image">
+            <a href=" \movies\tamilmovies\kaana.html">
+          <img src="\movie_pics\tamimovies_pic\kanna.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Kanaa<span>2018</span></h1>
+            <p class="genre"><strong>Genre:</strong> Sports</p>
+            <p><strong>Directed by:</strong> Arunraj Kamaraj</p>
+            <p><strong>Written by:</strong> Arunraj Kamaraj</p>
+            <p><strong>Produced by:</strong>Sivakarthikeyan Production</p>
+            <p class="starring"><strong>Starring:</strong>Sathyarai,Aishwarya Rajesh,Sivakarthikeyan,Dharshan</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: three;">
+        <div class="image">
+            <a href=" \movies\tamilmovies\maharaja.html">
+           <img src="\movie_pics\tamimovies_pic\maha.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Maharaja <span>2024</span></h1>
+            <p class="genre"><strong>Genre:</strong> Action,thriller</p>
+            <p><strong>Directed by:</strong>Nithilan Saminathan</p>
+            <p><strong>Written by:</strong> Nithilan Saminathan</p>
+            <p><strong>Produced by:</strong> Think Studios</p>
+            <p class="starring"><strong>Starring:</strong>Vijay Sethupathi,Anurag Kashyap,mamta Mohandas,Natarjan</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: four;">
+         <div class="image">
+            <a href=" \movies\tamilmovies\vip.html">
+            <img src="\movie_pics\tamimovies_pic\vipp.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">VIP <span>2014</span></h1>
+            <p class="genre"><strong>Genre:</strong> Action, Comedy</p>
+            <p><strong>Directed by:</strong>VelRaj</p>
+            <p><strong>Written by:</strong> VelRaj</p>
+            <p><strong>Produced by:</strong> Dhanush</p>
+            <p class="starring"><strong>Starring:</strong> Dhanush,Amala Paul,Vivek, Saranya ponvannan,Samuthirakani</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: five;">
+        <div class="image">
+            <a href=" \movies\tamilmovies\aram.html">
+           <img src="\movie_pics\tamimovies_pic\aram.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Aramm <span>2017</span></h1>
+            <p class="genre"><strong>Genre:</strong>Political Drama</p>
+            <p><strong>Directed by:</strong> Gopi Ninar</p>
+            <p><strong>Written by:</strong> Gopi Ninar</p>
+            <p><strong>Produced by:</strong>KJR Studios</p>
+            <p class="starring"><strong>Starring:</strong> Nayanthara,Ramachandran,Sunu Lakshmi</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: six;">
+       <div class="image">
+            <a href=" \movies\tamilmovies\gn.html">
+           <img src="\movie_pics\tamimovies_pic\gn.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Good Night <span>2023</span></h1>
+            <p class="genre"><strong>Genre:</strong> Comedy,Romantic </p>
+            <p><strong>Directed by:</strong> Vinayak Chandrasekaran</p>
+            <p><strong>Written by:</strong> Vinayak Chandrasekaran</p>
+            <p><strong>Produced by:</strong> MRP Studios</p>
+            <p class="starring"><strong>Starring:</strong>Manikandan,Meetha Raghunath,Ramesh Thilak,Raichal Rebecca</p>
+        </div>
+    </div>
+     <div class="card" style="grid-area: seven;">
+        <div class="image">
+             <a href=" \movies\tamilmovies\pariyarum.html">
+           <img src="\movie_pics\tamimovies_pic\pariyarum perumal.jpg" alt="Movie Image"></a>
+        </div>
+         <div class="details">
+            <h1 class="title">pariyarum Perumal <span>2018</span></h1>
+            <p class="genre"><strong>Genre:</strong> Drama</p>
+            <p><strong>Directed by:</strong> Mari Selvaraj</p>
+            <p><strong>Written by:</strong>  Mari Selvaraj</p>
+            <p><strong>Produced by:</strong> Neelam Production</p>
+            <p class="starring"><strong>Starring:</strong>Kathir,Anandhi,Yogi Babu,G.Marimuthu</p>
+        </div>
+    </div>
+     <div class="card" style="grid-area: eight;">
+        <div class="image">
+            <a href=" \movies\tamilmovies\nerkonda.html">
+             <img src="\movie_pics\tamimovies_pic\nerkonda parvai.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Nerkonda parvai<span> 2019</span></h1>
+            <p class="genre"><strong>Genre:</strong> Legal, Drama</p>
+            <p><strong>Directed by:</strong>H.Vinoth</p>
+            <p><strong>Written by:</strong> H.Vinoth</p>
+            <p><strong>Produced by:</strong>Zee Studios</p>
+            <p class="starring"><strong>Starring:</strong>Ajith Kumar,Shraddha Srinath,Abhirami,Venkatachalam</p>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

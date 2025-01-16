@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spotstar homepage</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body {
+    background: linear-gradient(to right, #f3904f, #3b4371);
+   
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #031716;
+    color: #fff;
+    top: 0;
+}
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+
+
+
+.language-selector {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.language-selector select {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+
+
+
+
+/* designing the card container*/
+
+.container1{
+   display: grid;
+   grid-template-areas:
+    'one two three four'
+    'seven six five eight';
+    padding: 20px;
+}
+.card_1 {
+    background-color:#D7263D;
+    width: 250px; 
+    border-radius: 8px;
+    font-size: 12px; 
+    color: #fff;
+    margin: 15px;
+}
+.card_1:hover{
+   transform: scale(1.05);
+    box-shadow: 0 8px 16px #ffd700;
+}
+.card_2 {
+    background-color:#1A1A2E;
+    width: 250px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 12px; 
+    color: #fff;
+    margin: 15px;
+}
+.card_2:hover{
+    transform: scale(1.05); /* Enlarge Image on Hover */
+    box-shadow: 0 15px 30px rgba(0, 255, 0, 0.6);
+   
+}
+.card_3 {
+    background-color:#0a7075;
+    width: 250px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 12px; 
+    color: #fff;
+    margin: 15px;
+}
+.card_3:hover{
+   transform: scale(1.05); /* Enlarge Image on Hover */
+    box-shadow: 0 15px 30px rgba(38, 253, 206, 0.8);
+}
+.card_4 {
+    background-color:#732449;
+    width: 250px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 12px; 
+    color: #fff;
+    margin: 15px;
+}
+.card_4:hover{
+   transform: scale(1.05);
+     box-shadow: 0 15px 30px #c90842;
+}
+
+.image img {
+    width: 100%;
+    height: 300px;
+}
+
+.details {
+    padding: 10px; 
+    color: #fff;
+}
+
+.title {
+    font-size: 16px; 
+    margin: 0;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.title span {
+    font-size: 12px; 
+    font-weight:bold;
+    color: #f3904f;
+}
+
+.genre, .starring, p {
+    margin: 5px 0; 
+    line-height: 1.4; 
+}
+
+
+
+
+/* designing the swiping place*/
+.slideshow{
+    position: relative;
+    width: 99%;
+    height: 500px;
+    margin: auto;
+    overflow: hidden;
+    border: 7px solid #110d0d;
+    border-radius: 8px;
+}
+
+
+.slides{
+  display:flex ;
+  width: 100%;
+  height: 100%;
+   position: absolute;
+    border-radius: 8px;
+  animation: slideshow 15s infinite;
+}
+.slide{
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+.slide img{
+  width: 100%;
+  height: 100%;
+  
+}
+
+/* Keyframes for fade-in and fade-out effect */
+@keyframes slideshow {
+    0%, 20% {
+        transform: translateX(0%);
+    }
+    25%, 45% {
+        transform: translateX(-100%);
+    }
+    50%, 70% {
+        transform: translateX(-200%);
+    }
+    75%, 100% {
+        transform: translateX(-300%);
+    }
+}
+</style>
+  <body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="\home.html">Home</a></li>
+            <li><a href="\music\musics.html">Music</a></li>
+            <li><a href="\home.html#about-section">About</a></li>
+        </ul>
+         <div class="language-selector">
+            <select id="language-select" onchange="socialmedia()">
+                <option value="Tamil">Tamil</option>
+                <option value="English">English</option>
+                <option value="Malayalam">Malayalam</option>
+                <option value="hindi">Hindi</option>
+            </select>
+        </div>
+    </nav>
+
+
+  <div class="slideshow">
+  <div class="slides">
+    <div class="slide">
+      <a href="/movies\tamilmovies\jailer.html"><img src="\movie_pics\tamimovies_pic\jai.jpg" alt=movie 1></a>
+    </div>
+  <div class="slide">
+      <a href=" \movies\englishmovies\titanic.html"><img src="\movie_pics\english_pic\tit.jpeg" alt=movie 1></a>
+  </div>
+  <div class="slide">
+      <a href=" \movies\hindi movies\12th.html"><img src="\movie_pics\hindi_pic\12.jpg" alt=movie 1></a>
+  </div>
+  <div class="slide">
+      <a href=" \movies\malayalam_movies\aavesham.html"><img src="\movie_pics\malayalam_pic\aavesh.jpg" alt=movie 1></a>
+  </div>
+  </div>
+  </div>
+
+  
+
+
+
+  <div class="container1">
+  <div class="card_1" style="grid-area: one;">
+        <div class="image">
+          <a href="\movies\tamilmovies\mersal.html">
+            <img src="\movie_pics\tamimovies_pic\mersal.jpg" alt="Movie Image"  ></a>
+        </div>
+        <div class="details">
+            <h1 class="title"> Mersal <span>2017</span></h1>
+            <p class="genre"><strong>Genre:</strong> Action, Thriller</p>
+            <p><strong>Directed by:</strong> Atlee</p>
+            <p><strong>Written by:</strong> Atlee</p>
+            <p><strong>Produced by:</strong> Thenandal Studios Limited</p>
+            <p class="starring"><strong>Starring:</strong> Vijay,S.J.Suriya,Kajal Aggarwal,Samantha</p>   
+        </div>
+        </div>
+        <div class="card_2" style="grid-area: two;">
+        <div class="image">
+          <a href="\movies\englishmovies\anabel.html">
+            <img src="\movie_pics\english_pic\ana.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Annabelle Comes Home <span> 2019</span></h1>
+            <p class="genre"><strong>Genre:</strong> Horror, Horror</p>
+            <p><strong>Directed by:</strong> Gary Dauberman</p>
+            <p><strong>Written by:</strong> James Wan</p>
+            <p><strong>Produced by:</strong> New Line Cinema</p>
+            <p class="starring"><strong>Starring: Mckenna Grace,Madison Iseman,Katie Sarife</strong> </p>
+        </div>
+    </div>
+    <div class="card_3" style="grid-area: three;">
+        <div class="image">
+          <a href="\movies\hindi movies\kalank.html">
+            <img src="\movie_pics\hindi_pic\kal.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Kalank <span> 2019</span></h1>
+            <p class="genre"><strong>Genre:</strong> Romantic</p>
+            <p><strong>Directed by:</strong> Abhishek Varman</p>
+            <p><strong>Written by:</strong> Hussain Dalal</p>
+            <p><strong>Produced by:</strong>Dharma Production</p>
+            <p class="starring"><strong>Starring:</strong>Varun Dhawan,Alia Bhatt,Sanjay Dutt,Madhuri Dixit</p>
+        </div>
+    </div>
+    <div class="card_4" style="grid-area: four;">
+        <div class="image">
+          <a href="\movies\malayalam_movies\king.html">
+            <img src="\movie_pics\malayalam_pic\kog.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">King Of Kotha<span> 2023</span></h1>
+            <p class="genre"><strong>Genre:</strong> Action,Thriller</p>
+            <p><strong>Directed by:</strong> Abhilash Joshiy </p>
+            <p><strong>Written by:</strong> Abhilash N. Chandran</p>
+            <p><strong>Produced by:</strong> Zee Studios</p>
+            <p class="starring"><strong>Starring:</strong> Dulquer Salmaan,Shaber Kallarakkal,Prasanna</p>
+        </div>
+    </div>
+    <div class="card_2" style="grid-area: five;">
+        <div class="image">
+           <a href="\movies\englishmovies\zathura.html">
+            <img src="\movie_pics\english_pic\za.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Zathur:A Space Adventure <span> 2005</span></h1>
+            <p class="genre"><strong>Genre:</strong> Science-Fiction</p>
+            <p><strong>Directed by:</strong> Jon Favreau</p>
+            <p><strong>Written by:</strong> Jon Favreau</p>
+            <p><strong>Produced by:</strong> William Teitler </p>
+            <p class="starring"><strong>Starring:</strong> Josh Hutcherson,Jonah Bobo,Dax Shepard</p>
+        </div>
+    </div>
+    <div class="card_4" style="grid-area: six;">
+        <div class="image">
+          <a href="\movies\malayalam_movies\kaapa.html">
+            <img src="\movie_pics\malayalam_pic\kap.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Kaapa <span> 2022</span></h1>
+            <p class="genre"><strong>Genre:</strong> Action, Thriller</p>
+            <p><strong>Directed by:</strong> Shaji Kailas</p>
+            <p><strong>Written by:</strong> G.R Indugopan</p>
+            <p><strong>Produced by:</strong> Theater Of Dreams</p>
+            <p class="starring"><strong>Starring:</strong> Prithiviraj Sukumaran,Asif Ali,Apana Balamurali</p>
+        </div>
+    </div>
+     <div class="card_3" style="grid-area: seven;">
+        <div class="image">
+        <a href="\movies\hindi movies\shersha.html">
+            <img src="\movie_pics\hindi_pic\she.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title"> Shershaah <span> 2021</span></h1>
+            <p class="genre"><strong>Genre:</strong> Biographic</p>
+            <p><strong>Directed by:</strong> VishnuVardhan</p>
+            <p><strong>Written by:</strong> Sandeep Shrivastava</p>
+            <p><strong>Produced by:</strong> Dharma Production</p>
+            <p class="starring"><strong>Starring:</strong> Sidharth Malhotra,Kiara Advani</p>
+        </div>
+    </div>
+     <div class="card_1" style="grid-area: eight;">
+        <div class="image">
+          <a href="\movies\tamilmovies\kabali.html">
+            <img src="\movie_pics\tamimovies_pic\kabali.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Kabali<span> 2016</span></h1>
+            <p class="genre"><strong>Genre:</strong> Action,Thriller</p>
+            <p><strong>Directed by:</strong> Pa. Ranjith</p>
+            <p><strong>Written by:</strong> pa. Ranjith</p>
+            <p><strong>Produced by:</strong> S.Dhanu</p>
+            <p class="starring"><strong>Starring:</strong> Ranjinikanth,Radhika Apte, Winston Chao</p>
+        </div>
+    </div>
+    </div>
+
+    
+    <script>
+      function socialmedia(){
+        var choice=document.getElementById("language-select").value
+        if(choice=='Tamil'){
+          window.location.href="/movies/tamilmovies/tamil_movie.html"
+
+        }
+        else if(choice=='English'){
+          window.location.href="/movies/englishmovies/English.html"
+        }
+        else if(choice=='Malayalam'){
+          window.location.href="/movies/malayalam_movies/malayalam.html"
+        }
+        else{
+          window.location.href="/movies/hindi movies/hindi.html"
+
+        }
+      }
+     </script>
+</body>
+</html>

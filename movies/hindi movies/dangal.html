@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dangal</title>
+</head>
+<style>
+     body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #032f30; /* Dark Gray Background */
+    color: #D3D3D3; /* Light Gray Text */
+}
+.container1{
+   display: grid;
+   grid-template-areas:
+    'four five six ten'
+    'eleven tweleve nine seven'
+    ;
+    padding: 20px;
+}
+.card {
+    background-color:#0a7075;
+    width: 250px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 12px; 
+    color: #fff;
+    margin: 15px;
+}
+
+.image img {
+    width: 100%;
+    height: 300px;
+}
+
+.details {
+    padding: 10px; /* Reduced padding */
+}
+
+.title {
+    font-size: 16px; /* Reduced title size */
+    margin: 0;
+    font-weight: bold;
+    color: #00CED1;
+}
+
+.title span {
+    font-size: 12px; /* Reduced year font size */
+    font-weight: bold;
+    color: #011616;
+}
+
+.genre, .starring, p {
+    margin: 5px 0; /* Reduced margin between lines */
+    line-height: 1.4; /* Adjusted line height for smaller text */
+}
+.movie-image img{
+    height: 400px;
+    width: 700px;
+}
+
+/* Movie Section */
+header {
+    background-color: #0a7075; /* Deep Red Header */
+    color: #FFFFFF; /* White Text */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 3px solid #00CED1;
+}
+
+.movie-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.movie-image {
+    width: 40%;
+    height: 350px;
+    border: 5px solid #00CED1;
+    border-radius: 10px;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.movie-image:hover{
+   transform: scale(1.1); /* Enlarge Image on Hover */
+    box-shadow: 0 15px 30px rgba(38, 253, 206, 0.8); /* Glow Effect */
+}
+
+.movie-details {
+    width: 50%;
+    background-color: #0a7075; /* Deep Red Section */
+    padding: 20px;
+    border-radius: 10px;
+    color: #FFFFFF; /* White Text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-family: inherit;
+}
+.movie-details h1{
+    color: #00CED1;
+}
+
+/* Buttons */
+button {
+    background-color: #00CED1;
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button a{
+    text-decoration: none;
+}
+button:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+   box-shadow: 0 15px 30px rgba(38, 253, 206, 0.8); /* Glow Effect */
+   
+}
+.card:hover{
+    transform: scale(1.05); /* Enlarge Image on Hover */
+    box-shadow: 0 15px 30px rgba(38, 253, 206, 0.8);
+   
+}
+</style>
+<body>
+<header>Retro Cinema</header>
+    <div class="movie-container">
+        <img src="\movie_pics\hindi_pic\danga.jpg" alt="Movie Poster" class="movie-image">
+        <div class="movie-details">
+            <h1>Dangal</h1>
+            <h4>Release Date: 23 December 2016</h4>
+            <h4>Director:  Nitesh Tiwari</h4>
+            <p>The film is based on the true story of Mahavir Singh Phogat, a former wrestler who trains his daughters, Geeta and Babita, to become champion wrestlers despite societal challenges and gender stereotypes in rural India.
+The movie portrays Mahavir's rigorous training, the daughters' struggles, and their eventual success on national and international stages, especially Geeta's historic win at the Commonwealth Games. Dangal was praised for its inspiring story, powerful performances, and realistic depiction of wrestling, becoming one of the highest-grossing Indian films worldwide.
+            </p>
+            <button>
+                <a href="https://youtu.be/x_7YlGv9u1g?si=9QxnMRSRh0z-h581">Watch Now</a>
+            </button>
+        </div>
+    </div>
+
+
+
+
+
+   <div class="container1">
+  <div class="card" style="grid-area: nine;">
+        <div class="image">
+             <a href=" \movies\hindi movies\tamsha.html">
+            <img src="\movie_pics\hindi_pic\tamasha.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Tamasha <span>2015</span></h1>
+            <p class="genre"><strong>Genre:</strong> Rmantic</p>
+            <p><strong>Directed by:</strong> Imtiaz Ali</p>
+            <p><strong>Written by:</strong> Imtiaz Ali</p>
+            <p><strong>Produced by:</strong>Nadiadwala Grandson Entertainment</p>
+            <p class="starring"><strong>Starring:</strong> Ranbir Kapoor, Deepika Padukone</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: ten;" >
+        <div class="image">
+             <a href=" \movies\hindi movies\rabta.html">
+            <img src="\movie_pics\hindi_pic\rabata.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Raabta <span>2017</span></h1>
+            <p class="genre"><strong>Genre:</strong> Romantic</p>
+            <p><strong>Directed by:</strong> Dinesh Vijan</p>
+            <p><strong>Written by:</strong> Siddharth-Garima</p>
+            <p><strong>Produced by:</strong> Maddock Films</p>
+            <p class="starring"><strong>Starring:</strong> Sushant Singh Rajput,Kriti Sanon,Jim Sarbh,Varun Sharma</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: eleven;">
+        <div class="image">
+             <a href=" \movies\hindi movies\raazi.html">
+            <img src="\movie_pics\hindi_pic\raazi.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Raazi <span>2018</span></h1>
+            <p class="genre"><strong>Genre:</strong> Spy-Thiriller</p>
+            <p><strong>Directed by:</strong> Meghna Gulzar</p>
+            <p><strong>Written by:</strong> Bhavani Iyer</p>
+            <p><strong>Produced by:</strong> Junglee Pictures</p>
+            <p class="starring"><strong>Starring:</strong> Alia Bhatt,Vicky Kaushal,Jaideep Ahlawat,Rajit Kapur</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: tweleve;">
+        <div class="image">
+             <a href=" \movies\hindi movies\kapoor.html">
+            <img src="\movie_pics\hindi_pic\kapoor.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Kapoor & Sons <span>2016</span></h1>
+            <p class="genre"><strong>Genre:</strong>Family,Drama</p>
+            <p><strong>Directed by:</strong> Shakun Batra</p>
+            <p><strong>Written by:</strong> Ayesha Devitre Dhillon</p>
+            <p><strong>Produced by:</strong> Dharma Productions</p>
+            <p class="starring"><strong>Starring:</strong> Rishi Kapoor, Siddharth Malhotra,Fawad Khan,Alia Bhatt</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: four;">
+        <div class="image">
+             <a href=" \movies\hindi movies\sathya.html">
+            <img src="\movie_pics\hindi_pic\sathya.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Sathyaprem Ki Katha <span>2023</span></h1>
+            <p class="genre"><strong>Genre:</strong> Romantic</p>
+            <p><strong>Directed by:</strong> Sameer Vidwans</p>
+            <p><strong>Written by:</strong> Karan Shrikant</p>
+            <p><strong>Produced by:</strong>Nadiadwala Grandson Entertainment</p>
+            <p class="starring"><strong>Starring:</strong> Karthik Aaryan, Kiara Advani</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: five;">
+        <div class="image">
+             <a href=" \movies\hindi movies\dear.html">
+            <img src="\movie_pics\hindi_pic\dear.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Dear Zindagi <span>2016</span></h1>
+            <p class="genre"><strong>Genre:</strong> Comedy</p>
+            <p><strong>Directed by:</strong> Gauri Shinde</p>
+            <p><strong>Written by:</strong> Gauri Shinde</p>
+            <p><strong>Produced by:</strong> Red Chillies Entertainment</p>
+            <p class="starring"><strong>Starring:</strong> Alia Bhatt,Shah Rukh Khan</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: six;">
+        <div class="image">
+             <a href=" \movies\hindi movies\dil.html">
+            <img src="\movie_pics\hindi_pic\dil bichara.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Dil Bichara <span>2020</span></h1>
+            <p class="genre"><strong>Genre:</strong> Tragedy, Romance</p>
+            <p><strong>Directed by:</strong> Mukesh Chhabra</p>
+            <p><strong>Written by:</strong> Shashank Khaitan</p>
+            <p><strong>Produced by:</strong>Fox Star Studios</p>
+            <p class="starring"><strong>Starring:</strong> Sushant Singh Rajput, Sanjana Sanghi,Sai Ali Khan</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: seven;">
+        <div class="image">
+             <a href=" \movies\hindi movies\student.html">
+            <img src="\movie_pics\hindi_pic\student.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Student of The Year <span>2012</span></h1>
+            <p class="genre"><strong>Genre:</strong> Sports, Romantic</p>
+            <p><strong>Directed by:</strong> Karan Johar</p>
+            <p><strong>Written by:</strong> Rensil D'Silva</p>
+            <p><strong>Produced by:</strong> Dharma Productions</p>
+            <p class="starring"><strong>Starring:</strong>Sidharth Malhotra, Alia Bhatt, Varun Dhawan</p>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

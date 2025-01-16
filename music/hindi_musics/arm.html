@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Armaan</title>
+    </head>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+          background: linear-gradient(115deg,#1f87b9,#121212);
+             
+        }
+       
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .background-image{
+            width: 100%;
+            height: 500px;
+        }
+        .btn{
+             position: absolute;
+            bottom: 20px;
+            left: 50%;
+           background-color: transparent;
+            padding: 10px 20px;
+            border:2px solid #a4082b;
+            color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .btn:hover{
+            background-color: #a4082b;
+        }
+        .overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+        .overlay-content{
+            background-color: rgba(226, 215, 215, 0.2);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            width: 90%;
+        }
+       
+
+         .container_2 {
+            width: 90%;
+            margin: 40px;
+            padding: 20px;
+            border: 2px solid #a4082b;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px 0 #a4082b;
+        }
+        
+        .section {
+            color:white;
+            margin-bottom: 40px;
+        }
+        .hit-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .hit-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            color: white;
+            margin: 10px 0;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .hit-list button {
+            padding: 5px 10px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid #a4082b;
+            
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .hit-list button:hover {
+            background-color:#a4082b;
+        }
+      
+        .details,.career,.awards{
+            font-family: 'Monaco',serif;
+            margin: 20px;
+            height: 300px;
+            width: 500px;
+            padding: 20px;
+            font-size: 17px;
+            
+        }
+        .overlay-content h1{
+            color: yellow;
+        }
+        .text-overlay {
+            position: absolute;
+            top: 60%; 
+            left: 30px;
+            color: white; 
+            font-size: 24px; 
+            font-family: Georgia, serif; 
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+        }
+
+ .container_3 {
+     display: flex;
+     flex-direction: column;
+      align-items: center;
+    padding: 10px;
+}
+
+
+.image-gallary {
+    display: none;
+    margin-top: 20px;
+      gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #a4082b;
+    border-radius: 8px;
+}
+.image-item:hover{
+    box-shadow: 0px 8px 32px 0 #a4082b;
+}
+.image-item img {
+     width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; 
+    
+}
+.image-item img:hover {
+    transform: scale(1.1); /* Optional zoom effect on hover */
+}
+
+
+.overlay_img {
+    position: absolute; 
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: white; 
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-item:hover .overlay_img {
+    opacity: 1; /* Show overlay text on hover */
+}
+.bn{
+    height: 50px;
+    width: 150px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 2px solid #a4082b;
+    background-color: transparent;
+    border-radius: 50px;
+    color: white;
+    box-shadow: 0 8px 32px 0 #a4082b;
+}
+.bn:focus{
+    background-color:#a4082b;
+}
+       strong{
+        color:#1f87b9 ;
+       }
+
+
+    </style>
+    <body>
+        <div class="container">
+            <img src="\musics_pics\hindi_pics\armm.jpeg"class="background-image">
+            <button id="detailsButton" class="btn">show</button>
+             <div class="text-overlay">
+                <h1>Armaan Malik</h1>
+                <h5>Singer, Songwriter, Composer</h5>
+                </div>
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <div class="details">
+                    <h1>About</h1>
+                    <h3>Birthdate:  July 22, 1995</h3>
+                    <h3>Hometown: Mumbai, Maharashtra, India</h3>
+                    <p>Armaan Malik is a versatile playback singer and composer known for his melodious voice and wide range of musical styles. He has sung in multiple languages, making him a favorite in both Bollywood and independent music scenes.</p>
+                    </div>
+                    <div class="career">
+                        <h1>Career Highlights</h1>
+                     <p><strong>Musical Roots:</strong>
+              Son of music director Daboo Malik and nephew of renowned composer Anu Malik.
+             Trained in classical music and began his career at a young age.<br><br>
+     <strong>Bollywood Success:</strong>
+      Rose to fame with songs like Main Hoon Hero Tera (Hero), Bol Do Na Zara (Azhar), and Jab Tak (M.S. Dhoni).<br><br>
+      <strong>
+Independent Music:
+</strong>
+Ventured into independent music with tracks like Control and You.
+Known for his international collaborations, making him a global pop icon.</p>
+                    </div>
+                    <div class="awards">
+                    <h1>Achievements</h1> 
+                        <h4>Winner of multiple awards, including Filmfare and Global Indian Music Academy (GiMA) awards.</h4>
+                        <h4>Recognized for his multilingual singing in Hindi, Telugu, Tamil, Bengali, and English.</h4>
+                    </div>
+                </div>
+         <button id="closebutton" class="btn" >close</button>
+                </div>
+            </div>
+        </div>
+      
+        <div class="container_2">
+    <div class="section hit-list">
+    <h2>Hit Songs</h2>
+    <ul>
+        <li>
+            <span>Bol Do Na Zara_ Azhar _ Emraan Hashmi_ Nargis Fakhri</span>
+            <button onclick="togglePlay('/spotstar/musicss/hindi_musics/arman/BOL DO NA ZARA.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Pehla Pyaar _ Kabir Singh _ Shahid Kapoor_ Kiara Advani _ Armaan Malik _ Vishal Mishra</span>
+            <button onclick="togglePlay('/musicss/hindi_musics/arman/Pehla Pyar.mp3', this)">Play</button>
+        </li>
+    
+        <li>
+            <span>Jab Tak _ Armaan Malik_ Amaal Mallik _Sushant Singh Rajput</span>
+            <button onclick="togglePlay('/musicss/hindi_musics/arman/Hua Hain Aaj Pehli Baar.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Kuch To Hai_ Do lafzon ki khani _ Randeep Hooda_ Kajal Aggarwal</span>
+            <button onclick="togglePlay('/musicss/hindi_musics/arman/JAB TAK M.S. DHONI .mp3.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Hua Hain Aaj Pehli Baar_ Snam Re _ Pulkit Samrat_ Urvashi Rautela _ Divya Khosla Kumar</span>
+            <button onclick="togglePlay('/musicss/hindi_musics/arman/Kuch To Hai.mp3', this)">Play</button>
+        </li>
+    </ul>
+</div>
+</div>
+      <div class="container_3">
+                   <button onclick="showMovies()" class="bn">Notable Albums</button>
+                 <div class="container_3">
+        <div class="image-gallary" id="movies">
+        <div class="image-item">
+            <a href="https://youtu.be/5Up8XW-K-Ik?si=F_2D2mZDZ9mCqImT">
+            <img src="\musics_pics\hindi_pics\zara.jpg" alt="Roja"></a>
+            <div class="overlay_img">
+            <h3>Zara Thehro</h3>
+            <h4>Released on 8 Jul 2020 and <br>directed by Gobind Dhanoa</h4>
+        </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/4CjNYcEF4cY?si=D9UB1NnTwKyWGxw1">
+            <img src="\musics_pics\hindi_pics\echo.jpg" alt="Jeans"></a>
+            <div class="overlay_img">
+                <h3>Echo</h3>
+                <h4>Released in 21 May  2021 and produced by  KSHMR
+                </h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/KNAMgkibaAA?si=rgt_DYT9oU1xnmPR">
+            <img src="\musics_pics\hindi_pics\tera.jpg" alt="Bombay"></a>
+            <div class="overlay_img">
+                <h3>Tera Main Intezaar</h3>
+                <h4>Released on  26 Jul 2024 and <br>directed by Krish Trivedi </h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/GsdYjCLcpN4?si=Qz2prw87P3kWzmLD">
+            <img src="\musics_pics\hindi_pics\you.jpg" alt="guru"></a>
+            <div class="overlay_img">
+                <h3>You</h3>
+            <h4>Released on 7 Jan 2022 and produced by Jack Edwards</h4></div>
+        </div>
+       
+
+    </div>
+</div>
+        <script>
+            document.getElementById('detailsButton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='flex';
+            });
+             document.getElementById('closebutton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='none';
+            });
+
+    let currentAudio = null; 
+    let currentButton = null; 
+
+    function togglePlay(file, button) {
+        
+        if (currentAudio) {
+            // Check if the current audio is the same as the new one
+            if (currentAudio.src === new URL(file, window.location.href).href) {
+                if (currentAudio.paused) {
+                    currentAudio.play(); 
+                    button.textContent = 'Pause'; 
+                } else {
+                    currentAudio.pause(); 
+                    button.textContent = 'Play'; 
+                }
+                return; 
+            } else {
+                // Stop the current audio if it's different
+                currentAudio.pause();
+                currentButton.textContent = 'Play'; // Reset the previous button text
+                currentAudio = null;
+                currentButton = null;
+            }
+        }
+
+        // Set up and play the new audio
+        currentAudio = new Audio(file); 
+        currentAudio.play();
+        button.textContent = 'Pause';
+        currentButton = button; 
+
+        // Handle when the audio finishes
+        currentAudio.onended = () => {
+            button.textContent = 'Play'; 
+            currentAudio = null; 
+            currentButton = null; 
+        };
+    }
+         function showMovies() {
+            const movieGallery = document.getElementById("movies");
+            if (movieGallery.style.display === "none" || movieGallery.style.display === "") {
+                movieGallery.style.display = "flex";
+            } else {
+                movieGallery.style.display = "none";
+            }
+        }
+
+        
+        </script>
+    </body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rajesh</title>
+    </head>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+          background: linear-gradient(115deg,#adadad,#121212);
+             
+        }
+       
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .background-image{
+            width: 100%;
+            height: 500px;
+        }
+        .btn{
+             position: absolute;
+            bottom: 20px;
+            left: 50%;
+           background-color: transparent;
+            padding: 10px 20px;
+            border:2px solid #e4e4e4;
+            color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .btn:hover{
+            background-color: #e4e4e4;
+        }
+        .overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+        .overlay-content{
+            background-color: rgba(226, 215, 215, 0.2);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            width: 90%;
+        }
+       
+
+         .container_2 {
+            width: 90%;
+            margin: 40px;
+            padding: 20px;
+            border: 2px solid #e4e4e4;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px 0 #e4e4e4;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        .hit-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .hit-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .hit-list button {
+            padding: 5px 10px;
+            background-color: transparent;
+            color:black;
+            border: 2px solid #e4e4e4;
+            
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .hit-list button:hover {
+            background-color: #e4e4e4;
+        }
+      
+        .details,.career,.awards{
+            font-family: 'Monaco',serif;
+            margin: 20px;
+            height: 300px;
+            width: 500px;
+            padding: 20px;
+            font-size: 17px;
+            
+        }
+        .overlay-content h1{
+            color: yellow;
+        }
+        .text-overlay {
+            position: absolute;
+            top: 60%; 
+            left: 30px;
+            color: white; 
+            font-size: 24px; 
+            font-family: Georgia, serif; 
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+        }
+
+ .container_3 {
+     display: flex;
+     flex-direction: column;
+      align-items: center;
+    padding: 10px;
+}
+
+
+.image-gallary {
+    display: none;
+    margin-top: 20px;
+      gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #e4e4e4;
+    border-radius: 8px;
+}
+.image-item:hover{
+    box-shadow: 0px 8px 32px 0 #e4e4e4;
+}
+
+.image-item img {
+     width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; 
+    
+}
+.image-item img:hover {
+    transform: scale(1.1); /* Optional zoom effect on hover */
+}
+
+
+.overlay_img {
+    position: absolute; 
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: white; 
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-item:hover .overlay_img {
+    opacity: 1; /* Show overlay text on hover */
+}
+.bn{
+    height: 50px;
+    width: 150px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 2px solid #e4e4e4;
+    background-color: transparent;
+    border-radius: 50px;
+    color: black;
+    box-shadow: 0 8px 32px 0 #e4e4e4;
+}
+.bn:focus{
+    background-color: #e4e4e4;
+}
+       strong{
+        color:red;
+       }
+
+
+    </style>
+    <body>
+        <div class="container">
+            <img src="\musics_pics\mala_pics\rajj.jpeg"class="background-image">
+            <button id="detailsButton" class="btn">show</button>
+             <div class="text-overlay">
+                <h1>Rajesh Murugesan</h1>
+                <h5>Music Composer</h5>
+                </div>
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <div class="details">
+                    <h1>About</h1>
+                    <h3>Birthdate: May 14, 1988</h3>
+                    <h3>Hometown: Kerala, India</h3>
+                    <p>Rajesh Murugesan is a renowned Indian music composer primarily associated with Malayalam cinema. Known for his innovative and youthful soundtracks, he has gained significant recognition for redefining film music with his unique style.</p>
+                    </div>
+                    <div class="career">
+                        <h1>Career Highlights</h1>
+                     <p><strong> Breakthrough:</strong> Gained widespread fame with his debut soundtrack for the film Neram (2013), directed by Alphonse Puthren.<br><br>
+<strong>Iconic Soundtrack:</strong> Achieved massive success with the music for Premam (2015), delivering chart-topping songs like Malare and Aluva Puzha.<br><br>
+<strong>Collaboration:</strong> Frequently collaborates with Alphonse Puthren, creating memorable and fresh music for his films.
+</p>
+                    </div>
+                    <div class="awards">
+                    <h1>Awards</h1> 
+                        <h4>Asianet Film Awards: Best Music Director for Premam.</h4>
+                        <h4>Vanitha Film Awards: Recognized for his outstanding contribution to the film Premam.</h4>
+                         <h4>South Indian International Movie Awards (SIIMA): Honored for his work in Malayalam cinema.</h4>
+                    </div>
+                </div>
+         <button id="closebutton" class="btn" >close</button>
+                </div>
+            </div>
+        </div>
+      
+        <div class="container_2">
+    <div class="section hit-list">
+    <h2>Hit Songs</h2>
+    <ul>
+        <li>
+            <span>Kalippu Premam</span>
+            <button onclick="togglePlay('/musicss/malayalam_musics/rajesh/Kalippu .mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Pista The Run Anthem - Neram _ Nivin Pauly _ Nazriya Nazim _ Alphonse Puthren</span>
+            <button onclick="togglePlay('/musicss/malayalam_musics/rajesh/Pista.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Premam Malare Rajesh Murugesan _ Vijay Yesudas _ Nivin Pauly _ Sai Pallavi</span>
+            <button onclick="togglePlay('/musicss/malayalam_musics/rajesh/Premam.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Thanne Thanne -Gold Movie _ Prithviraj _ Nayanthara _ Alphonse Puthren _Rajesh Murugesan</span>
+            <button onclick="togglePlay('/musicss/malayalam_musics/rajesh/Thanne .mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Vaathil Melle - Neram _ Nivin Pauly _ Nazriya Nazim _ Alphonse Puthren</span>
+            <button onclick="togglePlay('/musicss/malayalam_musics/rajesh/Vaathil Melle.mp3', this)">Play</button>
+        </li>
+       
+    </ul>
+</div>
+</div>
+      <div class="container_3">
+                   <button onclick="showMovies()" class="bn">Notable Albums</button>
+                 <div class="container_3">
+        <div class="image-gallary" id="movies">
+        <div class="image-item">
+            <a href="https://youtu.be/SuuypjzzqRw?si=H9GWU78oiRXXjtrv">
+            <img src="\musics_pics\mala_pics\neram.jpg" alt="Roja"></a>
+            <div class="overlay_img">
+            <h3> Neram</h3>
+            <h4>Released on 8 Feb 2023 and produced by 20dB Sound Studios</h4>
+        </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/tcdMUc3Q48A?si=Yix9XCxc4GubpVHu">
+            <img src="\musics_pics\mala_pics\kokila.jpg" alt="Jeans"></a>
+            <div class="overlay_img">
+                <h3>Vasantha Mullai </h3>
+                <h4>Released on 8 Feb 2023 and produced by 20dB Sound Studios
+                </h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/G6aeABvxE1U?si=kKG_Eprwe-1pU9Z6">
+            <img src="\musics_pics\mala_pics\gold.jpg" alt="Bombay"></a>
+            <div class="overlay_img">
+                <h3>GOLD</h3>
+                <h4>Released on 25 Mar 2022 and produced by  Magic Frames </h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/bsuLRhUt6Uo?si=Tvvr7BVqkLp8lAtF">
+            <img src="\musics_pics\mala_pics\pre.jpg" alt="guru"></a>
+            <div class="overlay_img">
+                <h3>Premam</h3>
+            <h4>Released on 25 mar 2015  and directed by Alphonse Puthren</h4></div>
+        </div>
+       
+
+    </div>
+</div>
+        <script>
+            document.getElementById('detailsButton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='flex';
+            });
+             document.getElementById('closebutton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='none';
+            });
+
+            let currentAudio = null; 
+    let currentButton = null; 
+
+    function togglePlay(file, button) {
+        
+        if (currentAudio) {
+            // Check if the current audio is the same as the new one
+            if (currentAudio.src === new URL(file, window.location.href).href) {
+                if (currentAudio.paused) {
+                    currentAudio.play(); 
+                    button.textContent = 'Pause'; 
+                } else {
+                    currentAudio.pause(); 
+                    button.textContent = 'Play'; 
+                }
+                return; 
+            } else {
+                // Stop the current audio if it's different
+                currentAudio.pause();
+                currentButton.textContent = 'Play'; // Reset the previous button text
+                currentAudio = null;
+                currentButton = null;
+            }
+        }
+
+        // Set up and play the new audio
+        currentAudio = new Audio(file); 
+        currentAudio.play();
+        button.textContent = 'Pause';
+        currentButton = button; 
+
+        // Handle when the audio finishes
+        currentAudio.onended = () => {
+            button.textContent = 'Play'; 
+            currentAudio = null; 
+            currentButton = null; 
+        };
+    }
+         function showMovies() {
+            const movieGallery = document.getElementById("movies");
+            if (movieGallery.style.display === "none" || movieGallery.style.display === "") {
+                movieGallery.style.display = "flex";
+            } else {
+                movieGallery.style.display = "none";
+            }
+        }
+
+        
+        </script>
+    </body>
+</html>

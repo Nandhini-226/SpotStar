@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>harish</title>
+    </head>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+          background: linear-gradient(115deg,#faec24,grey);
+             
+        }
+       
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .background-image{
+            width: 100%;
+            height: 500px;
+        }
+        .btn{
+             position: absolute;
+            bottom: 20px;
+            left: 50%;
+           background-color: transparent;
+            padding: 10px 20px;
+            color: white;
+            border:2px solid black;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .btn:hover{
+            background-color: black;
+        }
+        .overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+        .overlay-content{
+            background-color: rgba(226, 215, 215, 0.2);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            width: 90%;
+        }
+        .overlay .button{
+            background-color: #e97f06a1;
+        }
+
+         .container_2 {
+            width: 90%;
+            margin: 40px;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px 0 black;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        .hit-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .hit-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .hit-list button {
+            padding: 5px 10px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid black;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .hit-list button:hover {
+            background-color: black;
+        }
+      
+        .details,.career,.awards{
+            font-family: 'Monaco',serif;
+            margin: 20px;
+            height: 300px;
+            width: 500px;
+            padding: 20px;
+            font-size: 17px;
+            
+        }
+        .overlay-content h1{
+            color: yellow;
+        }
+        .text-overlay {
+            position: absolute;
+            top: 60%; 
+            left: 30px;
+            color: white; 
+            font-size: 24px; 
+            font-family: Georgia, serif; 
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+        }
+
+ .container_3 {
+     display: flex;
+     flex-direction: column;
+      align-items: center;
+    padding: 10px;
+}
+
+
+.image-gallary {
+    display: none;
+    margin-top: 20px;
+      gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid black;
+    border-radius: 8px;
+}
+.image-item:hover{
+ box-shadow: 0 8px 32px 0 black;
+}
+.image-item img {
+     width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; 
+    
+}
+.image-item img:hover {
+    transform: scale(1.1); /* Optional zoom effect on hover */
+}
+
+
+.overlay_img {
+    position: absolute; 
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: white; 
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-item:hover .overlay_img {
+    opacity: 1; /* Show overlay text on hover */
+}
+.bn{
+    height: 50px;
+    width: 150px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 2px solid black;
+    background-color: transparent;
+    border-radius: 50px;
+    color: white;
+    box-shadow: 0 8px 32px 0  black;
+}
+.bn:focus{
+    background-color: black;
+}
+ strong{
+        color: #fea601;
+       }
+
+
+    </style>
+    <body>
+        <div class="container">
+            <img src="\musics_pics\tamil_pics\ha.jpg"class="background-image">
+            <div class="text-overlay">
+                <h1>Harris Jayaraj</h1>
+                <h5> Indian Music Composer and Playback Singer</h5>
+                
+                </div>
+            <button id="detailsButton" class="btn">show</button>
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <div class="details">
+                    <h1>About</h1>
+                    <h3>Birthdate: January 8, 1975</h3>
+                    <h3>Hometown: Chennai, Tamil Nadu, India</h3>
+                    <p>Harris Jayaraj is one of the most successful and celebrated music composers in Indian cinema, especially known for his contributions to Tamil films. His music is characterized by its melodious tunes, innovative orchestration, and modern arrangements.</p>
+                    </div>
+                    <div class="career">
+                        <h1>Career Highlights</h1>
+                     <p><strong>Debut Success:</strong> Made an impactful debut with Minnale (2001), earning critical acclaim and numerous awards, including a Filmfare Award for Best Music Director.<br><br>
+              <strong>Hitmaker:</strong> Known for crafting evergreen soundtracks for films like Kaakha Kaakha, Vettaiyaadu Vilaiyaadu, Ghajini, Ayan, and Ko.<br><br>
+                 <strong>Collaboration:</strong> Frequently collaborates with leading filmmakers like Gautham Vasudev Menon and K.V. Anand.</p>
+                    </div>
+                    <div class="awards">
+                    <h1>Awards</h1> 
+                        <h4>Multiple Filmfare Awards and Vijay Awards for Best Music Direction.</h4>
+                        <h4>Recognized as one of the most consistent hitmakers in Tamil cinema.</h4>
+                    </div>
+                </div>
+         <button id="closebutton" class="btn" >close</button>
+                </div>
+            </div>
+        </div>
+      
+        <div class="container_2">
+    <div class="section hit-list">
+    <h2>Hit Songs</h2>
+    <ul>
+        <li>
+            <span>Aathadi_Aathadi_Semmbaruthi_pookaari</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/harish/Aathadi_Aathadi_Semmbaruthi_pookaari_[SamaDada.Com].mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>En_Frienda_Pola</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/harish/En_Frienda_Pola_[MassWala.Com].mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Mun_Andhi</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/harish/Mun_Andhi.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Othayila</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/harish/Othayilae_[SamaDada.Com].mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Rettai_Kathirae</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/harish/Rettai_Kathirae_[SamaDada.Com].mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Antarctica</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/harish/Antarctica_[MassWala.Com].mp3', this)">Play</button>
+        </li>
+    </ul>
+</div>
+</div>
+       <div class="container_3">
+                   <button onclick="showMovies()" class="bn">Notable Albums</button>
+                 <div class="container_3">
+        <div class="image-gallary" id="movies">
+        <div class="image-item">
+            <a href="https://youtu.be/7EoEcSoaWlA?si=pyXE-KzOYeDJ3hgK">
+            <img src="\musics_pics\tamil_pics\atha.jpg" alt="Adavan"></a>
+            <div class="overlay_img">
+            <h3>Aadhavan</h3>
+            <h4>Released on 17 October <br>2009 and directed by  K. S. Ravikumar</h4>
+        </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/kAsnuXMvaxg?si=tBqaZjN-GEpqwKh5">
+            <img src="\musics_pics\tamil_pics\spy.jpg" alt="spyder"></a>
+            <div class="overlay_img">
+                <h3>Spyder</h3>
+                <h4>Released in 27 September 2017 and directed by  A.R. Murugadoss
+                </h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/IjjBh4NX8V0?si=Io1XCPy7NV4-N4oq">
+            <img src="\musics_pics\tamil_pics\force.jpg" alt="force"></a>
+            <div class="overlay_img">
+                <h3>Force</h3>
+                <h4>Released on 30 September 2011 and directed by Nishikant Kamat</h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/4TMVBjYUvi4?si=RgodEeBZki_P6d5b">
+            <img src="\musics_pics\tamil_pics\thu.jpg" alt="thupaaki"></a>
+            <div class="overlay_img">
+                <h3>Thuppakki</h3>
+            <h4>Released on 13 November 2012  and directed by  A.R. Murugadoss.</h4></div>
+        </div>
+       
+
+    </div>
+</div>
+
+        <script>
+            document.getElementById('detailsButton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='flex';
+            });
+             document.getElementById('closebutton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='none';
+            });
+
+            let currentAudio = null;  // Current playing audio
+    let currentButton = null; // Button associated with the current audio
+
+    function togglePlay(file, button) {
+        // If the same song is clicked again, stop it
+        if (currentAudio && currentAudio.src.includes(file)) {
+            if (!currentAudio.paused) {
+                currentAudio.pause();
+                button.textContent = 'Play'; // Change button text to "Play"
+            } else {
+                currentAudio.play();
+                button.textContent = 'Pause'; // Change button text to "Pause"
+            }
+        } else {
+            // Stop the previous song if playing
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+                currentButton.textContent = 'Play'; // Reset previous button text
+            }
+
+            // Play the new song
+            currentAudio = new Audio(file);
+            currentAudio.play();
+            button.textContent = 'Pause'; 
+            currentButton = button; 
+        }
+    }
+         function showMovies() {
+            const movieGallery = document.getElementById("movies");
+            if (movieGallery.style.display === "none" || movieGallery.style.display === "") {
+                movieGallery.style.display = "flex";
+            } else {
+                movieGallery.style.display = "none";
+                console.log("images not visible")
+            }
+        }
+
+        
+        </script>
+    </body>
+</html>

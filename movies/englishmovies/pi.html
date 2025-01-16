@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pi</title>
+</head>
+<style>
+   body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Dark Gray Background */
+    color: #D3D3D3; /* Light Gray Text */
+}
+.container1{
+   display: grid;
+   grid-template-areas:
+    'four five six ten'
+    'nine eleven tweleve seven'
+    ;
+    padding: 20px;
+}
+.card {
+    background-color:#1A1A2E;
+    width: 250px; 
+    border-radius: 8px;
+    font-size: 12px; 
+    color: #fff;
+    margin: 15px;
+}
+
+.image img {
+    width: 100%;
+    height: 300px;
+}
+
+.details {
+    padding: 10px; /* Reduced padding */
+}
+
+.title {
+    font-size: 16px; /* Reduced title size */
+    margin: 0;
+    font-weight: bold;
+    color: #39FF14;
+}
+
+.title span {
+    font-size: 12px; /* Reduced year font size */
+    font-weight: bold;
+    color: #b6b1b1;
+}
+
+.genre, .starring, p {
+    margin: 5px 0; /* Reduced margin between lines */
+    line-height: 1.4; /* Adjusted line height for smaller text */
+}
+.movie-image img{
+    height: 400px;
+    width: 700px;
+}
+
+/* Movie Section */
+header {
+    background-color: #1A1A2E; /* Deep Red Header */
+    color: #FFFFFF; /* White Text */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    border-bottom: 3px solid #39FF14;
+}
+
+.movie-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.movie-image {
+    width: 40%;
+    height: 350px;
+    border: 5px solid #39FF14;
+    border-radius: 10px;
+}
+.movie-image:hover{
+   transform: scale(1.1); /* Enlarge Image on Hover */
+   box-shadow: 0 6px 12px rgba(0, 255, 0, 0.8); /* Glow Effect */
+}
+
+.movie-details {
+    width: 50%;
+    background-color: #1A1A2E; /* Deep Red Section */
+    padding: 20px;
+    border-radius: 10px;
+    color: #FFFFFF; /* White Text */
+    font-family: inherit;
+}
+.movie-details h1{
+    color: #39FF14;
+}
+
+/* Buttons */
+button {
+    background-color: #39FF14;
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button a{
+    text-decoration: none;
+}
+button:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 255, 0, 0.8); /* Glow Effect */
+   
+}
+.card:hover{
+    transform: scale(1.05); /* Enlarge Image on Hover */
+    box-shadow: 0 6px 12px rgba(0, 255, 0, 0.8);
+   
+}
+</style>
+<body>
+
+<body>
+<header>Retro Cinema</header>
+    <div class="movie-container">
+        <img src="\movie_pics\english_pic\piii.jpg" alt="Movie Poster" class="movie-image">
+        <div class="movie-details">
+            <h1>Life of Pi</h1>
+            <h4>Release Date: 23 November 2012 </h4>
+            <h4>Director: 	 Ang Lee</h4>
+            <p> Life of Pi tells the story of Pi Patel, a young boy from India, who survives a shipwreck and is stranded in the Pacific Ocean on a lifeboat with a Bengal tiger named Richard Parker. As Pi struggles to survive, he forms a unique bond with the tiger, relying on faith, ingenuity, and willpower to endure the hardships. The story explores themes of survival, spirituality, and the power of storytelling, leaving the audience to question what is real and what is imagined.
+            </p>
+            <button>
+                <a href="https://youtu.be/3mMN693-F3U?si=T84LdgjmSs7TCc10">Watch Now</a>
+            </button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container1">
+    <div class="card" style="grid-area: nine;">
+        <div class="image">
+             <a href=" \movies\englishmovies\insideout.html">
+            <img src="\movie_pics\english_pic\inside out.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Inside Out<span> 2015</span></h1>
+            <p class="genre"><strong>Genre:</strong> Comedy,Fantasy</p>
+            <p><strong>Directed by:</strong>Pete Docter</p>
+            <p><strong>Written by:</strong> Pete Docter</p>
+            <p><strong>Produced by:</strong> Jonas Rivera</p>
+            <p class="starring"><strong>Starring:</strong> Amy Poehler, Phyllis Smith, Richard Kind, Bill Hader</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: ten;" >
+        <div class="image">
+            <a href=" \movies\englishmovies\johnwick.html">
+            <img src="\movie_pics\english_pic\johnwick.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">John Wick <span>2014</span></h1>
+            <p class="genre"><strong>Genre:</strong> Action,Thriller</p>
+            <p><strong>Directed by:</strong> Chad Stahelski</p>
+            <p><strong>Written by:</strong> Derek Kolstad</p>
+            <p><strong>Produced by:</strong> Basil Iwanyk</p>
+            <p class="starring"><strong>Starring:</strong> Kanu Reve,Michael Nyqvist, Alfi Allen,Adrianne Palicki</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: eleven;">
+        <div class="image">
+            <a href=" \movies\englishmovies\joker.html">
+            <img src="\movie_pics\english_pic\joker.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Joker <span>2019</span></h1>
+            <p class="genre"><strong>Genre:</strong> Psychological, Thriller</p>
+            <p><strong>Directed by:</strong> Todd Phillips</p>
+            <p><strong>Written by:</strong> Scott Silver</p>
+            <p><strong>Produced by:</strong> Todd Phillips,Bradly Cooper</p>
+            <p class="starring"><strong>Starring:</strong> Joaquin Phoenix,Robert De Niro,Zazie Beetz,France Conroy</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: tweleve;">
+        <div class="image">
+            <a href=" \movies\englishmovies\nun.html">
+            <img src="\movie_pics\english_pic\nun.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">The Nun <span>2018</span></h1>
+            <p class="genre"><strong>Genre:</strong> Supernatural,Horror</p>
+            <p><strong>Directed by:</strong>Corin Hardy</p>
+            <p><strong>Written by:</strong>Gary Dauerman</p>
+            <p><strong>Produced by:</strong> Peter Safran</p>
+            <p class="starring"><strong>Starring:</strong> Demian Bichiar,Taissa Farmiga,Jonas Bloquet</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: four;">
+        <div class="image">
+          <a href=" \movies\englishmovies\alice.html">
+            <img src="\movie_pics\english_pic\alice.jpg" alt="Movie Image"  ></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Alice in WonderLand <span>2010</span></h1>
+            <p class="genre"><strong>Genre:</strong> Fantasy, Adventures</p>
+            <p><strong>Directed by:</strong> Tim Burton</p>
+            <p><strong>Written by:</strong> Linda Woolverton</p>
+            <p><strong>Produced by:</strong> Walt Disney Pictures</p>
+            <p class="starring"><strong>Starring:</strong> Mia Wasikowsaka,Johny Depp,Ann Hathway,Helena Bonham Carter</p>
+        </div>
+        </div>
+    <div class="card" style="grid-area: five;">
+        <div class="image">
+            <a href=" \movies\englishmovies\homealone.html">
+            <img src="\movie_pics\english_pic\homealone.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Home Alone <span>1990</span></h1>
+            <p class="genre"><strong>Genre:</strong> Commedy</p>
+            <p><strong>Directed by:</strong> Chris Columbus</p>
+            <p><strong>Written by:</strong> John Hughes</p>
+            <p><strong>Produced by:</strong> John Hughes</p>
+            <p class="starring"><strong>Starring:</strong>Macaulay Culkin,Joe Pesci, Daniel Stern,John Heard</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: six;">
+        <div class="image">
+            <a href=" \movies\englishmovies\damsel.html">
+            <img src="\movie_pics\english_pic\damsel.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Damsel <span>2024</span></h1>
+            <p class="genre"><strong>Genre:</strong> Dark Fantasy</p>
+            <p><strong>Directed by:</strong> Juan Carlos</p>
+            <p><strong>Written by:</strong>Dan Mazeau</p>
+            <p><strong>Produced by:</strong> Joe Roth,Chris Cataldi</p>
+            <p class="starring"><strong>Starring:</strong>Millie Bobby Brown, Ray Winstone,Nick Robinson,Angela Bassett</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: seven;">
+       <div class="image">
+            <a href=" \movies\englishmovies\charlie.html">
+            <img src="\movie_pics\english_pic\charlie.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Charlie And The Chocolate Factory <span>2005</span></h1>
+            <p class="genre"><strong>Genre:</strong> Fantacy, Adventeures</p>
+            <p><strong>Directed by:</strong>Tim Burton</p>
+            <p><strong>Written by:</strong> John August</p>
+            <p><strong>Produced by:</strong> Brad Grey</p>
+            <p class="starring"><strong>Starring:</strong> Johnny Depp,Freddie Highmore,David Kelly,Helena Bonham Carter</p>
+        </div>
+    </div>
+</body>
+</html>

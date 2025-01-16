@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>pradeep</title>
+    </head>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+          background: linear-gradient(115deg, grey, #1f013b);
+            
+        }
+       
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .background-image{
+            width: 100%;
+            height: 500px;
+        }
+        .btn{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translate(-50%);
+            padding: 10px 20px;
+            background-color: transparent;
+            border: 2px solid red;
+            color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .btn:hover{
+            background-color: red;
+        }
+        .overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+        .overlay-content{
+            background-color: rgba(226, 215, 215, 0.2);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            width: 90%;
+        }
+       
+
+         .container_2 {
+            width: 90%;
+            margin: 40px;
+            padding: 20px;
+            border: 2px solid rgb(180, 45, 45);
+            border-radius: 10px;
+            box-shadow: 0 8px 32px 0 rgb(194, 59, 59);
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        .hit-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .hit-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .hit-list button {
+            padding: 5px 10px;
+            background-color:transparent;
+            color: white;
+            border: 2px solid rgb(194, 59, 59);
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .hit-list button:hover {
+            background-color: red;
+        }
+      
+        .details,.career,.awards{
+            font-family: 'Monaco',serif;
+            margin: 20px;
+            height: 300px;
+            width: 500px;
+            padding: 20px;
+            font-size: 17px;
+            
+        }
+        .overlay-content h1{
+            color: yellow;
+        }
+        .text-overlay {
+            position: absolute;
+            top: 60%; 
+            left: 30px;
+            color: white; 
+            font-size: 24px; 
+            font-family: Georgia, serif; 
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+        }
+
+ .container_3 {
+     display: flex;
+     flex-direction: column;
+      align-items: center;
+    padding: 10px;
+}
+
+
+.image-gallary {
+    display: none;
+    margin-top: 20px;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid red;
+    border-radius: 8px;
+    
+}
+.image-item:hover{
+     box-shadow: 0 8px 32px 0 rgb(224, 43, 43);
+}
+
+
+.image-item img {
+     width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; /* Optional zoom-in effect */
+}
+
+.image-item img:hover {
+    transform: scale(1.1); /* Optional zoom effect on hover */
+}
+
+.overlay_img {
+    position: absolute; 
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: white; 
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-item:hover .overlay_img {
+    opacity: 1; /* Show overlay text on hover */
+}
+.bn{
+    height: 50px;
+    width: 150px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 2px solid red;
+    background-color: transparent;
+    border-radius: 50px;
+    color: white;
+    box-shadow: 0 8px 32px 0 rgb(194, 59, 59);
+}
+.bn:focus{
+    background-color: rgb(194, 59, 59);
+}
+       strong{
+        color: red;
+       } 
+
+
+    </style>
+    <body>
+        <div class="container">
+            <img src="\musics_pics\tamil_pics\pradeep.jpeg"class="background-image">
+            <div class="text-overlay">
+                <h1>Pradeep Kumar</h1>
+                <h5>Indian Playback Singer, Music Composer, and Lyricist</h5>
+                
+                </div>
+            <button id="detailsButton" class="btn">show</button>
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <div class="details">
+                    <h1> About</h1>
+                    <h3>Birthdate: May 12, 1986</h3>
+                    <h3>Hometown: Tiruchirappalli, Tamil Nadu, India</h3>
+                    <p>Pradeep Kumar is a celebrated playback singer and music composer in the Tamil film industry, known for his soulful voice and minimalistic approach to music. His songs often evoke deep emotions, making him a favorite for melodies and introspective tracks.</p>
+                    </div>
+                    <div class="career">
+                    <h1>Career Highlights</h1>
+                     <p>
+                      <strong>Breakthrough Song:</strong> Gained significant recognition with songs like "Enna Solla Pogirai" from Kandukondain Kandukondain (2000) and "Pookal Pookum" from Vaaranam Aayiram (2008).<br><br>
+                   <strong>Popular Soundtracks:</strong> Contributed to hit tracks in films like Sundarapandian, Vikram Vedha, Kumki, and Raavanan.</p>
+                    </div>
+                    <div class="awards">
+                    <h1>Achievements</h1> 
+                        <h4>Won Filmfare and Vijay Awards for his playback singing.</h4>
+                        <h4>Known for contributions to critically acclaimed films.</h4>
+                    </div>
+                </div>
+         <button id="closebutton" class="btn" >close</button>
+                </div>
+            </div>
+        </div>
+      
+        <div class="container_2">
+    <div class="section hit-list">
+    <h2>Hit Songs</h2>
+    <ul>
+        <li>
+            <span>Kaatrodu Pattam Pola</span>
+            <button onclick="togglePlay('/musicss/mil_musics/pradeep/Kaatrodu Pattam Pola Ayothi 128 Kbps.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Kangal Edho Chithha</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/pradeep/Kangal Edho Chithha 128 Kbps.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Kannamma</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/pradeep/Kannamma Kaala Tamil 128 Kbps.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Kodi Aruvi</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/pradeep/Kodi Aruvi Mehandi Circus 128 Kbps.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Nee Kavithaigala</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/pradeep/Nee Kavithaigala Maragatha Naanayam 128 Kbps.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Thanga_Sela</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/pradeep/Thanga_Sela_[MassWala.Com].mp3', this)">Play</button>
+        </li>
+    </ul>
+</div>
+</div>
+       <div class="container_3">
+                   <button onclick="showMovies()" class="bn">Notable Albums</button>
+                 <div class="container_3">
+        <div class="image-gallary" id="movies">
+        <div class="image-item">
+            <a href="https://youtu.be/pVkDZueTBpY?si=yE1Y2S-oXKqU-45D">
+            <img src="\movie_pics\tamimovies_pic\mara.jpg" alt="maragatha"></a>
+            <div class="overlay_img">
+            <h3>Maragatha Naanayam</h3>
+            <h4>Released on 19 January <br>2017 and directed by <br>Ark Saravan</h4>
+        </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/WNWusbLrYLs?si=9-zcYEp1z-HZvCmX">
+            <img src="\musics_pics\tamil_pics\veyil.jpg" alt="veyil"></a>
+            <div class="overlay_img">
+                <h3>Veyil</h3>
+                <h4>Released in 25 Feb 2022 <br>and directed by Sarath Menon
+                </h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/pBrbZ3bVJnA?si=NTh5ESdRb5cgjl-g">
+            <img src="\musics_pics\tamil_pics\meya.jpg" alt="meyadha"></a>
+            <div class="overlay_img">
+                <h3>Meyaadha Maan</h3>
+                <h4>Released on 18 October<br> 2017 and directed by <br>Rathna Kumar</h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/fFoq2QJb2iw?si=OQTdKGz4oq_xTGXL">
+            <img src="\musics_pics\tamil_pics\adai.jpg" alt="aadai"></a>
+            <div class="overlay_img">
+                <h3>Aadai</h3>
+            <h4>Released on 19 July 2019  and directed by Rathna Kumar</h4>
+        </div>
+       
+
+    </div>
+</div>
+
+        <script>
+            document.getElementById('detailsButton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='flex';
+            });
+             document.getElementById('closebutton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='none';
+            });
+
+            let currentAudio = null;  // Current playing audio
+    let currentButton = null; // Button associated with the current audio
+
+    function togglePlay(file, button) {
+        // If the same song is clicked again, stop it
+        if (currentAudio && currentAudio.src.includes(file)) {
+            if (!currentAudio.paused) {
+                currentAudio.pause();
+                button.textContent = 'Play'; // Change button text to "Play"
+            } else {
+                currentAudio.play();
+                button.textContent = 'Pause'; // Change button text to "Pause"
+            }
+        } else {
+            // Stop the previous song if playing
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+                currentButton.textContent = 'Play'; // Reset previous button text
+            }
+
+            // Play the new song
+            currentAudio = new Audio(file);
+            currentAudio.play();
+            button.textContent = 'Pause'; 
+            currentButton = button; 
+        }
+    }
+         function showMovies() {
+            const movieGallery = document.getElementById("movies");
+            if (movieGallery.style.display === "none" || movieGallery.style.display === "") {
+                movieGallery.style.display = "flex";
+            } else {
+                movieGallery.style.display = "none";
+                console.log("images not visible")
+            }
+        }
+
+        
+        </script>
+    </body>
+</html>

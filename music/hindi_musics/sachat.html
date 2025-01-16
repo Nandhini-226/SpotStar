@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sachat</title>
+    </head>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+          background: linear-gradient(115deg, #093f9c,#121212);
+             
+        }
+       
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .background-image{
+            width: 100%;
+            height: 500px;
+        }
+        .btn{
+             position: absolute;
+            bottom: 20px;
+            left: 50%;
+           background-color: transparent;
+            padding: 10px 20px;
+            border:2px solid #a4082b;
+            color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .btn:hover{
+            background-color: #a4082b;
+        }
+        .overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+        .overlay-content{
+            background-color: rgba(226, 215, 215, 0.2);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            width: 90%;
+        }
+       
+
+         .container_2 {
+            width: 90%;
+            margin: 40px;
+            padding: 20px;
+            border: 2px solid #a4082b;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px 0 #a4082b;
+        }
+        
+        .section {
+            color: white;
+            margin-bottom: 40px;
+        }
+        .hit-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .hit-list li {
+            display: flex;
+            color: white;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .hit-list button {
+            padding: 5px 10px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid #a4082b;
+            
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .hit-list button:hover {
+            background-color:#a4082b;
+        }
+      
+        .details,.career,.awards{
+            font-family: 'Monaco',serif;
+            margin: 20px;
+            height: 300px;
+            width: 500px;
+            padding: 20px;
+            font-size: 17px;
+            
+        }
+        .overlay-content h1{
+            color: yellow;
+        }
+        .text-overlay {
+            position: absolute;
+            top: 60%; 
+            left: 30px;
+            color: white; 
+            font-size: 24px; 
+            font-family: Georgia, serif; 
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+        }
+
+ .container_3 {
+     display: flex;
+     flex-direction: column;
+      align-items: center;
+    padding: 10px;
+}
+
+
+.image-gallary {
+    display: none;
+    margin-top: 20px;
+      gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #a4082b ;
+    border-radius: 8px;
+}
+.image-item:hover{
+    box-shadow: 0px 8px 32px 0 #a4082b;
+}
+
+.image-item img {
+     width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; 
+    
+}
+.image-item img:hover {
+    transform: scale(1.1); /* Optional zoom effect on hover */
+}
+
+
+.overlay_img {
+    position: absolute; 
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: white; 
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-item:hover .overlay_img {
+    opacity: 1; /* Show overlay text on hover */
+}
+.bn{
+    height: 50px;
+    width: 150px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 2px solid #a4082b;
+    background-color: transparent;
+    border-radius: 50px;
+    color: white;
+    box-shadow: 0 8px 32px 0 #a4082b;
+}
+.bn:focus{
+    background-color:#a4082b;
+}
+       strong{
+        color: #a4082b;
+       }
+
+
+    </style>
+    <body>
+        <div class="container">
+            <img src="\musics_pics\hindi_pics\sach.jpeg"class="background-image">
+            <button id="detailsButton" class="btn">show</button>
+             <div class="text-overlay">
+                <h1> Sachet Tandon</h1>
+                <h5>Singer, Music Composer</h5>
+                </div>
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <div class="details">
+                    <h1>About</h1>
+                    <h3>Birthdate: August 17, 1989</h3>
+                    <h3>Hometown:Lucknow, Uttar Pradesh, India</h3>
+                    <p>Sachet Tandon is a celebrated Indian singer and composer, best known for his work as part of the music duo Sachet-Parampara. His melodious voice and impactful compositions have earned him fame in Bollywood and independent music.</p>
+                    </div>
+                    <div class="career">
+                        <h1>Career Highlights</h1>
+                     <p><strong> Rise to Fame:</strong>
+Gained popularity as a finalist in the reality show The Voice India (2015).<br><br>
+<strong>Bollywood Success:</strong>
+Known for chart-topping songs like Bekhayali (Kabir Singh), which became a cultural phenomenon.
+Other hits include Mere Sohneya, Maiyya Mainu, and Raatan Lambiyan (Shershaah).<br><br>
+<strong>Music Composition:</strong>
+As part of Sachet-Parampara, has composed memorable soundtracks for movies like Toilet: Ek Prem Katha, Kabir Singh, Shershaah, and Jersey.
+                    </div>
+                    <div class="awards">
+                    <h1>Awards</h1> 
+                        <h4>Winner of several prestigious awards, including Filmfare and IIFA Awards, for his contributions to Bollywood music.
+</h4>
+                        <h4>Nominated for his acting performances in critically acclaimed films.</h4>
+                    </div>
+                </div>
+         <button id="closebutton" class="btn" >close</button>
+                </div>
+            </div>
+        </div>
+      
+        <div class="container_2">
+    <div class="section hit-list">
+    <h2>Hit Songs</h2>
+    <ul>
+        <li>
+            <span>Barbaadiyan - Sachet Tandon_ Nikita Gandhi _ Sunny K_ Radhika M _ Sachin-Jigar</span>
+            <button onclick="togglePlay('/musicss/hindi_musics/sachat/Barbaadiyan .mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Bekhayali - Kabir Singh _ Shahid K_Kiara A_Sandeep Reddy Vanga _ Sachet-Parampara _ Irshad</span>
+            <button onclick="togglePlay('/musicss/hindi_musics/sachat/Bekhayali .mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Humraah - Malang _ Aditya R K_ Disha P Anil K Kunal K _ Sachet T _ Mohit S _ Fusion P</span>
+            <button onclick="togglePlay('/musicss/hindi_musics/sachat/Humraah .mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Maiyya Mainu - Jersey _ Shahid Kapoor_ Mrunal Thakur_ Sachet-Parampara_ Shellee _ Gowtam T</span>
+            <button onclick="togglePlay('/musicss/hindi_musics/sachat/Maiyya Mainu .mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Malang Sajna Sachet Tandon_ Parampara Tandon _ Adil Shaikh_ Kumaar _ Bhushan Kumar</span>
+            <button onclick="togglePlay('/musicss/hindi_musics/sachat/Malang Sajna .mp3', this)">Play</button>
+        </li>
+        
+    </ul>
+</div>
+</div>
+      <div class="container_3">
+                   <button onclick="showMovies()" class="bn">Notable Albums</button>
+                 <div class="container_3">
+        <div class="image-gallary" id="movies">
+        <div class="image-item">
+            <a href="https://youtu.be/I-_LHvTeVy4?si=47Zbftlcth6ZriVm">
+            <img src="\musics_pics\hindi_pics\cha.jpg" alt="Roja"></a>
+            <div class="overlay_img">
+            <h3>Chandhi</h3>
+            <h4>Released on 4 Aug 2023  and <br>directed by Adil Shaikh </h4>
+        </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/RFOF7n5jjGg?si=JJZX85cmkKDCnDjE">
+            <img src="\musics_pics\hindi_pics\tak.jpg" alt="Jeans"></a>
+            <div class="overlay_img">
+                <h3>Takdaa Rawaan</h3>
+                <h4>Released in 10 Nov 2022 and <br>directed by Adil Shaikh
+                </h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/GBoBCbBXt1s?si=6aOKOxR44A7bx-F4">
+            <img src="\musics_pics\hindi_pics\shi.jpg" alt="Bombay"></a>
+            <div class="overlay_img">
+                <h3>Shiddat</h3>
+                <h4>Released on 22 Sep 2021 and <br>directed by Sridhar Raghavan</h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/tw1bHQm_ypY?si=QnhPo7CyOCM_Zsj0">
+            <img src="\musics_pics\hindi_pics\sah.jpg" alt="guru"></a>
+            <div class="overlay_img">
+                <h3>Hit List</h3>
+        </div>
+        </div>
+       
+
+    </div>
+</div>
+        <script>
+            document.getElementById('detailsButton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='flex';
+            });
+             document.getElementById('closebutton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='none';
+            });
+
+           let currentAudio = null; 
+    let currentButton = null; 
+
+    function togglePlay(file, button) {
+        
+        if (currentAudio) {
+            // Check if the current audio is the same as the new one
+            if (currentAudio.src === new URL(file, window.location.href).href) {
+                if (currentAudio.paused) {
+                    currentAudio.play(); 
+                    button.textContent = 'Pause'; 
+                } else {
+                    currentAudio.pause(); 
+                    button.textContent = 'Play'; 
+                }
+                return; 
+            } else {
+                // Stop the current audio if it's different
+                currentAudio.pause();
+                currentButton.textContent = 'Play'; // Reset the previous button text
+                currentAudio = null;
+                currentButton = null;
+            }
+        }
+
+        // Set up and play the new audio
+        currentAudio = new Audio(file); 
+        currentAudio.play();
+        button.textContent = 'Pause';
+        currentButton = button; 
+
+        // Handle when the audio finishes
+        currentAudio.onended = () => {
+            button.textContent = 'Play'; 
+            currentAudio = null; 
+            currentButton = null; 
+        };
+    }
+         function showMovies() {
+            const movieGallery = document.getElementById("movies");
+            if (movieGallery.style.display === "none" || movieGallery.style.display === "") {
+                movieGallery.style.display = "flex";
+            } else {
+                movieGallery.style.display = "none";
+            }
+        }
+
+        
+        </script>
+    </body>
+</html>

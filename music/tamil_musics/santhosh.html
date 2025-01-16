@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>santhosh</title>
+    </head>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+          background: linear-gradient(115deg, #52041c, #fea202);
+              
+        }
+       
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .background-image{
+            width: 100%;
+            height: 500px;
+        }
+        .btn{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translate(-50%);
+            padding: 10px 20px;
+            color: white;
+            background-color: transparent;
+            border: 2px solid orange;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .btn:hover{
+            background-color: orange;
+        }
+        .overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+        .overlay-content{
+            background-color: rgba(226, 215, 215, 0.2);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            width: 90%;
+        }
+        
+
+         .container_2 {
+            width: 90%;
+            margin: 40px;
+            padding: 20px;
+            border: 2px solid #fea601;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px 0 #fea601;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        .hit-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .hit-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .hit-list button {
+            padding: 5px 10px;
+            background-color:transparent;
+            color: white;
+            border: 2px solid #fea601;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .hit-list button:hover {
+            background-color:#fea601;
+        }
+      
+        .details,.career,.awards{
+            font-family: 'Monaco',serif;
+            margin: 20px;
+            height: 300px;
+            width: 500px;
+            padding: 20px;
+            font-size: 17px;
+            
+        }
+        .overlay-content h1{
+            color: yellow;
+        }
+        .text-overlay {
+            position: absolute;
+            top: 60%; 
+            left: 30px;
+            color: white; 
+            font-size: 24px; 
+            font-family: Georgia, serif; 
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+        }
+
+ .container_3 {
+     display: flex;
+     flex-direction: column;
+      align-items: center;
+    padding: 10px;
+}
+
+
+.image-gallary {
+    display: none;
+    margin-top: 20px;
+      gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fea601;
+    border-radius: 8px;
+}
+.image-item:hover {
+     box-shadow: 0 8px 32px 0 #fea601;
+}
+
+
+.image-item img {
+     width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; /* Optional zoom-in effect */
+}
+
+.image-item img:hover {
+    transform: scale(1.1); /* Optional zoom effect on hover */
+}
+
+.overlay_img {
+    position: absolute; 
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: white; 
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-item:hover .overlay_img {
+    opacity: 1; /* Show overlay text on hover */
+}
+.bn{
+    height: 50px;
+    width: 150px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 2px solid #fea601;
+    background-color: transparent;
+    border-radius: 50px;
+    color: white;
+    box-shadow: 0 8px 32px 0 #fea601;
+}
+.bn:focus{
+    background-color: #fea601;
+}
+       strong{
+        color: orange;
+       }
+
+    </style>
+    <body>
+        <div class="container">
+            <img src="\musics_pics\tamil_pics\san.jpg"class="background-image">
+            <div class="text-overlay">
+                <h1>Santhosh Narayanan</h1>
+                <h5>Indian Music Composer, Background Scorer, and Playback Singer</h5>
+                
+                </div>
+            <button id="detailsButton" class="btn">show</button>
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <div class="details">
+                    <h1>Santhosh Narayanan</h1>
+                    <h3>Birthdate: May 15, 1983</h3>
+                    <h3>Hometown: Tiruchirappalli, Tamil Nadu, India</h3>
+                    <p>He is a critically acclaimed music composer in Tamil cinema, known for his experimental and genre-defying soundtracks. His music is recognized for blending traditional Tamil folk elements with modern electronic, jazz, and rock influences. He is highly regarded for his impactful background scores.</p>
+                    </div>
+                    <div class="career">
+                        <h1>Career Highlights</h1>
+                     <p><strong>Debut as Composer:</strong> Gained recognition with his breakthrough score for Attakathi (2012), which earned him a place in the Tamil film music industry.<br><br>
+<strong> Versatility in Sound:</strong> Known for blending various genres, including folk, electronic, and contemporary music, creating a unique identity.<br><br>
+ <strong>Notable Works:</strong> Composed music for critically acclaimed films like Pizza, Jigarthanda, Kabali, Vikram Vedha, and Super Deluxe.</p>
+                    </div>
+                    <div class="awards">
+                    <h1>Achievements</h1> 
+                        <h4>Filmfare and Vijay Awards for Best Music Director.</h4>
+                        <h4>Recognized internationally for his work in Kabali and Kaala.</h4>
+                        <h4>2 Grammy Awards</h4>
+                        <h4>1 BAFTA Award</h4>
+                        <h4>1 Golden Globe Award</h4>
+                    </div>
+                </div>
+         <button id="closebutton" class="btn" >close</button>
+                </div>
+            </div>
+        </div>
+      
+        <div class="container_2">
+    <div class="section hit-list">
+    <h2>Hit Songs</h2>
+    <ul>
+        <li>
+            <span>Aadi_pona_Avani</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/santhosh/Aadi_pona.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Agayam-thepidithal</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/santhosh/Agayam.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>spare_Bujji</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/santhosh/Bujji.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Goindhamma</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/santhosh/Goindhamma.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>ka_ka_ka_po</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/santhosh/ka_ka_ka_po.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Nerupu_Da</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/santhosh/Nerupu_Da.mp3', this)">Play</button>
+        </li>
+    </ul>
+</div>
+</div>
+       <div class="container_3">
+                   <button onclick="showMovies()" class="bn">Notable Albums</button>
+                 <div class="container_3">
+        <div class="image-gallary" id="movies">
+        <div class="image-item">
+            <a href="https://youtu.be/4EaXadwKRgg?si=y49oK_FrIgRPBqfT">
+            <img src="\musics_pics\tamil_pics\sai.jpg" alt="Saindhav"></a>
+            <div class="overlay_img">
+            <h3>Saindhav</h3>
+            <h4>Released on 13 January <br>2024 and directed by Sailesh Kolanu</h4>
+        </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/yrrr9KLTIV8?si=dj5SZ1D2iYVlRrAo">
+            <img src="\musics_pics\tamil_pics\iruthi.jpg" alt="iruthu"></a>
+            <div class="overlay_img">
+                <h3>Irudhi Suttru</h3>
+                <h4>Released in  29 January 2016 and directed by Sudha Kongara Prasad
+                </h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/bkcisMDMYOs?si=TpNSV5vL9ZdJmv0j">
+            <img src="\musics_pics\tamil_pics\da.jpg" alt="dasara"></a>
+            <div class="overlay_img">
+                <h3>Dasara</h3>
+                <h4>Released in 30 March 2023 and directed by  Srikanth Odela</h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/BtGUrCsGhtA?si=IAUv4mc-9te86rB-">
+            <img src="\musics_pics\tamil_pics\vazai.jpg" alt="vazhai"></a>
+            <div class="overlay_img">
+                <h3>Vaazhai</h3>
+            <h4>Released on 23 August 2024  and directed by <br>Mari Selvaraj</h4></div>
+        </div>
+       
+
+    </div>
+</div>
+
+        <script>
+            document.getElementById('detailsButton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='flex';
+            });
+             document.getElementById('closebutton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='none';
+            });
+
+            let currentAudio = null;  // Current playing audio
+    let currentButton = null; // Button associated with the current audio
+
+    function togglePlay(file, button) {
+        // If the same song is clicked again, stop it
+        if (currentAudio && currentAudio.src.includes(file)) {
+            if (!currentAudio.paused) {
+                currentAudio.pause();
+                button.textContent = 'Play'; // Change button text to "Play"
+            } else {
+                currentAudio.play();
+                button.textContent = 'Pause'; // Change button text to "Pause"
+            }
+        } else {
+            // Stop the previous song if playing
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+                currentButton.textContent = 'Play'; // Reset previous button text
+            }
+
+            // Play the new song
+            currentAudio = new Audio(file);
+            currentAudio.play();
+            button.textContent = 'Pause'; 
+            currentButton = button; 
+        }
+    }
+         function showMovies() {
+            const movieGallery = document.getElementById("movies");
+            if (movieGallery.style.display === "none" || movieGallery.style.display === "") {
+                movieGallery.style.display = "flex";
+            } else {
+                movieGallery.style.display = "none";
+                console.log("images not visible")
+            }
+        }
+
+        
+        </script>
+    </body>
+</html>

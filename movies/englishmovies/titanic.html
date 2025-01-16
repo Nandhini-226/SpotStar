@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>titanic</title>
+</head>
+<style>
+   body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Dark Gray Background */
+    color: #D3D3D3; /* Light Gray Text */
+}
+.container1{
+   display: grid;
+   grid-template-areas:
+    'four five six ten'
+    'nine eleven tweleve seven'
+    ;
+    padding: 20px;
+}
+.card {
+    background-color:#1A1A2E;
+    width: 250px; 
+    border-radius: 8px;
+    font-size: 12px; 
+    color: #fff;
+    margin: 15px;
+}
+
+.image img {
+    width: 100%;
+    height: 300px;
+}
+
+.details {
+    padding: 10px; /* Reduced padding */
+}
+
+.title {
+    font-size: 16px; /* Reduced title size */
+    margin: 0;
+    font-weight: bold;
+    color: #39FF14;
+}
+
+.title span {
+    font-size: 12px; /* Reduced year font size */
+    font-weight: bold;
+    color: #b6b1b1;
+}
+
+.genre, .starring, p {
+    margin: 5px 0; /* Reduced margin between lines */
+    line-height: 1.4; /* Adjusted line height for smaller text */
+}
+.movie-image img{
+    height: 400px;
+    width: 700px;
+}
+
+/* Movie Section */
+header {
+    background-color: #1A1A2E; /* Deep Red Header */
+    color: #FFFFFF; /* White Text */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    border-bottom: 3px solid #39FF14;
+}
+
+.movie-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.movie-image {
+    width: 40%;
+    height: 350px;
+    border: 5px solid #39FF14;
+    border-radius: 10px;
+}
+.movie-image:hover{
+   transform: scale(1.1); /* Enlarge Image on Hover */
+   box-shadow: 0 6px 12px rgba(0, 255, 0, 0.8); /* Glow Effect */
+}
+
+.movie-details {
+    width: 50%;
+    background-color: #1A1A2E; /* Deep Red Section */
+    padding: 20px;
+    border-radius: 10px;
+    color: #FFFFFF; /* White Text */
+    font-family: inherit;
+}
+.movie-details h1{
+    color: #39FF14;
+}
+
+/* Buttons */
+button {
+    background-color: #39FF14;
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button a{
+    text-decoration: none;
+}
+button:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 255, 0, 0.8); /* Glow Effect */
+   
+}
+.card:hover{
+    transform: scale(1.05); /* Enlarge Image on Hover */
+    box-shadow: 0 6px 12px rgba(0, 255, 0, 0.8);
+   
+}
+</style>
+<body>
+
+<header>Retro Cinema</header>
+    <div class="movie-container">
+        <img src="\movie_pics\english_pic\tit.jpeg" alt="Movie Poster" class="movie-image">
+        <div class="movie-details">
+            <h1>Titanic </h1>
+            <h4>Release Date: 19 December 1997</h4>
+            <h4>Director: 	 James Cameron</h4>
+            <p> Titanic is a tragic love story set against the backdrop of the ill-fated maiden voyage of the RMS Titanic in 1912. Rose, a wealthy young woman, and Jack, a poor artist, meet aboard the ship and fall in love despite their different social classes. As their romance blossoms, the Titanic strikes an iceberg and begins to sink. Jack and Rose fight for survival amidst the chaos, but only Rose survives, holding on to her memories of their brief but passionate love.
+            </p>
+            <button>
+                <a href="https://youtu.be/I7c1etV7D7g?si=xJ-krcYVbgcuE7DN">Watch Now</a>
+            </button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container1">
+    <div class="card" style="grid-area: nine;">
+       <div class="image">
+             <a href=" \movies\englishmovies\pirates.html">
+            <img src="\movie_pics\english_pic\pirates.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Pirates Of Caribbean <span>2022</span></h1>
+            <p class="genre"><strong>Genre:</strong> Fantasy,SuperNatural</p>
+            <p><strong>Directed by:</strong> Gore Vebinski</p>
+            <p><strong>Written by:</strong>Td Elliot</p>
+            <p><strong>Produced by:</strong> Jrry Bruckheeimer</p>
+            <p class="starring"><strong>Starring:</strong>Johnny Depp, Geoffrey Rush,Kevin McNally,Orlando Bloom</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: ten;" >
+        <div class="image">
+            <a href=" \movies\englishmovies\johnwick.html">
+            <img src="\movie_pics\english_pic\johnwick.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">John Wick <span>2014</span></h1>
+            <p class="genre"><strong>Genre:</strong> Action,Thriller</p>
+            <p><strong>Directed by:</strong> Chad Stahelski</p>
+            <p><strong>Written by:</strong> Derek Kolstad</p>
+            <p><strong>Produced by:</strong> Basil Iwanyk</p>
+            <p class="starring"><strong>Starring:</strong> Kanu Reve,Michael Nyqvist, Alfi Allen,Adrianne Palicki</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: eleven;">
+        <div class="image">
+            <a href=" \movies\englishmovies\joker.html">
+            <img src="\movie_pics\english_pic\joker.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Joker <span>2019</span></h1>
+            <p class="genre"><strong>Genre:</strong> Psychological, Thriller</p>
+            <p><strong>Directed by:</strong> Todd Phillips</p>
+            <p><strong>Written by:</strong> Scott Silver</p>
+            <p><strong>Produced by:</strong> Todd Phillips,Bradly Cooper</p>
+            <p class="starring"><strong>Starring:</strong> Joaquin Phoenix,Robert De Niro,Zazie Beetz,France Conroy</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: tweleve;">
+        <div class="image">
+            <a href=" \movies\englishmovies\nun.html">
+            <img src="\movie_pics\english_pic\nun.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">The Nun <span>2018</span></h1>
+            <p class="genre"><strong>Genre:</strong> Supernatural,Horror</p>
+            <p><strong>Directed by:</strong>Corin Hardy</p>
+            <p><strong>Written by:</strong>Gary Dauerman</p>
+            <p><strong>Produced by:</strong> Peter Safran</p>
+            <p class="starring"><strong>Starring:</strong> Demian Bichiar,Taissa Farmiga,Jonas Bloquet</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: four;">
+        <div class="image">
+             <a href=" \movies\englishmovies\goose.html">
+            <img src="\movie_pics\english_pic\goose.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Wonka <span>2023</span></h1>
+            <p class="genre"><strong>Genre:</strong> Commedy, Fantasy</p>
+            <p><strong>Directed by:</strong> Paul King</p>
+            <p><strong>Written by:</strong> Simon Farnaby</p>
+            <p><strong>Produced by:</strong> David Heyman</p>
+            <p class="starring"><strong>Starring:</strong> Timothee Chalamet,Calah Lane,Kegan-Michael,Paterson Joseph</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: five;">
+        <div class="image">
+            <a href=" \movies\englishmovies\homealone.html">
+            <img src="\movie_pics\english_pic\homealone.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Home Alone <span>1990</span></h1>
+            <p class="genre"><strong>Genre:</strong> Commedy</p>
+            <p><strong>Directed by:</strong> Chris Columbus</p>
+            <p><strong>Written by:</strong> John Hughes</p>
+            <p><strong>Produced by:</strong> John Hughes</p>
+            <p class="starring"><strong>Starring:</strong>Macaulay Culkin,Joe Pesci, Daniel Stern,John Heard</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: six;">
+        <div class="image">
+            <a href=" \movies\englishmovies\damsel.html">
+            <img src="\movie_pics\english_pic\damsel.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Damsel <span>2024</span></h1>
+            <p class="genre"><strong>Genre:</strong> Dark Fantasy</p>
+            <p><strong>Directed by:</strong> Juan Carlos</p>
+            <p><strong>Written by:</strong>Dan Mazeau</p>
+            <p><strong>Produced by:</strong> Joe Roth,Chris Cataldi</p>
+            <p class="starring"><strong>Starring:</strong>Millie Bobby Brown, Ray Winstone,Nick Robinson,Angela Bassett</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: seven;">
+        <div class="image">
+            <a href=" \movies\englishmovies\metilda.html">
+            <img src="\movie_pics\english_pic\matilda.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Matilda <span>1996</span></h1>
+            <p class="genre"><strong>Genre:</strong> Fantasy,Comedy</p>
+            <p><strong>Directed by:</strong> Dany Devito</p>
+            <p><strong>Written by:</strong> Nicholas Kazan</p>
+            <p><strong>Produced by:</strong> TriStar Pictures</p>
+            <p class="starring"><strong>Starring:</strong>Danny Devito, Rhea Perlman, Emeth Davidtz,Pam Ferris</p>
+        </div>
+    </div>
+</body>
+</html>

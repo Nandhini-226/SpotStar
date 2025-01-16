@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sean</title>
+    </head>
+    <style>
+         body{
+            margin: 0;
+            padding: 0;
+          background: linear-gradient(95deg, #52041c,#121212);
+              
+        }
+       
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .background-image{
+            width: 100%;
+            height: 500px;
+        }
+        .btn{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            color: white;
+            transform: translate(-50%);
+            padding: 10px 20px;
+            background-color: transparent;
+            border: 2px solid #331aa1;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .btn:hover{
+            background-color: #331aa1;
+        }
+        .overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+        .overlay-content{
+            background-color: rgba(226, 215, 215, 0.2);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            width: 90%;
+        }
+        
+
+         .container_2 {
+            width: 90%;
+            margin: 40px;
+            padding: 20px;
+            border: 2px solid #331aa1;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px 0 #331aa1 ;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        .hit-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .hit-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .hit-list button {
+            padding: 5px 10px;
+            background-color:transparent;
+            color: white;
+            border: 2px solid #331aa1;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .hit-list button:hover {
+            background-color: #331aa1;
+        }
+      
+        .details,.career,.awards{
+            font-family: 'Monaco',serif;
+            margin: 20px;
+            height: 300px;
+            width: 500px;
+            padding: 20px;
+            font-size: 17px;
+            
+        }
+        .overlay-content h1{
+            color: yellow;
+        }
+        .text-overlay {
+            position: absolute;
+            top: 60%; 
+            left: 30px;
+            color: white; 
+            font-size: 24px; 
+            font-family: Georgia, serif; 
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+        }
+
+ .container_3 {
+     display: flex;
+     flex-direction: column;
+      align-items: center;
+    padding: 10px;
+}
+
+
+.image-gallary {
+    display: none;
+    margin-top: 20px;
+      gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #331aa1;
+    border-radius: 8px;
+}
+.image-item:hover{
+ box-shadow: 0 8px 32px 0 #4d2ddb;
+}
+
+.image-item img {
+     width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; /* Optional zoom-in effect */
+}
+
+.image-item img:hover {
+    transform: scale(1.1); /* Optional zoom effect on hover */
+}
+
+.overlay_img {
+    position: absolute; 
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: white; 
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-item:hover .overlay_img {
+    opacity: 1; /* Show overlay text on hover */
+}
+.bn{
+    height: 50px;
+    width: 150px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 2px solid #120741;
+    background-color: transparent;
+    border-radius: 50px;
+    box-shadow: 0 8px 32px 0 #331aa1;
+}
+.bn:focus{
+    background-color: rgb(61, 30, 172);
+}
+       
+strong{
+    color: #4d2ddb;
+}
+
+    </style>
+    <body>
+        <div class="container">
+            <img src="\musics_pics\tamil_pics\sean.jpg"class="background-image">
+            <div class="text-overlay">
+                <h1> Raghavendra Raja Rao (Sean Roldan)</h1>
+                <h5>Indian Music Composer, Singer, and Lyricist</h5>
+                
+                </div>
+            <button id="detailsButton" class="btn">show</button>
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <div class="details">
+                    <h1> About</h1>
+                    <h3>Birthdate:  March 11, 1987</h3>
+                    <h3>Hometown: Chennai, Tamil Nadu, India</h3>
+                    <p>he is a multi-talented music composer and playback singer known for his versatility in Tamil cinema. With a background in Carnatic music and a flair for experimentation,His work in both indie and film music has earned him critical acclaim and a dedicated fanbase.</p>
+                    </div>
+                    <div class="career">
+                        <h1>Career Highlights</h1>
+                     <p><strong>Debut as Composer:</strong> Made his debut as a music director in Tamil cinema with Vaanavil (2014), though he gained major recognition with his work in Muthina Kathirika (2016).<br><br>
+               <strong>Notable Compositions:</strong> Gained praise for his work in films like Kaaviya Thalaivan, Ratsasan, Kaatru Veliyidai, and Aruvi, known for their soulful and innovative scores.</p>
+                    </div>
+                    <div class="awards">
+                    <h1>Achievements</h1> 
+                        <h4>Nominated for multiple Filmfare Awards South.</h4>
+                        <h4>Praised for his ability to handle diverse genres and themes.</h4>
+                       
+                    </div>
+                </div>
+         <button id="closebutton" class="btn" >close</button>
+                </div>
+            </div>
+        </div>
+      
+        <div class="container_2">
+    <div class="section hit-list">
+    <h2>Hit Songs</h2>
+    <ul>
+        <li>
+            <span>Thaensudare</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/sean/Thaensudare.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Song 2</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/arr/Anbe_Anbe_kollathey__[SamaDada.Com].mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Song 3</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/arr/Ennodu_Nee_Irundhal_Reprise_[SamaDada.Com].mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Song 4</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/arr/Kadhal_Rojave_Bit.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Song 5</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/arr/Mustafa_Mustafa.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Song 6</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/arr/Romeo_Aatam_Potal.mp3', this)">Play</button>
+        </li>
+    </ul>
+</div>
+</div>
+       <div class="container_3">
+                   <button onclick="showMovies()" class="bn">Notable Albums</button>
+                 <div class="container_3">
+        <div class="image-gallary" id="movies">
+        <div class="image-item">
+            <a href="https://youtu.be/pmNA98zoaUk?si=b6BN6SOlivsjnBLh">
+            <img src="\movie_pics\tamimovies_pic\gn.jpg" alt="gn"></a>
+            <div class="overlay_img">
+            <h3>Good Night</h3>
+            <h4>Released on 12 May 2023<br> and directed by  Vinayak Chandrasekaran</h4>
+        </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/jZNIzoeKoIE?si=K0D8YRDwzz_iIoob">
+            <img src="\musics_pics\tamil_pics\munda.jpg" alt="mundasu"></a>
+            <div class="overlay_img">
+                <h3>Mundasupatti</h3>
+                <h4>Released on 13 June 2014<br> and directed by<br> Ram Kumar</h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/stW6q6SGCP4?si=SMEpg5dher2AE64c">
+            <img src="\musics_pics\tamil_pics\sam.jpg" alt="samsarika"></a>
+            <div class="overlay_img">
+                <h3>Samsaram Arogyathinu Hanikaram</h3>
+                <h4>Released on 25 Apr 2014 <br>and directed by<br> Balaji Mohan</h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/i_6wz53jx84?si=Qsc_kTnk_-zarZhY">
+            <img src="\musics_pics\tamil_pics\sathura.jpg" alt="sathura"></a>
+            <div class="overlay_img">
+                <h3>Sathuranga Vettai</h3>
+            <h4>Released on 18 July 2014 <br> and directed by H. Vinoth</h4>
+        </div>
+        </div>
+       
+
+    </div>
+</div>
+
+        <script>
+            document.getElementById('detailsButton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='flex';
+            });
+             document.getElementById('closebutton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='none';
+            });
+
+            let currentAudio = null;  // Current playing audio
+    let currentButton = null; // Button associated with the current audio
+
+    function togglePlay(file, button) {
+        // If the same song is clicked again, stop it
+        if (currentAudio && currentAudio.src.includes(file)) {
+            if (!currentAudio.paused) {
+                currentAudio.pause();
+                button.textContent = 'Play'; // Change button text to "Play"
+            } else {
+                currentAudio.play();
+                button.textContent = 'Pause'; // Change button text to "Pause"
+            }
+        } else {
+            // Stop the previous song if playing
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+                currentButton.textContent = 'Play'; // Reset previous button text
+            }
+
+            // Play the new song
+            currentAudio = new Audio(file);
+            currentAudio.play();
+            button.textContent = 'Pause'; 
+            currentButton = button; 
+        }
+    }
+         function showMovies() {
+            const movieGallery = document.getElementById("movies");
+            if (movieGallery.style.display === "none" || movieGallery.style.display === "") {
+                movieGallery.style.display = "flex";
+            } else {
+                movieGallery.style.display = "none";
+                console.log("images not visible")
+            }
+        }
+
+        
+        </script>
+    </body>
+</html>

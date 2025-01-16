@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>charlie</title>
+</head>
+<style>
+   body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Dark Gray Background */
+    color: #D3D3D3; /* Light Gray Text */
+}
+.container1{
+   display: grid;
+   grid-template-areas:
+    'four five six eight'
+    'one two three seven'
+    ;
+    padding: 20px;
+}
+.card {
+    background-color:#1A1A2E;
+    width: 250px; 
+    border-radius: 8px;
+    font-size: 12px; 
+    color: #fff;
+    margin: 15px;
+}
+
+.image img {
+    width: 100%;
+    height: 300px;
+}
+
+.details {
+    padding: 10px; /* Reduced padding */
+}
+
+.title {
+    font-size: 16px; /* Reduced title size */
+    margin: 0;
+    font-weight: bold;
+    color: #39FF14;
+}
+
+.title span {
+    font-size: 12px; /* Reduced year font size */
+    font-weight: bold;
+    color: #b6b1b1;
+}
+
+.genre, .starring, p {
+    margin: 5px 0; /* Reduced margin between lines */
+    line-height: 1.4; /* Adjusted line height for smaller text */
+}
+.movie-image img{
+    height: 400px;
+    width: 700px;
+}
+
+/* Movie Section */
+header {
+    background-color: #1A1A2E; /* Deep Red Header */
+    color: #FFFFFF; /* White Text */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    border-bottom: 3px solid #39FF14;
+}
+
+.movie-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.movie-image {
+    width: 40%;
+    height: 350px;
+    border: 5px solid #39FF14;
+    border-radius: 10px;
+}
+.movie-image:hover{
+   transform: scale(1.1); /* Enlarge Image on Hover */
+   box-shadow: 0 6px 12px rgba(0, 255, 0, 0.8); /* Glow Effect */
+}
+
+.movie-details {
+    width: 50%;
+    background-color: #1A1A2E; /* Deep Red Section */
+    padding: 20px;
+    border-radius: 10px;
+    color: #FFFFFF; /* White Text */
+    font-family: inherit;
+}
+.movie-details h1{
+    color: #39FF14;
+}
+
+/* Buttons */
+button {
+    background-color: #39FF14;
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button a{
+    text-decoration: none;
+}
+button:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 255, 0, 0.8); /* Glow Effect */
+   
+}
+.card:hover{
+    transform: scale(1.05); /* Enlarge Image on Hover */
+    box-shadow: 0 6px 12px rgba(0, 255, 0, 0.8);
+   
+}
+</style>
+<body>
+
+<body>
+<header>Retro Cinema</header>
+    <div class="movie-container">
+        <img src="\movie_pics\english_pic\hom.jpg" alt="Movie Poster" class="movie-image">
+        <div class="movie-details">
+            <h1>Home Alone</h1>
+            <h4>Release Date: 18 October 1991</h4>
+            <h4>Director: 	 Chris Columbus</h4>
+            <p> Home Alone follows 8-year-old Kevin McCallister, who is accidentally left behind when his family goes on vacation for Christmas. Initially thrilled to have the house to himself, Kevin's joy turns to concern when he learns two burglars, Harry and Marv, plan to rob his home. Using his quick thinking and creativity, Kevin sets up elaborate traps to protect the house. As he defends his home and outwits the burglars, Kevin learns the value of family and togetherness during the holidays.
+            </p>
+            <button>
+                <a href="https://youtu.be/jEDaVHmw7r4?si=UGc46boL0e1oLfJy">Watch Now</a>
+            </button>
+        </div>
+    </div>
+
+
+
+
+    <div class="container1">
+  <div class="card" style="grid-area: one;">
+        <div class="image">
+          <a href=" \movies\englishmovies\alice.html">
+            <img src="\movie_pics\english_pic\alice.jpg" alt="Movie Image"  ></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Alice in WonderLand <span>2010</span></h1>
+            <p class="genre"><strong>Genre:</strong> Fantasy, Adventures</p>
+            <p><strong>Directed by:</strong> Tim Burton</p>
+            <p><strong>Written by:</strong> Linda Woolverton</p>
+            <p><strong>Produced by:</strong> Walt Disney Pictures</p>
+            <p class="starring"><strong>Starring:</strong> Mia Wasikowsaka,Johny Depp,Ann Hathway,Helena Bonham Carter</p>
+        </div>
+        </div>
+        <div class="card" style="grid-area: two;">
+        <div class="image">
+             <a href=" \movies\englishmovies\avatar.html">
+            <img src="\movie_pics\english_pic\avatar.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Avatar<span>2022</span></h1>
+            <p class="genre"><strong>Genre:</strong> Science,Fiction</p>
+            <p><strong>Directed by:</strong> James Cameron</p>
+            <p><strong>Written by:</strong> Rick Jaffa</p>
+            <p><strong>Produced by:</strong> James Cameron</p>
+            <p class="starring"><strong>Starring:</strong>Sam Worthington,Zoe Saldana,Stephen Lang,CCH pounder</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: three;">
+        <div class="image">
+             <a href=" \movies\englishmovies\bfg.html">
+            <img src="\movie_pics\english_pic\bfg.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">The BFG <span>2016</span></h1>
+            <p class="genre"><strong>Genre:</strong> Fantasy, Adventures</p>
+            <p><strong>Directed by:</strong> Fantasy Adventurs Film</p>
+            <p><strong>Written by:</strong> Melissa Mathison</p>
+            <p><strong>Produced by:</strong> Fantasy Adventurs Film</p>
+            <p class="starring"><strong>Starring:</strong> Mark Rylance,Ruby Barnhill,penelope Wilton</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: four;">
+        <div class="image">
+             <a href=" \movies\englishmovies\insideout.html">
+            <img src="\movie_pics\english_pic\inside out.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Inside Out<span>2015</span></h1>
+            <p class="genre"><strong>Genre:</strong> Comedy,Fantasy</p>
+            <p><strong>Directed by:</strong>Pete Docter</p>
+            <p><strong>Written by:</strong> Pete Docter</p>
+            <p><strong>Produced by:</strong> Jonas Rivera</p>
+            <p class="starring"><strong>Starring:</strong> Amy Poehler, Phyllis Smith, Richard Kind, Bill Hader</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: five;">
+        <div class="image">
+             <a href=" \movies\englishmovies\pi.html">
+            <img src="\movie_pics\english_pic\pi.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Life Of Pi <span>2012</span></h1>
+            <p class="genre"><strong>Genre:</strong> Adventures</p>
+            <p><strong>Directed by:</strong> Ang Lee</p>
+            <p><strong>Written by:</strong> David Magee</p>
+            <p><strong>Produced by:</strong> Ang Lee</p>
+            <p class="starring"><strong>Starring:</strong>Irfan Khan,Tabu,Rafa Spall,Gerard Depardieu</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: six;">
+        <div class="image">
+             <a href=" \movies\englishmovies\titanic.html">
+            <img src="\movie_pics\english_pic\titanic.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Titanic <span>1997</span></h1>
+            <p class="genre"><strong>Genre:</strong> Romantic, Epic, Disaster</p>
+            <p><strong>Directed by:</strong>James Cameron</p>
+            <p><strong>Written by:</strong> James Cameron</p>
+            <p><strong>Produced by:</strong> James Cameron</p>
+            <p class="starring"><strong>Starring:</strong> Leonardo DiCaprio,Kate Winslet</p>
+        </div>
+    </div>
+     <div class="card" style="grid-area: seven;">
+        <div class="image">
+             <a href=" \movies\englishmovies\goose.html">
+            <img src="\movie_pics\english_pic\goose.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Goosebumps<span>2015</span></h1>
+            <p class="genre"><strong>Genre:</strong> Action,Horror</p>
+            <p><strong>Directed by:</strong> Rob Letterman</p>
+            <p><strong>Written by:</strong> Scott Alexander</p>
+            <p><strong>Produced by:</strong>Deborah Forte</p>
+            <p class="starring"><strong>Starring:</strong> Jack Black,Odeya Rush,Dylan Minnette</p>
+        </div>
+    </div>
+     <div class="card" style="grid-area: eight;">
+        <div class="image">
+             <a href=" \movies\englishmovies\pirates.html">
+            <img src="\movie_pics\english_pic\pirates.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Pirates Of Caribbean <span>2022</span></h1>
+            <p class="genre"><strong>Genre:</strong> Fantasy,SuperNatural</p>
+            <p><strong>Directed by:</strong> Gore Vebinski</p>
+            <p><strong>Written by:</strong>Td Elliot</p>
+            <p><strong>Produced by:</strong> Jrry Bruckheeimer</p>
+            <p class="starring"><strong>Starring:</strong>Johnny Depp, Geoffrey Rush,Kevin McNally,Orlando Bloom</p>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathaan</title>
+</head>
+<style>
+     body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #032f30; /* Dark Gray Background */
+    color: #D3D3D3; /* Light Gray Text */
+}
+.container1{
+   display: grid;
+   grid-template-areas:
+    'four five six eight'
+    'one two three seven'
+    ;
+    padding: 20px;
+}
+.card {
+    background-color:#0a7075;
+    width: 250px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 12px; 
+    color: #fff;
+    margin: 15px;
+}
+
+.image img {
+    width: 100%;
+    height: 300px;
+}
+
+.details {
+    padding: 10px; /* Reduced padding */
+}
+
+.title {
+    font-size: 16px; /* Reduced title size */
+    margin: 0;
+    font-weight: bold;
+    color: #00CED1;
+}
+
+.title span {
+    font-size: 12px; /* Reduced year font size */
+    font-weight: bold;
+    color: #011616;
+}
+
+.genre, .starring, p {
+    margin: 5px 0; /* Reduced margin between lines */
+    line-height: 1.4; /* Adjusted line height for smaller text */
+}
+.movie-image img{
+    height: 400px;
+    width: 700px;
+}
+
+/* Movie Section */
+header {
+    background-color: #0a7075; /* Deep Red Header */
+    color: #FFFFFF; /* White Text */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 3px solid #00CED1;
+}
+
+.movie-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.movie-image {
+    width: 40%;
+    height: 350px;
+    border: 5px solid #00CED1;
+    border-radius: 10px;
+     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.movie-image:hover{
+   transform: scale(1.1); /* Enlarge Image on Hover */
+    box-shadow: 0 15px 30px rgba(38, 253, 206, 0.8); /* Glow Effect */
+}
+
+.movie-details {
+    width: 50%;
+    background-color: #0a7075; /* Deep Red Section */
+    padding: 20px;
+    border-radius: 10px;
+    color: #FFFFFF; /* White Text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-family: inherit;
+}
+.movie-details h1{
+    color: #00CED1;
+}
+
+/* Buttons */
+button {
+    background-color: #00CED1;
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button a{
+    text-decoration: none;
+}
+button:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+   box-shadow: 0 15px 30px rgba(38, 253, 206, 0.8); /* Glow Effect */
+   
+}
+.card:hover{
+    transform: scale(1.05); /* Enlarge Image on Hover */
+    box-shadow: 0 15px 30px rgba(38, 253, 206, 0.8);
+   
+}
+</style>
+<body>
+<header>Retro Cinema</header>
+    <div class="movie-container">
+        <img src="\movie_pics\hindi_pic\path.jpg" alt="Movie Poster" class="movie-image">
+        <div class="movie-details">
+            <h1>Pathaan</h1>
+            <h4>Release Date: 25 January 2023 </h4>
+            <h4>Director:  Siddharth Anand</h4>
+            <p>The film follows Pathaan (Shah Rukh Khan), an exiled RAW agent, who is called back to duty to stop Jim (John Abraham), a rogue agent-turned-terrorist planning a deadly attack on India. Deepika Padukone plays Rubina, a spy who joins Pathaan in his mission, leading to high-stakes chases, intense combat, and a quest to thwart global threats.
+Part of Yash Raj Films' "Spy Universe," Pathaan is known for its fast-paced action sequences, stunning visuals, and powerful performances, especially Shah Rukh Khan's return to an action role after several years. The film became a massive box-office hit, celebrated for its blockbuster appeal, thrilling plot, and Shah Rukh Khan’s charismatic comeback.
+            </p>
+            <button>
+                <a href="https://youtu.be/4xl9KfUg8Lc?si=nGB5n_a7HAxfR6CX">Watch Now</a>
+            </button>
+        </div>
+    </div>
+
+
+
+
+
+
+   <div class="container1">
+  <div class="card" style="grid-area: one;">
+        <div class="image">
+          <a href=" \movies\hindi movies\12th.html">
+            <img src="\movie_pics\hindi_pic\12th fail.jpg" alt="Movie Image"  ></a>
+        </div>
+        <div class="details">
+            <h1 class="title"> 12th Fail <span>2023</span></h1>
+            <p class="genre"><strong>Genre:</strong>Biographical</p>
+            <p><strong>Directed by:</strong> Vidhu Vinod Chopra</p>
+            <p><strong>Written by:</strong> Jaskunwar Kohil</p>
+            <p><strong>Produced by:</strong> Vinod Chopra Films</p>
+            <p class="starring"><strong>Starring:</strong> Vikrant Massey, Media Shankar, Anant V Joshi</p>  
+        </div>
+        </div>
+        <div class="card" style="grid-area: two;">
+        <div class="image">
+            <a href=" \movies\hindi movies\bhedia.html">
+            <img src="\movie_pics\hindi_pic\bhedia.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Bhediya <span>2022</span></h1>
+            <p class="genre"><strong>Genre:</strong> Comedy, Horror</p>
+            <p><strong>Directed by:</strong> Amal Kaushik</p>
+            <p><strong>Written by:</strong> Niren Bhatt</p>
+            <p><strong>Produced by:</strong>Dinesh Vijan</p>
+            <p class="starring"><strong>Starring:</strong>Varun Dhawan,Kriti Sanon,Abhshek Banerjee,Deepak Dobriyal</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: three;">
+        <div class="image">
+            <a href=" \movies\hindi movies\atrang.html">
+            <img src="\movie_pics\hindi_pic\at.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title"> Atrangi Re<span>2021</span></h1>
+            <p class="genre"><strong>Genre:</strong> Comedy, Romantic, Fantasy</p>
+            <p><strong>Directed by:</strong>Aanand Rai</p>
+            <p><strong>Written by:</strong> Himanshu Sharma</p>
+            <p><strong>Produced by:</strong>Cape of Goods Films</p>
+            <p class="starring"><strong>Starring:</strong>Dhanush, Sara Ali Khan, Akshay Kumar</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: four;">
+         <div class="image">
+            <a href=" \movies\hindi movies\dangal.html">
+            <img src="\movie_pics\hindi_pic\dangal.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Dangal <span>2016</span></h1>
+            <p class="genre"><strong>Genre:</strong> Biographical</p>
+            <p><strong>Directed by:</strong> Nitesh Tiwari</p>
+            <p><strong>Written by:</strong> Piyush Gupta</p>
+            <p><strong>Produced by:</strong> Aamir Khan Productions </p>
+            <p class="starring"><strong>Starring:</strong>Aamir Khan,Sakshi Tanwar,Fatima Sana Shaikh,Zaira Wasim</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: five;">
+        <div class="image">
+            <a href=" \movies\hindi movies\kabir.html">
+            <img src="\movie_pics\hindi_pic\kabir singh.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Kabir Singh <span>2019</span></h1>
+            <p class="genre"><strong>Genre:</strong>Romantic</p>
+            <p><strong>Directed by:</strong>Sandeep Reddy Vanga</p>
+            <p><strong>Written by:</strong> Sandeep Reddy Vanga</p>
+            <p><strong>Produced by:</strong> T-Series</p>
+            <p class="starring"><strong>Starring:</strong> Shahid Kapoor, Kiara Advani</p>
+        </div>
+    </div>
+    <div class="card" style="grid-area: six;">
+       <div class="image">
+            <a href=" \movies\hindi movies\jodha.html">
+            <img src="\movie_pics\hindi_pic\jodha akbar.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Jodhaa Akbar <span>2008</span></h1>
+            <p class="genre"><strong>Genre:</strong> History,Romantic</p>
+            <p><strong>Directed by:</strong>Ashutosh Gowariker</p>
+            <p><strong>Written by:</strong> K.P.Saxena</p>
+            <p><strong>Produced by:</strong> Ashutosh Gowariker Productions</p>
+            <p class="starring"><strong>Starring:</strong> Hrithik Roshan,Aishwarya Rai</p>
+        </div>
+    </div>
+     <div class="card" style="grid-area: seven;">
+        <div class="image">
+             <a href=" \movies\hindi movies\kapoor.html">
+            <img src="\movie_pics\hindi_pic\kapoor.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Kapoor & Sons <span>2016</span></h1>
+            <p class="genre"><strong>Genre:</strong>Family,Drama</p>
+            <p><strong>Directed by:</strong> Shakun Batra</p>
+            <p><strong>Written by:</strong> Ayesha Devitre Dhillon</p>
+            <p><strong>Produced by:</strong> Dharma Productions</p>
+            <p class="starring"><strong>Starring:</strong> Rishi Kapoor, Siddharth Malhotra,Fawad Khan,Alia Bhatt</p>
+        </div>
+    </div>
+     <div class="card" style="grid-area: eight;">
+       <div class="image">
+          <a href=" \movies\hindi movies\kalank.html">
+            <img src="\movie_pics\hindi_pic\kal.jpg" alt="Movie Image"></a>
+        </div>
+        <div class="details">
+            <h1 class="title">Kalank <span> 2019</span></h1>
+            <p class="genre"><strong>Genre:</strong> Romantic</p>
+            <p><strong>Directed by:</strong> Abhishek Varman</p>
+            <p><strong>Written by:</strong> Hussain Dalal</p>
+            <p><strong>Produced by:</strong>Dharma Production</p>
+            <p class="starring"><strong>Starring:</strong>Varun Dhawan,Alia Bhatt,Sanjay Dutt,Madhuri Dixit</p>
+        </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
+

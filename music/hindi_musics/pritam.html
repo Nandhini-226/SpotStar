@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pritam</title>
+    </head>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+          background: linear-gradient(115deg,#5b4e68,#121212);
+             
+        }
+       
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .background-image{
+            width: 100%;
+            height: 500px;
+        }
+        .btn{
+             position: absolute;
+            bottom: 20px;
+            left: 50%;
+           background-color: transparent;
+            padding: 10px 20px;
+            border:2px solid #b49e74;
+            color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .btn:hover{
+            background-color: #b49e74;
+        }
+        .overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+        .overlay-content{
+            background-color: rgba(226, 215, 215, 0.2);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            width: 90%;
+        }
+       
+
+         .container_2 {
+            width: 90%;
+            margin: 40px;
+            padding: 20px;
+            border: 2px solid #b49e74;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px 0 #b49e74;
+        }
+        
+        .section {
+            color: white;
+            margin-bottom: 40px;
+        }
+        .hit-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .hit-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            color: white;
+            margin: 10px 0;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .hit-list button {
+            padding: 5px 10px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid #b49e74;
+            
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .hit-list button:hover {
+            background-color: #b49e74;
+        }
+      
+        .details,.career,.awards{
+            font-family: 'Monaco',serif;
+            margin: 20px;
+            height: 300px;
+            width: 500px;
+            padding: 20px;
+            font-size: 17px;
+            
+        }
+        .overlay-content h1{
+            color: yellow;
+        }
+        .text-overlay {
+            position: absolute;
+            top: 60%; 
+            left: 30px;
+            color: white; 
+            font-size: 24px; 
+            font-family: Georgia, serif; 
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+        }
+
+ .container_3 {
+     display: flex;
+     flex-direction: column;
+      align-items: center;
+    padding: 10px;
+}
+
+
+.image-gallary {
+    display: none;
+    margin-top: 20px;
+      gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #b49e74;
+    border-radius: 8px;
+}
+.image-item:hover{
+    box-shadow: 0px 8px 32px 0 #b49e74;
+}
+
+.image-item img {
+     width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; 
+    
+}
+.image-item img:hover {
+    transform: scale(1.1); /* Optional zoom effect on hover */
+}
+
+
+.overlay_img {
+    position: absolute; 
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: white; 
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-item:hover .overlay_img {
+    opacity: 1; /* Show overlay text on hover */
+}
+.bn{
+    height: 50px;
+    width: 150px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 2px solid #b49e74;
+    background-color: transparent;
+    border-radius: 50px;
+    color: white;
+    box-shadow: 0 8px 32px 0 #b49e74;
+}
+.bn:focus{
+    background-color: #b49e74;
+}
+       strong{
+        color: #b49e74;
+       }
+
+
+    </style>
+    <body>
+        <div class="container">
+            <img src="\musics_pics\hindi_pics\pre.jpeg"class="background-image">
+            <button id="detailsButton" class="btn">show</button>
+             <div class="text-overlay">
+                <h1> Pritam Chakraborty</h1>
+                <h5> Music Composer, Playback Singer, Producer</h5>
+                </div>
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <div class="details">
+                    <h1>About</h1>
+                    <h3>Birthdate: June 14, 1971</h3>
+                    <h3>Hometown: Kolkata, West Bengal, India</h3>
+                    <p>Pritam Chakraborty, widely known as Pritam, is one of the most prolific and successful music composers in Bollywood. Known for his versatility and memorable compositions, Pritam has created some of the most iconic soundtracks in Indian cinema.
+
+</p>
+                    </div>
+                    <div class="career">
+                        <h1>Career Highlights</h1>
+                     <p><strong>Bollywood Debut:</strong>
+Started his career with the film Tere Liye (2001).
+Rose to fame with Dhoom (2004), featuring blockbuster tracks like Dhoom Machale.<br><br>
+<strong>Notable Soundtracks:</strong>
+Known for chart-topping albums in films like Jab We Met, Ae Dil Hai Mushkil, Barfi!, Yeh Jawaani Hai Deewani, Bajrangi Bhaijaan, and Brahmastra.
+Tracks like Channa Mereya, Tum Hi Ho Bandhu, and Bulleya have become cultural touchstones.</p>
+                    </div>
+                    <div class="awards">
+                    <h1>Achievements</h1> 
+                        <h4>Multiple Filmfare Awards and IIFA Awards for Best Music Direction.</h4>
+                        <h4>Known for blending contemporary and traditional sounds in his compositions.</h4>
+                      <h4>Worked with top singers like Arijit Singh, Shreya Ghoshal, and Sunidhi Chauhan.</h4>
+                    </div>
+                </div>
+         <button id="closebutton" class="btn" >close</button>
+                </div>
+            </div>
+        </div>
+      
+        <div class="container_2">
+    <div class="section hit-list">
+    <h2>Hit Songs</h2>
+    <ul>
+        <li>
+            <span>Kabira - Yeh Jawaani Hai Deewani _ Pritam _ Ranbir Kapoor_ Deepika Padukone</span>
+            <button onclick="togglePlay('/musicss/hindi_musics/pritam/_Kabira .mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Channa Meraya</span>
+            <button onclick="togglePlay('/musicss/hindi_musics/pritam/channa Mereya .mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Tum Se Hi -Jab We Met _ Kareena Kapoor_ Shahid Kapoor _ Mohit Chauhan _ Pritam</span>
+            <button onclick="togglePlay('/musicss/hindi_musics/pritam/Hawayein .mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Hawayein -Jab Harry Met Sejal _ Anushka Sharma _Shah Rukh Khan_ Pritam _ Imtiaz Ali_ Arijit Singh</span>
+            <button onclick="togglePlay('/musicss/hindi_musics/pritam/Shayad .mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Shayad - Love Aaj Kal _ Kartik _ Sara _ Arushi _ Pritam _ Arijit Singh</span>
+            <button onclick="togglePlay('/musicss/hindi_musics/pritam/Tum Se Hi .mp3', this)">Play</button>
+        </li>
+       
+    </ul>
+</div>
+</div>
+      <div class="container_3">
+                   <button onclick="showMovies()" class="bn">Notable Albums</button>
+                 <div class="container_3">
+        <div class="image-gallary" id="movies">
+        <div class="image-item">
+            <a href="https://youtu.be/IGumOr_rP3I?si=DZM_N9612Ot1W-9Z">
+            <img src="\movie_pics\hindi_pic\ae.jpg" alt="Roja"></a>
+            <div class="overlay_img">
+            <h3>Ae Dil Hai Mushkil</h3>
+            <h4>Released on 2 Nov 2016 and <br>directed by  Karan Johar</h4>
+        </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/44w3oGQ_ex0?si=J5IFASC3QQOAgiRf">
+            <img src="\movie_pics\hindi_pic\bramsta.jpg" alt="Jeans"></a>
+            <div class="overlay_img">
+                <h3>Brahmāstra</h3>
+                <h4>Released on 15 Apr 2024  and directed by Ayan Mukerji
+                </h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/ECBLsu3XlGg?si=kFJtwEgqOHe2yP21">
+            <img src="\movie_pics\hindi_pic\kal.jpg" alt="Bombay"></a>
+            <div class="overlay_img">
+                <h3>Kalank</h3>
+                <h4>Released on 14 Apr 2019 and directed by Abhishek Varman</h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/dEXUiap8eEw?si=Joya2Wv8Wy8ggbq5">
+            <img src="\musics_pics\hindi_pics\jab.jpg" alt="guru"></a>
+            <div class="overlay_img">
+                <h3>Jab Harry Met Sejal</h3>
+            <h4>Released on 8 Aug  2023  and <br>directed by Imtiaz Ali</h4></div>
+        </div>
+       
+
+    </div>
+</div>
+        <script>
+            document.getElementById('detailsButton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='flex';
+            });
+             document.getElementById('closebutton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='none';
+            });
+
+             let currentAudio = null; 
+    let currentButton = null; 
+
+    function togglePlay(file, button) {
+        
+        if (currentAudio) {
+            // Check if the current audio is the same as the new one
+            if (currentAudio.src === new URL(file, window.location.href).href) {
+                if (currentAudio.paused) {
+                    currentAudio.play(); 
+                    button.textContent = 'Pause'; 
+                } else {
+                    currentAudio.pause(); 
+                    button.textContent = 'Play'; 
+                }
+                return; 
+            } else {
+                // Stop the current audio if it's different
+                currentAudio.pause();
+                currentButton.textContent = 'Play'; // Reset the previous button text
+                currentAudio = null;
+                currentButton = null;
+            }
+        }
+
+        // Set up and play the new audio
+        currentAudio = new Audio(file); 
+        currentAudio.play();
+        button.textContent = 'Pause';
+        currentButton = button; 
+
+        // Handle when the audio finishes
+        currentAudio.onended = () => {
+            button.textContent = 'Play'; 
+            currentAudio = null; 
+            currentButton = null; 
+        };
+    }
+         function showMovies() {
+            const movieGallery = document.getElementById("movies");
+            if (movieGallery.style.display === "none" || movieGallery.style.display === "") {
+                movieGallery.style.display = "flex";
+            } else {
+                movieGallery.style.display = "none";
+            }
+        }
+
+        
+        </script>
+    </body>
+</html>

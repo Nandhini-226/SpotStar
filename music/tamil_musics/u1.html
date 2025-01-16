@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>U1</title>
+    </head>
+    <style>
+         body{
+            margin: 0;
+            padding: 0;
+          background: linear-gradient(105deg, rgb(247, 203, 152),#121212);
+              
+        }
+       
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .background-image{
+            width: 100%;
+            height: 500px;
+        }
+        .btn{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translate(-50%);
+            padding: 10px 20px;
+            background-color: transparent;
+            color: #fff;
+            border:2px solid rgb(247, 203, 152);
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .btn:hover{
+            background-color: wheat;
+        }
+        .overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+        .overlay-content{
+            background-color: rgba(226, 215, 215, 0.2);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            width: 90%;
+        }
+        
+
+         .container_2 {
+            width: 90%;
+            margin: 40px;
+            padding: 20px;
+            border: 2px solid wheat;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px 0 wheat;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        .hit-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .hit-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .hit-list button {
+            padding: 5px 10px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid wheat;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .hit-list button:hover {
+            background-color: wheat;
+        }
+      
+        .details,.career,.awards{
+            font-family: 'Monaco',serif;
+            margin: 20px;
+            height: 300px;
+            width: 500px;
+            padding: 20px;
+            font-size: 17px;
+            
+        }
+        .overlay-content h1{
+            color: yellow;
+        }
+        .text-overlay {
+            position: absolute;
+            top: 60%; 
+            left: 30px;
+            color: white; 
+            font-size: 24px; 
+            font-family: Georgia, serif; 
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+        }
+
+ .container_3 {
+     display: flex;
+     flex-direction: column;
+      align-items: center;
+    padding: 10px;
+}
+
+
+.image-gallary {
+    display: none;
+    margin-top: 20px;
+      gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid wheat;
+    border-radius: 8px;
+}
+.image-item:hover {
+     box-shadow: 0 8px 32px 0 wheat;
+}
+
+.image-item img {
+     width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; /* Optional zoom-in effect */
+}
+
+.image-item img:hover {
+    transform: scale(1.1); /* Optional zoom effect on hover */
+}
+
+.overlay_img {
+    position: absolute; 
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: white; 
+    width: 100%;
+    padding: 10px;
+   
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-item:hover .overlay_img {
+    opacity: 1; /* Show overlay text on hover */
+}
+.bn{
+    height: 50px;
+    width: 150px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 2px solid wheat;
+    background-color: transparent;
+    border-radius: 50px;
+    color: black;
+    box-shadow: 0 8px 32px 0 wheat;
+}
+.bn:focus{
+    background-color: wheat;
+}
+     strong{
+        color: wheat;
+     }  
+
+
+    </style>
+    <body>
+        <div class="container">
+            <img src="\musics_pics\tamil_pics\u11.jpg"class="background-image">
+            <div class="text-overlay">
+                <h1> Yuvan Shankar Raja</h1>
+                <h5>Indian Music Composer, Playback Singer, and Producer</h5>
+                
+                </div>
+            <button id="detailsButton" class="btn">show</button>
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <div class="details">
+                    <h1> Yuvan Shankar Raja</h1>
+                    <h3>Birthdate: January 6, 1967</h3>
+                    <h3>Hometown: Chennai, Tamil Nadu, India</h3>
+                    <p>Yuvan Shankar Raja, often referred to as "U1," is a renowned music composer and playback singer in Indian cinema. Known as the "King of BGM", He is the youngest son of legendary composer Ilaiyaraaja, he has carved his own unique identity in the Tamil film industry.</p>
+                    </div>
+                    <div class="career">
+                        <h1>Career Highlights</h1>
+                     <p><strong>Debut as Composer:</strong> U1 Shankar Raja made his debut as a music composer with the Tamil film Puriyaatha Puthir (2017), earning recognition for his fresh sound and innovative compositions.<br><br>
+                    <strong>Notable Films:</strong> Gained recognition for his work in films like Kuppathu Raja, Iruttu and V1. His soundtracks are known for their fusion of folk, contemporary, and experimental music.<br><br>
+                  </p>
+                    </div>
+                    <div class="awards">
+                    <h1>Achievements</h1> 
+                        <h4>First Tamil composer to win the Cyprus International Film Festival Award for Raam (2005).</h4>
+                        <h4>Frequently credited with popularizing electronic music in Tamil cinema.
+                        </h4>
+                        <h4>Composed for over 100 films, delivering chart-topping hits in multiple genres.</h4>
+                    </div>
+                </div>
+         <button id="closebutton" class="btn" >close</button>
+                </div>
+            </div>
+        </div>
+      
+        <div class="container_2">
+    <div class="section hit-list">
+    <h2>Hit Songs</h2>
+    <ul>
+        <li>
+            <span>En_Jannal_Vandha</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/u1/En_Jannal_Vandha.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>En_Kadhal_Solla</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/u1/En_Kadhal_Solla.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Engeyo_Paartha</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/u1/Engeyo_Paartha.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Ennai_Vittu</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/u1/Ennai_Vittu_[SamaDada.Com].mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>High_On_Love</span>
+            <button onclick="togglePlay('/musicss/tamil_musics/u1/High_On_Love.mp3', this)">Play</button>
+        </li>
+        <li>
+            <span>Kadhal_Aasai</span>
+            <button onclick="togglePlay('/musicss/amil_musics/u1/Kadhal_Aasai_[SamaDada.Com].mp3', this)">Play</button>
+        </li>
+    </ul>
+</div>
+</div>
+      <div class="container_3">
+                   <button onclick="showMovies()" class="bn">Notable Albums</button>
+                 <div class="container_3">
+        <div class="image-gallary" id="movies">
+        <div class="image-item">
+            <a href="https://youtu.be/q5_b3tbLPYA?si=XkmfZifbc4wsNWF4">
+            <img src="\musics_pics\tamil_pics\pudhu.jpg" alt="puthu"></a>
+            <div class="overlay_img">
+            <h3>Pudhupettai</h3>
+            <h4>Released on 26 May 2006 <br>and directed <br>by Selvaragavan</h4>
+        </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/Lnm8DjlgClI?si=yzb6k-fLrDuso3H2">
+            <img src="\musics_pics\tamil_pics\pyar.jpg" alt="pyar"></a>
+            <div class="overlay_img">
+                <h3>Pyaar Prema Kaadhal</h3>
+                <h4>Released in 10 August 2018 and directed by  Elan
+                </h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/l_JIvFNKNHs?si=mvZOekCMP6iZXz5C">
+            <img src="\musics_pics\tamil_pics\yaradi.jpg" alt="yaradi"></a>
+            <div class="overlay_img">
+                <h3>Yaaradi Nee Mohini</h3>
+                <h4>Released on 4 April 2008 <br>and directed by Mithran R. Jawahar</h4>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="https://youtu.be/k44-B5R0XBQ?si=IDPGO4JRFKY3Wi0n">
+            <img src="\musics_pics\tamil_pics\mang.jpg" alt="mangatha"></a>
+            <div class="overlay_img">
+                <h3>Mankatha</h3>
+            <h4>Released on 31 August 2011  and directed by Venkat Prabhu</h4></div>
+        </div>
+       
+
+    </div>
+</div>
+
+        <script>
+            document.getElementById('detailsButton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='flex';
+            });
+             document.getElementById('closebutton').addEventListener('click',function(){
+                document.getElementById('overlay').style.display='none';
+            });
+
+            let currentAudio = null;  // Current playing audio
+    let currentButton = null; // Button associated with the current audio
+
+    function togglePlay(file, button) {
+        // If the same song is clicked again, stop it
+        if (currentAudio && currentAudio.src.includes(file)) {
+            if (!currentAudio.paused) {
+                currentAudio.pause();
+                button.textContent = 'Play'; // Change button text to "Play"
+            } else {
+                currentAudio.play();
+                button.textContent = 'Pause'; // Change button text to "Pause"
+            }
+        } else {
+            // Stop the previous song if playing
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+                currentButton.textContent = 'Play'; // Reset previous button text
+            }
+
+            // Play the new song
+            currentAudio = new Audio(file);
+            currentAudio.play();
+            button.textContent = 'Pause'; 
+            currentButton = button; 
+        }
+    }
+         function showMovies() {
+            const movieGallery = document.getElementById("movies");
+            if (movieGallery.style.display === "none" || movieGallery.style.display === "") {
+                movieGallery.style.display = "flex";
+            } else {
+                movieGallery.style.display = "none";
+                console.log("images not visible")
+            }
+        }
+
+        
+        </script>
+    </body>
+</html>
